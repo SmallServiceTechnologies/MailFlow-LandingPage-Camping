@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MainComponent.css";
 
-export default function MainComponent() {
+export default function MainComponent({ openCalendly }) {  // Empfang der Funktion als Prop
 
   const handleClick = () => {
-    alert(`Button clicked with input: ${inputValue}`);
+    openCalendly();  
   };
 
   return (
@@ -25,7 +25,7 @@ export default function MainComponent() {
           title="YouTube video"
         ></iframe>
         <button onClick={handleClick} className="small-screen-call-to-action">
-          Book a free call (Mobile)
+          Book a free call (mobile)
         </button>
       </div>
     </div>
