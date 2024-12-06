@@ -1,0 +1,78 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.cta-container {
+  flex: 1;
+  margin-right: 20px;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /* Ensures buttons stack vertically on small screens */
+  align-items: center;
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 8px;
+}
+
+.call-to-action {
+  padding: 0.6rem 80px;
+  margin: 0 0;
+  border-radius: 10px;
+  background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
+  outline: none;
+  border: none;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 1800;
+  font-size: large;
+}
+
+/* Standard (large screens) - hide the new button */
+.small-screen-call-to-action {
+  display: none; /* Hide the button by default */
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-container {
+    margin-right: 0;
+  }
+
+  .call-to-action {
+    display: none; /* Hide the original button on small screens */
+  }
+
+  .small-screen-call-to-action {
+    display: block; /* Show the new button on small screens */
+    padding: 0.6rem 80px;
+    margin-top: 20px; /* Add space between video and button */
+    border-radius: 10px;
+    background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
+    outline: none;
+    border: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 1800;
+    font-size: large;
+  }
+}
