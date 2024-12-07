@@ -1,25 +1,33 @@
 .main-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Zwei gleich große Spalten */
+  gap: 20px; /* Abstand zwischen den Spalten */
   padding: 20px;
 }
 
-.cta-container {
-  flex: 1;
-  margin-right: 20px;
+.cta-container,
+.video-container,
+.card-container {
   text-align: center;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
 }
 
-.video-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  flex-direction: column; /* Ensures buttons stack vertically on small screens */
-  align-items: center;
+/* Für große Bildschirme: Zwei Container nebeneinander */
+@media (min-width: 768px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr); /* Zwei gleich große Spalten */
+  }
+}
+
+/* Für kleine Bildschirme: Ein Container pro Zeile */
+@media (max-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr; /* Ein Container pro Zeile */
+  }
+  .cta-container, .video-container, .card-container {
+    margin-bottom: 20px; /* Abstand zwischen den Containern */
+  }
 }
 
 iframe {
@@ -49,15 +57,6 @@ iframe {
 
 /* Media Query for small screens */
 @media (max-width: 768px) {
-  .main-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cta-container {
-    margin-right: 0;
-  }
-
   .call-to-action {
     display: none; /* Hide the original button on small screens */
   }

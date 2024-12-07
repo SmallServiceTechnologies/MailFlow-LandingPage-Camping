@@ -1,0 +1,60 @@
+.card-container {
+  position: relative;
+}
+
+.note {
+  padding:  5px 5px 5px 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;  /* Hellgraue Border */
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%; /* Notiz soll genauso breit wie die Card sein */
+  box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite zählen */
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+  font-family: Montserrat;
+}
+
+.text-left-align {
+  text-align: left;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  background: linear-gradient(to right, #91AEF3, #A48AF4);
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-family: Montserrat;
+}
+
+.card-body {
+  padding: 1px 10px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  white-space: pre-line;
+}
+
+.label {
+  color: #757575; /* Hellgrauer Farbton nur für die Labels */
+  font-family: Montserrat;
+}
+
+.dynamic-data {
+  color: #1E1E1E; /* Dunkler Farbton für dynamische Daten */
+  font-family: Montserrat;
+}
+
+.divider {
+  border-top: 1px solid #e0e0e0; /* Hellgraue Linie */
+  margin: 1px 0;
+}
