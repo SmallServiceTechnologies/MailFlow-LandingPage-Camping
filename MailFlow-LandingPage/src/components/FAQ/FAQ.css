@@ -1,0 +1,14 @@
+.faq-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.headline {
+  font-family: 'Montserrat';
+}
+  
+.faq-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+  

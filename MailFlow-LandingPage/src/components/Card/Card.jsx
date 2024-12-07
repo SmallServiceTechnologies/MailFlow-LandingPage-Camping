@@ -10,7 +10,7 @@ const Card = ({ title, subject, email, body, note }) => {
         <div className="card-title text-left-align">{title}</div>
         <div className="card-body">
           <p className='text-left-align'>
-            <span className="label">To:</span> <span className="dynamic-data">{email}</span>
+            <span className="label">To:</span> <span className="dynamic-data email-background">{email}</span>
           </p>
           <div className="divider"></div>
           <p  className='text-left-align' >

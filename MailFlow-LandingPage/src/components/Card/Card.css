@@ -58,3 +58,9 @@
   border-top: 1px solid #e0e0e0; /* Hellgraue Linie */
   margin: 1px 0;
 }
+.email-background {
+  background-color: #f0f0f0; /* Leicht grauer Hintergrund */
+  padding: 0.2rem 0.5rem; /* Etwas Abstand um den Text */
+  border-radius: 4px; /* Abgerundete Ecken */
+}
+

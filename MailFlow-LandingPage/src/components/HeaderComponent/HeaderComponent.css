@@ -1,25 +1,54 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
-  .header-logo img {
-    height: 40px; /* Größe des Logos anpassen */
-  }
-  
-  .book-button {
-    padding: 0.6rem 0.8rem; 
-    margin: 0 0;
-    border-radius: 10px;
-    background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
-    outline: none;
-    border: none;
-    color: white;
-    font-family: 'Montserrat';
-    font-weight: 1800;
-    font-size: large;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0px 7%
+}
+
+.header-logo {
+  display: flex;
+  align-items: center; /* Damit Logo und Text nebeneinander stehen */
+}
+
+.header-logo .logo {
+  height: 40px; /* Größe des Logos anpassen */
+  margin-right: 10px; /* Abstand zwischen Logo und Text */
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Oder eine andere Farbe */
+  font-family: 'Montserrat';
+}
+
+.book-button {
+  padding: 0.6rem 0.8rem; 
+  margin: 0 0;
+  border-radius: 10px;
+  background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
+  outline: none;
+  border: none;
+  color: white;
+  font-family: 'Montserrat';
+  font-weight: 1800;
+  font-size: large;
 } 
-  
- 
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 768px) {
+.book-button {
+  display: none; /* Button ausblenden */
+}
+
+.header {
+  justify-content: center; /* Zentriere die Elemente */
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center; /* Zentriere das Logo und Text */
+  width: 100%;
+}
+}
