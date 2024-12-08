@@ -50,14 +50,6 @@ ul li .strong {
 
 
 
-@media (max-width: 768px) {
-  .main-container {
-    grid-template-columns: 1fr; 
-  }
-  .cta-container, .video-container, .card-container {
-    margin-bottom: 20px; 
-  }
-}
 
 .backgroundcolor-grey  {
   background-color: #f7f8fa;
@@ -109,6 +101,9 @@ iframe {
   .call-to-action {
     display: none; 
   }
+  .arrow-image {
+    display: none;
+  }
 
   .small-screen-call-to-action {
     display: block; 
@@ -123,4 +118,11 @@ iframe {
     font-weight: 1800;
     font-size: large;
   }
+  .main-container {
+    grid-template-columns: 1fr; 
+  }
+  .cta-container, .video-container, .card-container {
+    margin-bottom: 20px; 
+  }
+
 }
