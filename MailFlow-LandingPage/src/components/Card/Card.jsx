@@ -4,7 +4,7 @@ import './Card.css';
 const Card = ({ title, subject, email, body, note }) => {
   return (
     <div className="card-container">
-      {note && <div className="note text-left-align">{note}</div>}  {/* Die Notiz über der Card */}
+      {note && <div className="note text-left-align">{note}</div>}  
       
       <div className="card">
         <div className="card-title text-left-align">{title}</div>

@@ -8,18 +8,18 @@
 
 .header-logo {
   display: flex;
-  align-items: center; /* Damit Logo und Text nebeneinander stehen */
+  align-items: center;
 }
 
 .header-logo .logo {
-  height: 40px; /* Größe des Logos anpassen */
-  margin-right: 10px; /* Abstand zwischen Logo und Text */
+  height: 40px; 
+  margin-right: 10px; 
 }
 
 .logo-text {
   font-size: 24px;
   font-weight: bold;
-  color: #333; /* Oder eine andere Farbe */
+  color: #333; 
   font-family: 'Montserrat';
 }
 
@@ -36,19 +36,18 @@
   font-size: large;
 } 
 
-/* Media Query für kleinere Bildschirme */
 @media (max-width: 768px) {
 .book-button {
-  display: none; /* Button ausblenden */
+  display: none; 
 }
 
 .header {
-  justify-content: center; /* Zentriere die Elemente */
+  justify-content: center; 
 }
 
 .header-logo {
   display: flex;
-  justify-content: center; /* Zentriere das Logo und Text */
+  justify-content: center; 
   width: 100%;
 }
 }

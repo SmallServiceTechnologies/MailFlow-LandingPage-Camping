@@ -8,7 +8,6 @@ import cardsWithArrowResponsive from "../../assets/cardsWithArrow-responsive.png
 export default function MainComponent({ openCalendly }) {
   const [currentImage, setCurrentImage] = useState(cardsWithArrow);
 
-  // Funktion zur Überwachung der Bildschirmgröße
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -18,11 +17,9 @@ export default function MainComponent({ openCalendly }) {
       }
     };
 
-    // Initiale Überprüfung und Eventlistener hinzufügen
     handleResize();
     window.addEventListener("resize", handleResize);
 
-    // Eventlistener beim Unmount entfernen
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -81,7 +78,6 @@ export default function MainComponent({ openCalendly }) {
         </div>
       </div>
       <div className="margin-center">
-        {/* Dynamisch ausgewähltes Bild basierend auf der Bildschirmgröße */}
         <img
           id="cardsWithArrowImage"
           src={currentImage}

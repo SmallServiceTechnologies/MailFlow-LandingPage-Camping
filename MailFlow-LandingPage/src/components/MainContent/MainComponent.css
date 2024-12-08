@@ -3,8 +3,8 @@
 }
 .main-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Zwei gleich große Spalten */
-  gap: 20px; /* Abstand zwischen den Spalten */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
   padding: 20px;
 }
 
@@ -16,46 +16,46 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Für große Bildschirme: Zwei Container nebeneinander */
+
 @media (min-width: 768px) {
   .main-container {
-    grid-template-columns: repeat(2, 1fr); /* Zwei gleich große Spalten */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 h1 {
-  text-align: left; /* Stellt sicher, dass der Text links ausgerichtet bleibt */ 
+  text-align: left; 
 }
 
 #cardsWithArrowImage {
-  width: 100%; /* Bild nimmt die gesamte Fensterbreite ein */
-  height: auto; /* Beibehaltung des Seitenverhältnisses */
-  max-width: none; /* Keine maximale Breitenbegrenzung */
+  width: 100%; 
+  height: auto; 
+  max-width: none; 
 }
 
 ul {
-  list-style-position: inside; /* Macht sicher, dass die Punkte innerhalb des Containers linksbündig sind */
-  padding-left: 0; /* Entfernt unnötigen Einzug */
+  list-style-position: inside; 
+  padding-left: 0; 
   margin: 0;
 }
 
 ul li {
-  text-align: left; /* Stellt sicher, dass der Text links ausgerichtet bleibt */
-  margin-bottom: 10px; /* Fügt etwas Abstand zwischen den Listenelementen hinzu */
+  text-align: left; 
+  margin-bottom: 10px; 
 }
 
 ul li .strong {
-  font-weight: bold; /* Falls zusätzlich gewünscht */
+  font-weight: bold; 
 }
 
 
-/* Für kleine Bildschirme: Ein Container pro Zeile */
+
 @media (max-width: 768px) {
   .main-container {
-    grid-template-columns: 1fr; /* Ein Container pro Zeile */
+    grid-template-columns: 1fr; 
   }
   .cta-container, .video-container, .card-container {
-    margin-bottom: 20px; /* Abstand zwischen den Containern */
+    margin-bottom: 20px; 
   }
 }
 
@@ -65,12 +65,12 @@ ul li .strong {
 
 .arrow-container {
   display: flex;
-  justify-content: center; /* Zentriert das Bild horizontal */
-  margin-top: 20px; /* Abstand nach oben */
+  justify-content: center; 
+  margin-top: 20px; 
 }
 
 .arrow-image {
-  width: 150px; /* Größe des Bildes anpassen */
+  width: 150px; 
   height: auto;
 }
 
@@ -99,21 +99,21 @@ iframe {
   font-size: large;
 }
 
-/* Standard (large screens) - hide the new button */
+
 .small-screen-call-to-action {
-  display: none; /* Hide the button by default */
+  display: none; 
 }
 
-/* Media Query for small screens */
+
 @media (max-width: 768px) {
   .call-to-action {
-    display: none; /* Hide the original button on small screens */
+    display: none; 
   }
 
   .small-screen-call-to-action {
-    display: block; /* Show the new button on small screens */
+    display: block; 
     padding: 0.6rem 80px;
-    margin-top: 20px; /* Add space between video and button */
+    margin-top: 20px; 
     border-radius: 10px;
     background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
     outline: none;

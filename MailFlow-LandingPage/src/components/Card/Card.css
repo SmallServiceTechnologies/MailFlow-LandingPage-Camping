@@ -5,13 +5,13 @@
 .note {
   padding:  5px 5px 5px 10px;
   margin-bottom: 5px;
-  border: 1px solid #ddd;  /* Hellgraue Border */
+  border: 1px solid #ddd;  
   border-radius: 15px;
   font-size: 14px;
   font-weight: bold;
-  width: 100%; /* Notiz soll genauso breit wie die Card sein */
-  box-sizing: border-box; /* Stellt sicher, dass Padding und Border zur Gesamtbreite zählen */
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+  width: 100%; 
+  box-sizing: border-box; 
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); 
   font-family: Montserrat;
 }
 
@@ -45,22 +45,22 @@
 }
 
 .label {
-  color: #757575; /* Hellgrauer Farbton nur für die Labels */
+  color: #757575; 
   font-family: Montserrat;
 }
 
 .dynamic-data {
-  color: #1E1E1E; /* Dunkler Farbton für dynamische Daten */
+  color: #1E1E1E; 
   font-family: Montserrat;
 }
 
 .divider {
-  border-top: 1px solid #e0e0e0; /* Hellgraue Linie */
+  border-top: 1px solid #e0e0e0; 
   margin: 1px 0;
 }
 .email-background {
-  background-color: #f0f0f0; /* Leicht grauer Hintergrund */
-  padding: 0.2rem 0.5rem; /* Etwas Abstand um den Text */
-  border-radius: 4px; /* Abgerundete Ecken */
+  background-color: #f0f0f0; 
+  padding: 0.2rem 0.5rem; 
+  border-radius: 4px; 
 }
 

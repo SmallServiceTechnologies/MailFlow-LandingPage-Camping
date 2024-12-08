@@ -4,7 +4,7 @@
 
 .faq-question {
   display: flex;
-  align-items: center; /* Vertikale Ausrichtung für Pfeil und Frage */
+  align-items: center;
   cursor: pointer;
   font-size: 18px;
   font-family: 'Montserrat';
@@ -20,9 +20,9 @@
 }
 
 .arrow {
-  width: 10px; /* Passe die Breite des Pfeils an */
-  height: 10px; /* Passe die Höhe des Pfeils an */
-  margin-right: 10px; /* Abstand zwischen Pfeil und Text */
-  margin-left: 10px; /* Abstand zwischen Pfeil und Text */
-  transition: transform 0.3s ease; /* Animation beim Drehen des Pfeils */
+  width: 10px; 
+  height: 10px;
+  margin-right: 10px; 
+  margin-left: 10px; 
+  transition: transform 0.3s ease; 
 }
