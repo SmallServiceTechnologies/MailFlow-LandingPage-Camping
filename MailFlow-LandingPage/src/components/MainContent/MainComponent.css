@@ -125,7 +125,7 @@ iframe {
   .small-screen-call-to-action {
     display: block; 
     padding: 0.6rem 80px;
-    margin-top: 20px; 
+    margin: 20px auto; 
     border-radius: 10px;
     background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
     outline: none;
@@ -134,6 +134,8 @@ iframe {
     font-family: 'Montserrat';
     font-weight: 1800;
     font-size: large;
+    text-align: center;
+    width: fit-content;
   }
   .main-container {
     grid-template-columns: 1fr; 
