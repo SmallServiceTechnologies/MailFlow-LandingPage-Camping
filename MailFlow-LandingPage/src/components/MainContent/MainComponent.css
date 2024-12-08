@@ -27,6 +27,12 @@ h1 {
   text-align: left; /* Stellt sicher, dass der Text links ausgerichtet bleibt */ 
 }
 
+#cardsWithArrowImage {
+  width: 100%; /* Bild nimmt die gesamte Fensterbreite ein */
+  height: auto; /* Beibehaltung des Seitenverhältnisses */
+  max-width: none; /* Keine maximale Breitenbegrenzung */
+}
+
 ul {
   list-style-position: inside; /* Macht sicher, dass die Punkte innerhalb des Containers linksbündig sind */
   padding-left: 0; /* Entfernt unnötigen Einzug */
