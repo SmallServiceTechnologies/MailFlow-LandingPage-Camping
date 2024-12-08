@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div>
-      <HeaderComponent />
+      <HeaderComponent openCalendly={openCalendly}/>
       <MainComponent openCalendly={openCalendly} /> 
     </div>
   );

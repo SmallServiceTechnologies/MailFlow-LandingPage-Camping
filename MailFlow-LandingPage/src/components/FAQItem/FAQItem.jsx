@@ -4,7 +4,7 @@ import arrowRight from '../../assets/arrow-right.png';
 import arrowDown from '../../assets/arrow-down.png';  
 
 const FAQItem = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false); // Zustand für das Öffnen/Schließen der Antwort
+  const [isOpen, setIsOpen] = useState(false); 
 
   const toggleAnswer = () => {
     setIsOpen(!isOpen);
