@@ -90,6 +90,30 @@ iframe {
 }
 
 
+.call-to-action, .small-screen-call-to-action {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer; 
+}
+
+.call-to-action:hover, .small-screen-call-to-action:hover {
+  background-color: #d06bb0; 
+  transform: scale(1.05); 
+}
+
+.call-to-action:active, .small-screen-call-to-action:active {
+  transform: scale(0.95); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.call-to-action.clicked, .small-screen-call-to-action.clicked {
+  background-color: #a989fb; 
+  transform: scale(1); 
+  box-shadow: none; 
+  transition: background-color 0.3s ease;
+}
+
+
+
 @media (max-width: 768px) {
   .call-to-action {
     display: none; 

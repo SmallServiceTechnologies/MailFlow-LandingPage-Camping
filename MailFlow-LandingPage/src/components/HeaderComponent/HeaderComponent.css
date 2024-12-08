@@ -24,17 +24,36 @@
 }
 
 .book-button {
-  padding: 0.6rem 0.8rem; 
-  margin: 0 0;
+  padding: 0.6rem 20px;
   border-radius: 10px;
   background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
-  outline: none;
-  border: none;
   color: white;
-  font-family: 'Montserrat';
-  font-weight: 1800;
+  font-family: 'Montserrat', sans-serif;
   font-size: large;
-} 
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.book-button:hover {
+  background-color: #d06bb0; 
+  transform: scale(1.05); 
+}
+
+.book-button:active {
+  transform: scale(0.95); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+.book-button.clicked {
+  background-color: #a989fb; 
+  transform: scale(1);
+  box-shadow: none; 
+  transition: background-color 0.3s ease;
+}
+
 
 @media (max-width: 768px) {
 .book-button {
