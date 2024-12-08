@@ -12,15 +12,8 @@
 .video-container,
 .card-container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-family: 'Montserrat', sans-serif;
-}
-
-
-@media (min-width: 768px) {
-  .main-container {
-    grid-template-columns: repeat(2, 1fr); 
-  }
 }
 
 h1 {
@@ -124,5 +117,10 @@ iframe {
   .cta-container, .video-container, .card-container {
     margin-bottom: 20px; 
   }
+}
 
+@media (min-width: 768px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
