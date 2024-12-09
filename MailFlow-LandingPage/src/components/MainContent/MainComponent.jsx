@@ -4,6 +4,7 @@ import FAQ from "../FAQ/FAQ";
 import Arrow from '../../assets/Arrow.png';  
 import cardsWithArrow from "../../assets/cardsWithArrow.png";
 import cardsWithArrowResponsive from "../../assets/cardsWithArrow-responsive.png";
+import ExplainerComponent from "../ExplainerComponent/ExplainerComponent";
 
 export default function MainComponent({ openCalendly }) {
   const [currentImage, setCurrentImage] = useState(cardsWithArrow);
@@ -15,7 +16,7 @@ export default function MainComponent({ openCalendly }) {
       } else {
         setCurrentImage(cardsWithArrow);
       }
-    };
+    } ;
 
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -61,28 +62,24 @@ export default function MainComponent({ openCalendly }) {
             </div>
             <div className="video-container">
               <iframe
-                width="560"
-                height="315"
+
                 src="https://www.youtube.com/embed/IiB02GFi1FU"
+                id = "video"
                 allowFullScreen
                 title="YouTube video"
               ></iframe>
-              <button
+            </div>
+            <button
                 onClick={handleClick}
                 className="small-screen-call-to-action"
               >
                 Jetzt Termin vereinbaren!
               </button>
-            </div>
           </div>
         </div>
       </div>
       <div className="margin-center">
-        <img
-          id="cardsWithArrowImage"
-          src={currentImage}
-          alt="Cards with Arrow Icon"
-        />
+       <ExplainerComponent></ExplainerComponent> 
       </div>
       <div className="margin-center">
         <FAQ></FAQ>
