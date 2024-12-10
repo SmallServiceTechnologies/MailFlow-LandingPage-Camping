@@ -12,7 +12,6 @@ export default function HeaderComponent({ openCalendly }) {
     <header className="header">
       <div className="header-logo">
         <img src={flowLogo} className="logo" alt="Logo" />
-        <span className="logo-text">MailFlow</span> 
       </div>
       <input type="submit" value="Buche einen Termin" className="book-button" onClick={handleClick} />
     </header>

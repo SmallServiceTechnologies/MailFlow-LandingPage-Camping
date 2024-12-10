@@ -32,7 +32,7 @@ export default function MainComponent({ openCalendly }) {
 
   return (
     <div>
-      <div className="backgroundcolor-grey">
+      <div className="main">
         <div className="arrow-container">
           <img src={Arrow} alt="Arrow Icon" className="arrow-image" />
         </div>
@@ -43,26 +43,15 @@ export default function MainComponent({ openCalendly }) {
                 Schluss mit wiederholten E-Mails – keine Zeit mehr verschwenden.
               </h1>
               <ul>
-                <li>
-                  <strong className="strong">Wiederkehrende Fragen eliminieren</strong>: Automatische Antworten auf häufige Anfragen.
-                </li>
-                <li>
-                  <strong className="strong">Buchungen automatisieren</strong>: Anfragen direkt mit CRM-Integration bearbeiten.
-                </li>
-                <li>
-                  <strong className="strong">Gästezufriedenheit erhöhen</strong>: Schnelle und präzise Antworten.
-                </li>
-                <li>
-                  <strong className="strong">Zeit sparen</strong>: Fokus auf die wichtigen Aufgaben Ihres Campingplatzes.
-                </li>
+                <li>Wiederkehrende Fragen eliminieren: Automatische Antworten auf häufige Anfragen.</li>
+                <li>Buchungen automatisieren: Anfragen direkt mit CRM-Integration bearbeiten.</li>
+                <li>Gästezufriedenheit erhöhen: Schnelle und präzise Antworten.</li>
+                <li>Zeit sparen: Fokus auf die wichtigen Aufgaben Ihres Campingplatzes.</li>
               </ul>
-              <button onClick={handleClick} className="call-to-action">
-                Jetzt Termin vereinbaren!
-              </button>
+              <button onClick={handleClick} className="call-to-action">Jetzt Termin vereinbaren!</button>
             </div>
             <div className="video-container">
               <iframe
-
                 src="https://www.youtube.com/embed/IiB02GFi1FU"
                 id = "video"
                 allowFullScreen

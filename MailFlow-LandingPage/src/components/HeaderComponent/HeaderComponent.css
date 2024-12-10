@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  margin: 0px 7%
+  margin: 0px 7%;
 }
 
 .header-logo {
@@ -26,7 +25,7 @@
 .book-button {
   padding: 0.6rem 20px;
   border-radius: 10px;
-  background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
+  background: linear-gradient(to right, #91AEF3, #A48AF4);
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: large;

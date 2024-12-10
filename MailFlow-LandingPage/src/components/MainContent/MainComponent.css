@@ -2,22 +2,24 @@
   margin: 0px 7%
 }
 
-
 html {
   font-size: 16px;
 }
 
 .main-container {
   display: grid;
-  gap: 20px; 
-  padding: 20px;
+  gap: 40px;
+  margin-top: 20px;
 }
 
-.cta-container,
+.cta-container {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .video-container,
 .card-container {
   text-align: center;
-  padding: 10px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -29,6 +31,7 @@ html {
 }
 
 
+
 #video {
   width: 100%;
   height: 100%;
@@ -36,7 +39,10 @@ html {
 }
 
 h1 {
-  text-align: left; 
+  text-align: left;
+  font-size: 36px;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 
 #cardsWithArrowImage {
@@ -46,24 +52,21 @@ h1 {
 }
 
 ul {
-  list-style-position: inside; 
-  padding-left: 0; 
-  margin: 0;
+  font-size: 14px;
+  list-style-position: outside;
+  padding-left: 15px;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 ul li {
-  text-align: left; 
-  margin-bottom: 10px; 
-}
-
-ul li .strong {
-  font-weight: bold; 
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .arrow-container {
   display: flex;
   justify-content: center; 
-  margin-top: 20px; 
 }
 
 .arrow-image {
@@ -78,16 +81,15 @@ ul li .strong {
 
 
 .call-to-action {
-  padding: 0.6rem 80px;
-  margin-top: 10px;
+  padding: 0.6rem 20px;
   border-radius: 10px;
-  background: linear-gradient(to right, #a989fb, #cf4fc0, #e07552);
+  background: linear-gradient(to right, #C057BB, #C24454);
   outline: none;
   border: none;
   color: white;
-  font-family: 'Montserrat';
-  font-weight: 1800;
-  font-size: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  width: 100%;
 }
 
 
@@ -102,7 +104,7 @@ ul li .strong {
 }
 
 .call-to-action:hover, .small-screen-call-to-action:hover {
-  background-color: #d06bb0; 
+  background-color: #d06bb0;
   transform: scale(1.05); 
 }
 
