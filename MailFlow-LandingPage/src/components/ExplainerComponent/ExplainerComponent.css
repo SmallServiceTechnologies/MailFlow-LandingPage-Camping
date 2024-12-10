@@ -1,9 +1,12 @@
 
+.explainer-component {
+    margin-top: 20px;
+}
+
 .div-block-explainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 50px;
 }
 
 .div-block-explainer-text {
@@ -31,6 +34,25 @@ h3 {
 
 p {
     font-size: 14px;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    justify-content: center;
+    gap: 10px;
+}
+
+.first-item {
+    justify-self: end;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.second-item {
+    grid-column: 2;
+    grid-row: 2;
 }
 
 @media (max-width: 768px) {
