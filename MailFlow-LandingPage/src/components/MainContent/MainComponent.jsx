@@ -2,32 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import "./MainComponent.css";
 import FAQ from "../FAQ/FAQ";
 import Arrow from "../../assets/Arrow.png";
-import cardsWithArrow from "../../assets/cardsWithArrow.png";
-import cardsWithArrowResponsive from "../../assets/cardsWithArrow-responsive.png";
 import ExplainerComponent from "../ExplainerComponent/ExplainerComponent";
 
 export default function MainComponent({ openCalendly }) {
-  const [currentImage, setCurrentImage] = useState(cardsWithArrow);
 
   // Referenz für den FAQ-Bereich
   const faqRef = useRef(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setCurrentImage(cardsWithArrowResponsive);
-      } else {
-        setCurrentImage(cardsWithArrow);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const handleClick = () => {
     openCalendly();
