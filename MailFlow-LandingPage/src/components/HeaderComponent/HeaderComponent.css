@@ -1,8 +1,18 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.inner-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 7%;
+  margin: 0 7%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .header-logo {
@@ -24,12 +34,12 @@
 
 .book-button {
   padding: 0.6rem 20px;
-  border-radius: 10px;
-  background: linear-gradient(to right, #91AEF3, #A48AF4);
+  border-radius: 30px;
+  background: linear-gradient(to right, #91AEF3, #C057BB);
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: large;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 0.7rem;
   border: none;
   outline: none;
   cursor: pointer; 

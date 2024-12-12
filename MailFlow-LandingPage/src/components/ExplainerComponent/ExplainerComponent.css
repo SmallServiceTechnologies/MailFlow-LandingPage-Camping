@@ -1,39 +1,48 @@
+.explainer-main {
+    margin-top: 50px;
+}
 
 .explainer-component {
-    margin-top: 20px;
+    margin: 0px 7%;
 }
 
 .div-block-explainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.div-block-explainer-text {
+.div-block-explainer-arrow {
     flex: 1;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    padding: 10px;
 }
 
 .div-block-explainer-photo {
     flex: 1;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
 }
 
-.div-block-explainer-photo img {
-    max-width: 100%;
-    height: auto;
-}
-
-h3 {
-    font-size: 30px;
-}
+.explainer-photo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #91AEF3, #C057BB);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 
 p {
-    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.div-block-explainer-photo img {
+    height: auto;
+    width: 100%;
 }
 
 .image-container {
@@ -53,6 +62,10 @@ p {
 .second-item {
     grid-column: 2;
     grid-row: 2;
+}
+
+.arrow-image {
+
 }
 
 @media (max-width: 768px) {

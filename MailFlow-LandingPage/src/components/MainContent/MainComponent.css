@@ -6,6 +6,9 @@ html {
   font-size: 16px;
 }
 
+.main {
+}
+
 .main-container {
   display: grid;
   gap: 40px;
@@ -27,9 +30,8 @@ html {
   aspect-ratio: 16/9;
   width: 100%;
   position: relative;
-  max-width: 50vw;
+  max-width: 40vw;
 }
-
 
 
 #video {
@@ -39,9 +41,10 @@ html {
 }
 
 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   text-align: left;
-  font-size: 36px;
-  margin-top: 0px;
+  font-size: 1.5rem;
   margin-bottom: 30px;
 }
 
@@ -52,11 +55,12 @@ h1 {
 }
 
 ul {
-  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
   list-style-position: outside;
   padding-left: 15px;
-  margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 ul li {
@@ -72,11 +76,6 @@ ul li {
 .arrow-image {
   width: 150px; 
   height: auto;
-}
-
-
-.strong {
-  font-weight: bold;
 }
 
 .button-container {
@@ -96,14 +95,16 @@ ul li {
 
 .call-to-action {
   padding: 0.6rem 20px;
-  border-radius: 10px;
+  border-radius: 30px;
   background: linear-gradient(to right, #C057BB, #C24454);
   outline: none;
   border: none;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  width: 60%;  
+  font-weight: 500;
+  font-size: 0.8rem;
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .learn-more-button {
@@ -138,8 +139,6 @@ ul li {
   transition: background-color 0.3s ease;
 }
 
-
-
 .small-screen-call-to-action {
   display: none; 
 }
@@ -170,20 +169,18 @@ ul li {
   }
 
   .small-screen-call-to-action {
-    display: block; 
-    padding: 0.6rem 0; 
-    margin: 20px auto; 
-    border-radius: 10px;
+    display: block;
+    padding: 0.6rem 20px;
+    border-radius: 30px;
     background: linear-gradient(to right, #C057BB, #C24454);
     outline: none;
     border: none;
     color: white;
-    font-family: 'Montserrat';
-    font-weight: 1800;
-    font-size: 1.5rem;
-    text-align: center;
-    width: 100%; 
-    max-width: 500px; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
   .small-screen-learn-more {

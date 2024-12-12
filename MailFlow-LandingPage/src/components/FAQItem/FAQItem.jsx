@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './FAQItem.css';
 import arrowRight from '../../assets/arrow-right.png'; 
-import arrowDown from '../../assets/arrow-down.png';  
+import arrowLeft from '../../assets/arrow-prev-small-svgrepo-com.svg';
+import arrowDown from '../../assets/arrow-down-svgrepo-com.svg';
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false); 
@@ -11,21 +12,21 @@ const FAQItem = ({ question, answer }) => {
   };
 
   return (
-    <div className="faq-item">
-      <div className="faq-question" onClick={toggleAnswer}>
-        <img
-          src={isOpen ? arrowDown : arrowRight} 
-          alt="Arrow"
-          className="arrow"
-        />
-        <p>{question}</p>
-      </div>
-      {isOpen && (
-        <div className="faq-answer">
-          <p>{answer}</p>
+      <div className="faq-question-answer-div">
+        <div className="faq-question" onClick={toggleAnswer}>
+          <p>{question}</p>
+          <img
+              src={isOpen ? arrowDown : arrowLeft}
+              alt="Arrow"
+              className="arrow"
+          />
         </div>
-      )}
-    </div>
+        {isOpen && (
+          <div className="faq-answer">
+            <p>{answer}</p>
+          </div>
+        )}
+      </div>
   );
 };
 

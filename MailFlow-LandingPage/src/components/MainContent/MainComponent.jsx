@@ -52,13 +52,7 @@ export default function MainComponent({ openCalendly }) {
                   onClick={handleClick}
                   className="call-to-action button-effect"
                 >
-                  Jetzt Termin vereinbaren!
-                </button>
-                <button
-                  onClick={handleLearnMoreClick}
-                  className="learn-more-button button-effect"
-                >
-                  Erfahre mehr!
+                  Termin Vereinbaren
                 </button>
               </div>
             </div>
@@ -75,24 +69,11 @@ export default function MainComponent({ openCalendly }) {
                 onClick={handleClick}
                 className="small-screen-call-to-action button-effect"
               >
-                Jetzt Termin vereinbaren!
-              </button>
-              <button
-                onClick={handleLearnMoreClick}
-                className="small-screen-learn-more button-effect"
-              >
-                Erfahre mehr!
+                Termin Vereinbaren
               </button>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="margin-center">
-        <ExplainerComponent />
-      </div>
-      <div className="margin-center" ref={faqRef}>
-        <FAQ />
       </div>
     </div>
   );

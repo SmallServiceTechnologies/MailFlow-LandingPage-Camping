@@ -24,10 +24,14 @@ const FAQ = () => {
 
   return (
     <div className="faq-container">
-      <h2 className="headline">Häufige Fragen (FAQ)</h2>
-      {faqs.map((faq, index) => (
-        <FAQItem key={index} question={faq.question} answer={faq.answer} />
-      ))}
+      <div className="faq-title">
+        <p>Frequently Asked Questions</p>
+      </div>
+      <div className="faq-elements">
+        {faqs.map((faq, index) => (
+            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+        ))}
+      </div>
     </div>
   );
 };
