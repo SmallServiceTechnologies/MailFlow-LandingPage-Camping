@@ -19,6 +19,7 @@
     "@vitejs/plugin-react": "^4.0.0"
   },
   "devDependencies": {
+    "express": "^4.21.2",
     "@eslint/js": "^9.15.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
