@@ -5,27 +5,35 @@ import './FAQ.css';
 const FAQ = () => {
   const faqs = [
     {
-      question: 'Was ist der Zweck dieser FAQ?',
-      answer: 'Die FAQ dient dazu, häufig gestellte Fragen zu beantworten und den Besuchern zu helfen.'
+      question: 'Was ist MailFlow?',
+      answer: 'MailFlow ist eine KI-gestützte Lösung, die E-Mails automatisch analysiert und beantwortet. Die Software nutzt Daten aus Ihrer Website und Ihrem Buchungssystem, um personalisierte und präzise Antworten zu generieren.'
     },
     {
-      question: 'Wie kann ich eine Buchung vornehmen?',
-      answer: 'Sie können eine Buchung über unser Online-Formular oder durch Kontaktaufnahme mit unserem Team vornehmen.'
+      question: 'Wie funktioniert die automatische E-Mail-Beantwortung?',
+      answer: 'Unsere KI analysiert eingehende E-Mails, extrahiert den Kontext und greift auf Informationen von Ihrer Website sowie über Schnittstellen zu Ihrem Buchungssystem zu. Dadurch kann sie auf Kundenanfragen schnell und zuverlässig reagieren.'
     },
     {
-      question: 'Was sind die Zahlungsoptionen?',
-      answer: 'Wir akzeptieren Zahlungen per Kreditkarte, Banküberweisung und PayPal.'
+      question: 'Welche Arten von E-Mails kann die Software beantworten, und wie geht sie mit komplexen Anfragen um?',
+      answer: 'Unsere Software kann sowohl häufig gestellte Fragen (z. B. Öffnungszeiten, Verfügbarkeiten, Stornierungsbedingungen) als auch komplexere Anfragen analysieren und auf Basis der verfügbaren Daten kontextbezogene, personalisierte Antworten erstellen. Sollte eine Anfrage eine manuelle Bearbeitung erfordern, wird die E-Mail automatisch zur weiteren Bearbeitung weitergeleitet.'
     },
     {
-      question: 'Kann ich meinen Aufenthalt stornieren?',
-      answer: 'Ja, Stornierungen sind bis 48 Stunden vor der Ankunft möglich.'
-    }
+      question: 'Welche Vorteile bietet die automatische E-Mail-Beantwortung und wie verbessert sie den Kundenservice?',
+      answer: 'Mit MailFlow sparen Sie Zeit, steigern die Effizienz und verbessern die Kundenzufriedenheit durch schnelle und präzise Antworten. Die KI bearbeitet Anfragen rund um die Uhr und sorgt dafür, dass Ihr Team sich auf wichtigere Aufgaben konzentrieren kann, während die Anfragen schnell und effizient beantwortet werden.'
+    },
+    {
+      question: 'Kann die Software angepasst werden?',
+      answer: 'Ja, die Software kann individuell an Ihre Anforderungen angepasst werden, um Ihre spezifischen Geschäftsprozesse zu unterstützen.'
+    },
+    {
+      question: 'Wer sind Wir?',
+      answer: 'Wir sind vier Informatikstudenten der Technischen Universität München. Mit unserer Software möchten wir Unternehmen dabei unterstützen, ihre Kommunikation zu optimieren und den Kundenservice zu verbessern.'
+         },
   ];
 
   return (
     <div className="faq-container">
       <div className="faq-title">
-        <p>Frequently Asked Questions</p>
+        <p>Häufig gestellte Fragen</p>
       </div>
       <div className="faq-elements">
         {faqs.map((faq, index) => (
