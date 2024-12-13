@@ -37,7 +37,7 @@ const ExplainerComponent = () => {
                     </div>
                     <div className="div-block-explainer-photo">
                         <div className="explainer-photo-text">
-                            <p>MailFlow generiert Automatische Antwort</p>
+                            <p>MailFlow generiert automatische Antwort</p>
                         </div>
                         <img src={antwort_email_1} alt="Mail Icon"/>
                     </div>
