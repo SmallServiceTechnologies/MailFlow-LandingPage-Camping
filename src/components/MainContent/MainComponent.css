@@ -117,18 +117,7 @@ ul li {
 
 @media (max-width: 1024px) {
   .video-container {
-    margin: auto;
-    min-height: 30vw;
-    display: grid;
-    place-items: center;
-    aspect-ratio: 16/9;
-  }
-
-  #video {
-    display: flex;
-    justify-content: center;
-    height: 120%;
-    width: 160%;
+    max-width: none;
   }
 
   .call-to-action {
