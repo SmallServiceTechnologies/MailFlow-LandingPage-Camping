@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './FAQItem.css';
-import arrowRight from '../../assets/arrow-right.png'; 
 import arrowLeft from '../../assets/arrow-prev-small-svgrepo-com.svg';
 import arrowDown from '../../assets/arrow-down-svgrepo-com.svg';
 
+// eslint-disable-next-line react/prop-types
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false); 
 
