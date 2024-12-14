@@ -17,7 +17,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <p>Vertretungbrechtige</p>
+                    <p>Vertretungsberechtigte</p>
                     <ul>
                         <li>Jure Kleindienst</li>
                         <li>Kevin Fischer</li>
