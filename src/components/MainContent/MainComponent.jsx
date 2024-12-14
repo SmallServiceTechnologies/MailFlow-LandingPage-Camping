@@ -20,7 +20,7 @@ export default function MainComponent({ openCalendly }) {
           <div className="main-container">
             <div className="cta-container">
               <h1 className="h1-header">
-                Schluss mit wiederholten E-Mails – keine Zeit mehr verschwenden.
+                Keine Zeit mehr verlieren - simple E-Mails mit KI automatisieren!
               </h1>
               <ul>
                 <li>
