@@ -1,6 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./ExplainerComponent.css"
-import anfrage_email from "../../assets/anfrage_email.svg"
 import antwort_email_1 from "../../assets/antwort_email_2.svg";
 import arrow_down from "../../assets/arrow_down_1.svg";
 import anfrage_email_1 from "../../assets/anfrage_fixed.svg";
