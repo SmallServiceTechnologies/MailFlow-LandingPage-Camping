@@ -1,21 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./MainComponent.css";
-import FAQ from "../FAQ/FAQ";
 import Arrow from "../../assets/Arrow.png";
-import ExplainerComponent from "../ExplainerComponent/ExplainerComponent";
 
 export default function MainComponent({ openCalendly }) {
 
-  // Referenz für den FAQ-Bereich
   const faqRef = useRef(null);
 
   const handleClick = () => {
     openCalendly();
-  };
-
-  // Funktion für das Scrollen zum FAQ-Bereich
-  const handleLearnMoreClick = () => {
-    faqRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -47,14 +39,12 @@ export default function MainComponent({ openCalendly }) {
                   Campingplatzes.
                 </li>
               </ul>
-              <div className="button-container">
                 <button
                   onClick={handleClick}
                   className="call-to-action button-effect"
                 >
                   Termin Vereinbaren
                 </button>
-              </div>
             </div>
             <div className="video-container">
               <iframe
