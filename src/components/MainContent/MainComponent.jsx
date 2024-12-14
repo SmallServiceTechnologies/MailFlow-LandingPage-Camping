@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { useRef } from "react";
 import "./MainComponent.css";
 import Arrow from "../../assets/Arrow.png";
 
+// eslint-disable-next-line react/prop-types
 export default function MainComponent({ openCalendly }) {
-
-  const faqRef = useRef(null);
-
+  useRef(null);
   const handleClick = () => {
     openCalendly();
   };
