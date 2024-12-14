@@ -14,13 +14,11 @@ html {
 
 .cta-container {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .video-container,
 .card-container {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .video-container {
@@ -38,7 +36,6 @@ html {
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   text-align: left;
   font-size: 1.5rem;
@@ -46,7 +43,6 @@ h1 {
 }
 
 ul {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 0.7rem;
   list-style-position: outside;
@@ -76,7 +72,6 @@ ul li {
   outline: none;
   border: none;
   color: white;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
   width: 100%;
@@ -135,7 +130,6 @@ ul li {
     outline: none;
     border: none;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 1rem;
     width: 100%;

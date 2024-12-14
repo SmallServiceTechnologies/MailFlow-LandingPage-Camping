@@ -16,7 +16,6 @@
 .div-block-explainer-arrow {
     flex: 1;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .div-block-explainer-photo {
@@ -27,7 +26,6 @@
 }
 
 .explainer-photo-text {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #ffffff;
     font-size: 0.8rem;

@@ -1,9 +1,4 @@
-.faq-item {
-  font-family: 'Montserrat', sans-serif;
-}
-
 .faq-question {
-  font-family: 'Montserrat', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +13,6 @@
 }
 
 .faq-answer {
-  font-family: 'Montserrat', sans-serif;
   color: #808080;
   font-size: 0.7rem;
 }

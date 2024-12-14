@@ -29,7 +29,6 @@
   font-size: 24px;
   font-weight: bold;
   color: #333; 
-  font-family: 'Montserrat';
 }
 
 .book-button {
@@ -37,7 +36,6 @@
   border-radius: 30px;
   background: linear-gradient(to right, #91AEF3, #C057BB);
   color: white;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.7rem;
   border: none;

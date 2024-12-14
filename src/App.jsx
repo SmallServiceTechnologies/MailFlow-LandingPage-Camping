@@ -4,6 +4,7 @@ import MainComponent from "./components/MainContent/MainComponent";
 import ExplainerComponent from "./components/ExplainerComponent/ExplainerComponent";
 import FAQ from "./components/FAQ/FAQ";
 import { PopupWidget } from 'react-calendly'
+import Footer from "./components/Footer/Footer.jsx";
 
 
 export default function App() {
@@ -14,10 +15,11 @@ export default function App() {
 
   return (
     <div>
-      <HeaderComponent openCalendly={openCalendly}/>
-      <MainComponent openCalendly={openCalendly} />
-      <ExplainerComponent />
-      <FAQ />
+        <HeaderComponent openCalendly={openCalendly}/>
+        <MainComponent openCalendly={openCalendly} />
+        <ExplainerComponent />
+        <FAQ />
+        <Footer></Footer>
     </div>
   );
 }

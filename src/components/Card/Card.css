@@ -12,7 +12,6 @@
   width: 100%; 
   box-sizing: border-box; 
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); 
-  font-family: Montserrat;
 }
 
 .text-left-align {
@@ -34,7 +33,6 @@
   font-weight: bold;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  font-family: Montserrat;
 }
 
 .card-body {
@@ -46,12 +44,10 @@
 
 .label {
   color: #757575; 
-  font-family: Montserrat;
 }
 
 .dynamic-data {
   color: #1E1E1E; 
-  font-family: Montserrat;
 }
 
 .divider {

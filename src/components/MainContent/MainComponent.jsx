@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import "./MainComponent.css";
 import Arrow from "../../assets/Arrow.png";
+import Footer from "../Footer/Footer.jsx";
 
 // eslint-disable-next-line react/prop-types
 export default function MainComponent({ openCalendly }) {

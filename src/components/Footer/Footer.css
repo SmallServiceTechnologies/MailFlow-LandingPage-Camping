@@ -1,0 +1,25 @@
+#footer {
+    margin-top: 20vh;
+}
+
+.footer-container {
+    display: flex;
+    font-size: 0.5rem;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.footer-container > div > p {
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.footer-container > div > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-container > div > ul > li {
+    font-size: 0.5rem;
+}
