@@ -1,25 +1,19 @@
 import React from "react";
-import HeaderComponent from "./components/HeaderComponent/HeaderComponent";
-import MainComponent from "./components/MainContent/MainComponent";
-import ExplainerComponent from "./components/ExplainerComponent/ExplainerComponent";
-import FAQ from "./components/FAQ/FAQ";
-import { PopupWidget } from 'react-calendly'
-import Footer from "./components/Footer/Footer.jsx";
+import Datenschutz from './pages/Datenschutz.jsx';
+import MainPage from './pages/MainPage.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-export default function App() {
-  const openCalendly = () => {
-    window.Calendly.initPopupWidget({ url: 'https://calendly.com/flow-suite-info/30min' });
-    return false;
-  };
 
+function App() {
   return (
-    <div>
-        <HeaderComponent openCalendly={openCalendly}/>
-        <MainComponent openCalendly={openCalendly} />
-        <ExplainerComponent />
-        <FAQ />
-        <Footer></Footer>
-    </div>
+    <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+        </Routes>
+    </Router>
   );
 }
+
+export default App;
