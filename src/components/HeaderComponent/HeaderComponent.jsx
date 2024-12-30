@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeaderComponent.css";
-import flowLogo from "../../assets/flowLogo.svg";
+import flowLogo from "../../assets/FlowSuiteLogo.svg";
 
 export default function HeaderComponent({ openCalendly }) {
 

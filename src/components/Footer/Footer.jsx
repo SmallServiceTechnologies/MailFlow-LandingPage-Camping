@@ -28,7 +28,6 @@ const Footer = () => {
                 </div>
                 <div>
                     <Link to="/datenschutz">Datenschutz</Link>
-
                 </div>
             </div>
         </div>
