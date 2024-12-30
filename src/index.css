@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(164, 138, 244, 0.2),
+            #F7F7F7,
+            rgba(145, 174, 243, 0.3)
+    );
+}
+*{
+    font-family: Montserrat, sans-serif;
+}
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 30px;
+    display: none; /* hidden by default */
+    z-index: 9999;
+    align-items: center;
+  }
+  #cookie-banner button {
+    margin: 0 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: linear-gradient(to right, #C057BB, #C24454);
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 0.8rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-height: 50px;
+}
+
+#decline-cookie {
+    background: #ffffff!important;
+    color: #000000!important;
+    border: 1px solid #ccc!important;
+}
+
+#cookie-banner p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+#cookie-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    #cookie-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #cookie-buttons-container {
+        margin-top: 1rem;
+    }
+}
