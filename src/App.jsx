@@ -1,16 +1,16 @@
 import React from "react";
-import Datenschutz from './pages/Datenschutz.jsx';
-import MainPage from './pages/MainPage.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
+import Home from "./pages/Home.jsx";
+import Imprint from "./pages/Imprint.jsx";
 
 function App() {
   return (
     <Router>
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/impressum" element={<Imprint />} />
+            <Route path="/datenschutzerklärung" element={<PrivacyPolicy />} />
         </Routes>
     </Router>
   );
