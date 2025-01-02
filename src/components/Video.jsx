@@ -1,14 +1,26 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import "../css/video.css"
-import ArrowVideo from "../assets/arrow-video.png"
+import {AppContext} from "../AppContext.jsx";
 
 export default function Video() {
+    const { cookiesAccepted, acceptCookies }  = useContext(AppContext);
+
+    const handleAcceptCookies = () => {
+        acceptCookies();
+    }
+
+    // Dynamically set the iframe src based on cookie consent
+    const iframeSrc = cookiesAccepted
+        ? "https://www.youtube.com/embed/IiB02GFi1FU?enablejsapi=1"
+        : "https://www.youtube-nocookie.com/embed/IiB02GFi1FU?enablejsapi=1";
+
     return (
-        <div className="video-container">
-            <img id="arrow-video" src={ArrowVideo} alt="Gerader Pfeil der auf das Video zeigt" />
+        <div className="video-container" onClick={handleAcceptCookies}>
+            <span id="video-text-overlay">
+                Mit dem Start des Videos stimmen Sie der Verwendung von (analytischen) Cookies zu. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</span>
             <iframe
-                src="https://www.youtube.com/embed/IiB02GFi1FU"
-                id="video"
+                src={iframeSrc}
+                id="youtube-video"
                 allowFullScreen
                 title="MailFlow: KI E-Mail Automatiserung"
             ></iframe>

@@ -7,7 +7,7 @@ export default function Footer() {
 
     const toggleFooter = () => {
         const banner = document.getElementById('cookie-banner');
-        const gaConsent = localStorage.getItem('gaConsent');
+        const cookieConsent = localStorage.getItem('cookieConsent');
 
         if (!banner) return;
 
@@ -19,17 +19,17 @@ export default function Footer() {
         }
 
         // Load GTM/GA if consent is accepted
-        if (gaConsent === 'accepted') {
+        if (cookieConsent === 'accepted') {
             loadGTMandAnalytics();
         }
     }
 
     return (
         <div className="footer-container">
-            <Link to="/impressum">Impressum</Link>
-            <Link to="/datenschutzerklärung">Datenschutzerklärung</Link>
-            <button onClick={toggleFooter}>Cookie Einstellungen</button>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noopener noreferrer" target="_blank">Nicht klicken ;)</a>
+            <Link className="footer-btn" to="/impressum">Impressum</Link>
+            <Link className="footer-btn" to="/datenschutzerklärung">Datenschutzerklärung</Link>
+            <button className="footer-btn" onClick={toggleFooter}>Cookie Einstellungen</button>
+            <a className="footer-btn" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="noopener noreferrer" target="_blank">Nicht klicken ;)</a>
         </div>
     )
 }

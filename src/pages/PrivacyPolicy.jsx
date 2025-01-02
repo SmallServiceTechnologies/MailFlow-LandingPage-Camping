@@ -1,11 +1,13 @@
 import React from "react";
 import Nav from "../components/Nav.jsx";
 import Footer from "../components/Footer.jsx";
+import CookieBanner from "../components/CookieBanner.jsx";
 
 export default function PrivacyPolicy() {
     return (
         <React.Fragment>
-            <section>
+            <CookieBanner></CookieBanner>
+            <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
             <section id="privacy-policy">
@@ -54,7 +56,7 @@ export default function PrivacyPolicy() {
                 <h3>YouTube</h3> <p>Diese Website bindet Videos der Website YouTube ein. Betreiber der Website ist die Google Ireland Limited (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4, Irland.</p> <p>Wenn Sie eine unserer Webseiten besuchen, auf denen YouTube eingebunden ist, wird eine Verbindung zu den Servern von YouTube hergestellt. Dabei wird dem YouTube-Server mitgeteilt, welche unserer Seiten Sie besucht haben.</p> <p>Des Weiteren kann YouTube verschiedene Cookies auf Ihrem Endger&auml;t speichern oder vergleichbare Technologien zur Wiedererkennung verwenden (z.&nbsp;B. Device-Fingerprinting). Auf diese Weise kann YouTube Informationen &uuml;ber Besucher dieser Website erhalten. Diese Informationen werden u.&nbsp;a. verwendet, um Videostatistiken zu erfassen, die Anwenderfreundlichkeit zu verbessern und Betrugsversuchen vorzubeugen. Des Weiteren werden die erfassten Daten im Google-Werbenetzwerk verarbeitet.</p> <p>Wenn Sie in Ihrem YouTube-Account eingeloggt sind, erm&ouml;glichen Sie YouTube, Ihr Surfverhalten direkt Ihrem pers&ouml;nlichen Profil zuzuordnen. Dies k&ouml;nnen Sie verhindern, indem Sie sich aus Ihrem YouTube-Account ausloggen.</p> <p>Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschlie&szlig;lich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und &sect; 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endger&auml;t des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p> <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerkl&auml;rung von YouTube unter: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy?hl=de</a>.</p>
                 <p>Das Unternehmen verf&uuml;gt &uuml;ber eine Zertifizierung nach dem &bdquo;EU-US Data Privacy Framework&ldquo; (DPF). Der DPF ist ein &Uuml;bereinkommen zwischen der Europ&auml;ischen Union und den USA, der die Einhaltung europ&auml;ischer Datenschutzstandards bei Datenverarbeitungen in den USA gew&auml;hrleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noopener noreferrer">https://www.dataprivacyframework.gov/participant/5780</a>.</p>
             </section>
-            <section>
+            <section className="no-margin-bottom">
                 <Footer></Footer>
             </section>
         </React.Fragment>

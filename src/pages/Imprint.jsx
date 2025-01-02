@@ -1,11 +1,13 @@
 import React from 'react';
 import Footer from "../components/Footer.jsx";
 import Nav from "../components/Nav.jsx";
+import CookieBanner from "../components/CookieBanner.jsx";
 
 export default function Imprint() {
     return (
         <React.Fragment>
-            <section>
+            <CookieBanner></CookieBanner>
+            <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
             <section className="imprint">
@@ -28,7 +30,7 @@ export default function Imprint() {
                     </ul>
                 </div>
             </section>
-            <section>
+            <section className="no-margin-bottom">
                 <Footer></Footer>
             </section>
         </React.Fragment>

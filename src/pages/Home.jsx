@@ -14,6 +14,9 @@ import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
 import PricingCalculator from "../components/PricingCalculator.jsx";
 import Mail from "../components/Mail.jsx";
 import ArrowMail from "../assets/arrow-mail.svg"
+import "../css/home.css"
+import ArrowVideo from "../assets/arrow-video.png";
+import CookieBanner from "../components/CookieBanner.jsx";
 
 export default function Home() {
     const handleLinkClick = (event) => {
@@ -27,35 +30,46 @@ export default function Home() {
 
     return (
         <React.Fragment>
-            <section>
+            <CookieBanner></CookieBanner>
+            <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
-            <section>
+            <section id="above-the-fold">
+                <div></div>
+                <img id="arrow-video" src={ArrowVideo} alt="Gerader Pfeil der auf das Video zeigt"/>
                 <div className="container">
                     <h1>
-                        <span className="gradient-text">Automatisieren Sie das Postfach Ihres Campingplatzes</span> –<br></br>
-                        Schnelle Antworten, weniger manueller Aufwand!
+                        <span className="gradient-text">Automatisieren Sie das Postfach Ihres Campingplatzes mit MailFlow</span> –
+                        Schnelle Antworten, minimaler manueller Aufwand!
                     </h1>
                     <h2>
                         Sparen Sie Zeit, indem Sie wiederkehrende E-Mail-Anfragen automatisieren. MailFlow integriert
-                        sich nahtlos in Ihr Postfach und verwaltet die Gästekommunikation schnell und effizient.
+                        sich nahtlos in Ihr E-Mail Postfach und verwaltet die Gästekommunikation schnell, höflich und
+                        effizient.
                     </h2>
                     <div className="btn-container">
-                        <a href="#how-mailflow-works" className="btn">Wie funktioniert MailFlow?</a>
                         <CTABtn></CTABtn>
+                        <a href="#how-mailflow-works" className="btn">Wie funktioniert MailFlow?</a>
                     </div>
                 </div>
                 <Video></Video>
             </section>
             <section id="partners">
                 <div className="container">
-                    <a href="https://www.campnerd.camp" rel="noopener noreferrer" target="_blank" onClick={handleLinkClick}>
+                    <h3>Unsere Partner und Unterstützer</h3>
+                    <a className="partner-company" href="https://www.bvcd.de" rel="noopener noreferrer"
+                       target="_blank"
+                       onClick={handleLinkClick}>
+                        <img src={BVCDLogo}
+                             alt="Bundesverband der Campingwirtschaft in Deutschland e.V. Logo"></img>
+                    </a>
+                    <a className="partner-company" href="https://www.campnerd.camp" rel="noopener noreferrer"
+                       target="_blank" onClick={handleLinkClick}>
                         <img src={CampNerdLogo} alt="CampNerd Logo"></img>
                     </a>
-                    <a href="https://www.bvcd.de" rel="noopener noreferrer" target="_blank" onClick={handleLinkClick}>
-                        <img src={BVCDLogo} alt="Bundesverband der Campingwirtschaft in Deutschland e.V. Logo"></img>
-                    </a>
-                    <a href="https://www.unternehmertum.de" rel="noopener noreferrer" target="_blank" onClick={handleLinkClick}>
+                    <a className="partner-company" href="https://www.unternehmertum.de"
+                       rel="noopener noreferrer"
+                       target="_blank" onClick={handleLinkClick}>
                         <img src={UnternehmerTUMLogo} alt="UnternehmerTUM Logo"></img>
                     </a>
                 </div>
@@ -118,9 +132,9 @@ export default function Home() {
             <section id="FAQ">
                 <FAQ></FAQ>
             </section>
-            <section>
+            <section className="no-margin-bottom">
                 <Footer></Footer>
             </section>
         </React.Fragment>
-)
+    )
 }

@@ -1,0 +1,28 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    height: min-content;
+    position: relative;
+    cursor: pointer;
+}
+
+#video-text-overlay {
+    text-align: center;
+    padding: 33% 5%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+    color: var(--white);
+}
+
+#youtube-video {
+    border: none;
+    outline: none;
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+}
