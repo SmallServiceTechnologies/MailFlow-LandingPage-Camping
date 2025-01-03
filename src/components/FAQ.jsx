@@ -8,7 +8,7 @@ export default function FAQ() {
                 <h3 className="section-heading gradient-text">Frequently asked questions</h3>
                 <Accordion
                     title="Wie viel kostet MailFlow?"
-                    content="Wir möchten kleine und mittelgroße Campingplätze nicht benachteiligen. Daher richten sich die Kosten für MailFlow vor allem nach der Anzahl der Stellplätze Ihres Campingplatzes und Ihren individuellen Anforderungen. Buchen Sie ein kostenloses Beratungsgespräch, um mehr über eine Lösung zu erfahren, die zu Ihrem Campingplatz passt.">
+                    content="Wir möchten kleine und mittelgroße Unternehmen nicht benachteiligen. Daher richten sich die Kosten für MailFlow vor allem nach der Größe Ihres Unternehmens und Ihren individuellen Anforderungen. Buchen Sie ein kostenloses Beratungsgespräch, um mehr über eine Lösung zu erfahren, die optimal zu Ihrem Unternehmen passt.">
                 </Accordion>
                 <Accordion
                     title="Wie lange dauert die Einrichtung von MailFlow?"
@@ -28,7 +28,7 @@ export default function FAQ() {
                 </Accordion>
                 <Accordion
                     title="Unterstützt MailFlow mehrere Sprachen?"
-                    content="Ja, MailFlow kann Antworten in vielen verschiedenen Sprachen generieren und ist ideal für internationale Gäste.">
+                    content="Ja, MailFlow kann Antworten in vielen verschiedenen Sprachen generieren und ist ideal für internationale Kunden.">
                 </Accordion>
                 <Accordion
                     title="Wie bewältigt MailFlow große Anfragenmengen?"

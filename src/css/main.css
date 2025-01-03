@@ -46,7 +46,7 @@ h2 {
 }
 
 .section-heading {
-    padding-top: 10vh;
+    padding-top: 5vh;
     font-size: 1.75rem;
 }
 
@@ -96,6 +96,7 @@ button, .btn {
     outline: none;
     box-shadow: none;
     cursor: pointer;
+    z-index: 10;
 }
 
 button:hover, .btn:hover {
