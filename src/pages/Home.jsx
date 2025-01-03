@@ -1,4 +1,5 @@
 import React from 'react';
+import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
 import Video from "../components/Video.jsx";
@@ -12,9 +13,9 @@ import CampNerdLogo from "../assets/CampNerd-Logo.svg";
 import BVCDLogo from "../assets/BVCD-Logo.svg";
 import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
 import Mail from "../components/Mail.jsx";
-import ArrowMail from "../assets/arrow-mail.svg"
-import "../css/home.css"
-import ArrowVideo from "../assets/arrow-video.png";
+import ArrowMail1 from "../assets/arrow-mail-1.svg"
+import ArrowMail2 from "../assets/arrow-mail-2.svg"
+import ArrowVideo from "../assets/arrow-video.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
 import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
@@ -25,7 +26,7 @@ export default function Home() {
 
         const confirmation = window.confirm("Sind Sie sicher, dass Sie die Seite verlassen wollen?");
         if (confirmation) {
-            window.location.href = event.currentTarget.href;
+            window.open(event.currentTarget.href, "_blank", "noopener,noreferrer");
         }
     };
 
@@ -106,13 +107,13 @@ export default function Home() {
                         ]}
                     ></Mail>
                     <div className="container">
+                        <img id="arrow-mail-1" src={ArrowMail1} alt="Geschwungender Pfeil"/>
                         <h4>
-                            MailFlow beantwortet E-Mails automatisch, prüft die Verfügbarkeit und Preise in Ihrem
-                            Channel Manager (z.B. CampNerd) oder Buchungssystem und nutzt zusätzlichen Kontext (z.B.
-                            Website), um eine passende Antwort zu
-                            erstellen.
+                            <span className="gradient-text">MailFlow beantwortet E-Mails automatisch</span>, prüft die
+                            Verfügbarkeit und Preise in Ihrem Channel Manager (z.B. CampNerd) oder Buchungssystem und
+                            nutzt zusätzlichen Kontext (z.B. Website), um eine passende Antwort zu erstellen.
                         </h4>
-                        <img id="arrow-mail" src={ArrowMail} alt="Geschwungender Pfeil der auf die E-Mail zeigt"/>
+                        <img id="arrow-mail-2" src={ArrowMail2} alt="Geschwungender Pfeil"/>
                     </div>
                     <Mail
                         id={"mail-campground"}
@@ -149,7 +150,7 @@ export default function Home() {
                     <Card
                         heading={"Automatische Kategorisierung von Anfragen"}
                         body={"MailFlow sortiert E-Mails automatisch in Kategorien wie Buchungsanfragen, " +
-                            "Gruppenbuchungen, allgemeine Anfragen, Spam oder E-Mails, die eine manuelle Bearbeitung " +
+                            "Gruppenbuchungen, allgemeine Anfragen, Spam/Unwichtig oder E-Mails, die eine manuelle Bearbeitung " +
                             "erfordern. Dadurch schafft MailFlow Struktur und erleichtert die Arbeit Ihrer Mitarbeiter erheblich."}
                     ></Card>
                     <Card
@@ -185,7 +186,7 @@ export default function Home() {
                     ></Card>
                     <Card
                         image={DollarIcon}
-                        body={"Senkt die Kosten für saisonale Arbeitskräfte und vereinfacht die Personalplanung."}
+                        body={"Reduziert Personalkosten, minimiert Fluktuation und erleichtert dadurch die Personalplanung."}
                     ></Card>
                 </div>
             </section>

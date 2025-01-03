@@ -3,7 +3,7 @@
     padding-bottom: 2rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 2rem;
     text-align: center;
 }
@@ -16,7 +16,6 @@
     font-weight: normal;
     text-align: center;
     cursor: pointer;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,11 +29,10 @@
 }
 
 @media (max-width: 1024px) {
-   .footer-container {
-       gap: 1rem;
-       justify-content: center;
-       align-items: center;
-   }
+    .footer-container {
+        gap: 1rem;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 786px) {
