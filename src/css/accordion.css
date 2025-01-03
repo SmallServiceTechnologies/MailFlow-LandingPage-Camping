@@ -1,0 +1,30 @@
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-header {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.accordion-header > h4 {
+    margin: 0;
+}
+
+.accordion-header:hover {
+    text-decoration: underline;
+}
+
+.accordion-arrow {
+    width: 2rem;
+    height: 2rem;
+}
+
+.accordion-content {
+    padding: 1rem;
+}

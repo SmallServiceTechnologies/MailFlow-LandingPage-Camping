@@ -19,8 +19,8 @@ export default function Accordion({ title, content }) {
                     alt={isOpen ? "Collapse" : "Expand"}
                     className="accordion-arrow"
                 />
-                <hr></hr>
             </div>
+            <hr></hr>
             {isOpen && <div className="accordion-content">{content}</div>}
         </div>
     )

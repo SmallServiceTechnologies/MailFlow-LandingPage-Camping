@@ -29,8 +29,27 @@
     color: var(--white);
 }
 
+#decline-cookies {
+    border-color: transparent;
+}
+
 @media (max-width: 1024px) {
     #cookie-banner {
+        left: 2rem;
         max-width: none;
+    }
+}
+
+@media (max-width: 430px) {
+    #cookie-banner {
+        padding: 1rem;
+    }
+
+    #decline-cookies {
+        padding: 0;
+    }
+
+    #cookie-banner > .container {
+        flex-direction: column-reverse;
     }
 }

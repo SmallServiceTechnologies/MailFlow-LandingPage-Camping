@@ -4,15 +4,19 @@ import "../css/faq.css"
 
 export default function FAQ() {
     return (
-        <div className="FAQ-contianer">
-                <h3>Frequently asked questions</h3>
+        <div className="FAQ-container">
+                <h3 className="section-heading gradient-text">Frequently asked questions</h3>
+                <Accordion
+                    title="Wie viel kostet MailFlow?"
+                    content="Wir möchten kleine und mittelgroße Campingplätze nicht benachteiligen. Daher richten sich die Kosten für MailFlow vor allem nach der Anzahl der Stellplätze Ihres Campingplatzes und Ihren individuellen Anforderungen. Buchen Sie ein kostenloses Beratungsgespräch, um mehr über eine Lösung zu erfahren, die zu Ihrem Campingplatz passt.">
+                </Accordion>
                 <Accordion
                     title="Wie lange dauert die Einrichtung von MailFlow?"
-                    content="MailFlow kann in der Regel innerhalb weniger Stunden eingerichtet und getestet werden. Wir kümmern uns um alle technischen Notwendigkeiten, sodass Sie sich ganz entspannt zurücklehnen können.">
+                    content="MailFlow kann in der Regel innerhalb weniger Stunden eingerichtet und getestet werden. Wir kümmern uns um alle technischen Notwendigkeiten und leiten Sie durch die notwendigen Schritte. Buchen Sie sich ein Gespräch, damit wir Ihnen genau sagen können, wie schnell die Testversion bei Ihnen eingesetzt werden kann.">
                 </Accordion>
                 <Accordion
                     title="Lässt sich MailFlow mit jeder E-Mail bzw. jedem E-Mail-Programm integrierten?"
-                    content="MailFlow integriert sich nahtlos in gängige Plattformen wie Gmail, Outlook und viele mehr.">
+                    content="MailFlow integriert sich nahtlos in gängige Provider und Programme wie Gmail, Outlook, Thunderbird und viele mehr.">
                 </Accordion>
                 <Accordion
                     title="Was passiert, wenn die KI nicht die richtige Antwort findet?"
@@ -20,7 +24,7 @@ export default function FAQ() {
                 </Accordion>
                 <Accordion
                     title="Ist MailFlow sicher?"
-                    content="Ja! Wir legen hochen Wert darauf so DSGVO-konform wie möglich zu agieren. Ihre E-Mail Daten werden ausschließlich bei Ihnen im Postfach und bei keinem Dritten gespeichert.">
+                    content="Ja! Wir legen hochen Wert darauf so DSGVO-konform wie möglich zu agieren. Ihre E-Mail Daten und die Ihrer Kunden werden ausschließlich bei Ihnen im Postfach und bei keinem Dritten gespeichert.">
                 </Accordion>
                 <Accordion
                     title="Unterstützt MailFlow mehrere Sprachen?"

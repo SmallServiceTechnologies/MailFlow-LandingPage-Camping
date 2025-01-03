@@ -5,16 +5,18 @@ export default function Card({ image, heading, body }) {
     return (
         <div className="card">
             {image && (
-                <img className="card-img-top" src={image} alt="Card visual" />
+                <img className="card-img" src={image} alt="Icon" />
             )}
             {heading && (
-                <div className="card-header">
-                    <strong>{heading}</strong>
+                <div className="card-heading gradient-text">
+                    <h4>{heading}</h4>
                 </div>
             )}
-            <div className="card-body">
-                {body}
-            </div>
+            {body && (
+                <p className="card-body">
+                    {body}
+                </p>
+            )}
         </div>
     )
 }

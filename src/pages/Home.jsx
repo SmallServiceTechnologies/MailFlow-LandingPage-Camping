@@ -17,6 +17,8 @@ import ArrowMail from "../assets/arrow-mail.svg"
 import "../css/home.css"
 import ArrowVideo from "../assets/arrow-video.png";
 import CookieBanner from "../components/CookieBanner.jsx";
+import MailUserPicture from "../assets/user-svgrepo-com.svg"
+import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
 
 export default function Home() {
     const handleLinkClick = (event) => {
@@ -49,7 +51,7 @@ export default function Home() {
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
-                        <a href="#how-mailflow-works" className="btn">Wie funktioniert MailFlow?</a>
+                        <a href="#how" className="btn">Wie funktioniert MailFlow?</a>
                     </div>
                 </div>
                 <Video></Video>
@@ -57,38 +59,121 @@ export default function Home() {
             <section id="partners">
                 <div className="container">
                     <h3>Unsere Partner und Unterstützer</h3>
-                    <a className="partner-company" href="https://www.bvcd.de" rel="noopener noreferrer"
+                    <a className="partner-company"
+                       href="https://www.bvcd.de"
+                       rel="noopener noreferrer"
                        target="_blank"
                        onClick={handleLinkClick}>
-                        <img src={BVCDLogo}
-                             alt="Bundesverband der Campingwirtschaft in Deutschland e.V. Logo"></img>
+                        <img src={BVCDLogo} alt="Bundesverband der Campingwirtschaft in Deutschland e.V. Logo"></img>
                     </a>
-                    <a className="partner-company" href="https://www.campnerd.camp" rel="noopener noreferrer"
-                       target="_blank" onClick={handleLinkClick}>
+                    <a className="partner-company"
+                       href="https://www.campnerd.camp"
+                       rel="noopener noreferrer"
+                       target="_blank"
+                       onClick={handleLinkClick}>
                         <img src={CampNerdLogo} alt="CampNerd Logo"></img>
                     </a>
-                    <a className="partner-company" href="https://www.unternehmertum.de"
+                    <a className="partner-company"
+                       href="https://www.unternehmertum.de"
                        rel="noopener noreferrer"
-                       target="_blank" onClick={handleLinkClick}>
+                       target="_blank"
+                       onClick={handleLinkClick}>
                         <img src={UnternehmerTUMLogo} alt="UnternehmerTUM Logo"></img>
                     </a>
                 </div>
             </section>
-            <section>
-                <div className="mail-continer-gird">
-                    <Mail></Mail>
-                    <img id="arrow-mail" src={ArrowMail} alt="Geschwungender Pfeil der auf die E-Mail zeigt"/>
-                    <Mail></Mail>
+            <section id="how">
+                <h3 className="section-heading gradient-text">Wie funktioniert MailFlow?</h3>
+                <div className="mail-container-grid Nx8">
+                    <Mail
+                        id={"mail-customer"}
+                        picture={MailUserPicture}
+                        from={"kevin@flow-suite.de"}
+                        to={"kontakt@campingplatz.de"}
+                        subject={"Buchungsanfrage August 2025"}
+                        text={[
+                            "Guten Tag,",
+                            <br key="1"></br>,
+                            <br key="2"></br>,
+                            "Ich möchte gerne mit meiner Familie eine Woche im August bei Ihnen, mit unserem Wohnmobil, " +
+                            "verbringen. Wir sind zu viert (zwei Kinder) und haben unseren Hund Morty dabei. Außerdem " +
+                            "benötigen wir einen Stromanschluss für unser Wohnmobil. Können Sie mir bitte ein " +
+                            "entsprechendes Angebot machen?",
+                            <br key="3"></br>,
+                            <br key="4"></br>,
+                            "Liebe Grüße,",
+                            <br key="5"></br>,
+                            "Kevin Fischer"
+                        ]}
+                    ></Mail>
+                    <div className="container">
+                        <h4>
+                            MailFlow beantwortet E-Mails automatisch, prüft die Verfügbarkeit und Preise in Ihrem
+                            Channel Manager (z.B. CampNerd) oder Buchungssystem und nutzt zusätzlichen Kontext (z.B.
+                            Website), um eine passende Antwort zu
+                            erstellen.
+                        </h4>
+                        <img id="arrow-mail" src={ArrowMail} alt="Geschwungender Pfeil der auf die E-Mail zeigt"/>
+                    </div>
+                    <Mail
+                        id={"mail-campground"}
+                        picture={CampgroundPicture}
+                        from={"kontakt@campingplatz.de"}
+                        to={"kevin@flow-suite.de"}
+                        subject={"Re: Buchungsanfrage August 2025"}
+                        text={[
+                            "Guten Tag Herr Fischer,",
+                            <br key="1"></br>,
+                            <br key="2"></br>,
+                            "Vielen Dank für Ihre Anfrage. Wir freuen uns, dass Sie Ihren Urlaub bei uns verbringen möchten. " +
+                            "Für den gewünschten Zeitraum im August haben wir noch einige Plätze verfügbar. Wir können Ihnen einen Stellplatz " +
+                            "mit Stromanschluss anbieten. Der Preis beträgt 45€ pro Nacht für vier Personen inklusive Strom. " +
+                            "Hunde sind bei uns willkommen, hierfür fällt eine kleine Gebühr von 5€ pro Nacht an.",
+                            <br key="3"></br>,
+                            <br key="4"></br>,
+                            "Bitte lassen Sie uns wissen, ob Sie das Angebot annehmen möchten, damit wir den Platz für Sie reservieren können.",
+                            <br key="5"></br>,
+                            <br key="6"></br>,
+                            "Mit freundlichen Grüßen,",
+                            <br key="7"></br>,
+                            "Flamur Maliqi - Ihr Campingplatz-Team"
+                        ]}
+                    ></Mail>
+                </div>
+                <div className="card-container-grid Nx1">
+                    <Card
+                        heading={"Integration mit Ihrem Posteingang"}
+                        body={"MailFlow integriert sich nahtlos und in wenigen Minuten in nahezu jedes E-Mail-Postfach – " +
+                            "ganz ohne Lernkurve oder technische Vorkenntnisse. Wir führen Sie durch die wenigen, " +
+                            "einfachen Schritte, die erforderlich sind."}
+                    ></Card>
+                    <Card
+                        heading={"Automatische Kategorisierung von Anfragen"}
+                        body={"MailFlow sortiert E-Mails automatisch in Kategorien wie Buchungsanfragen, " +
+                            "Gruppenbuchungen, allgemeine Anfragen, Spam oder E-Mails, die eine manuelle Bearbeitung " +
+                            "erfordern. Dadurch schafft MailFlow Struktur und erleichtert die Arbeit Ihrer Mitarbeiter erheblich."}
+                    ></Card>
+                    <Card
+                        heading={"Intelligente Antwortgenerierung durch KI"}
+                        body={"MailFlow nutzt Informationen von Ihrer Website und zusätzlichen Quellen und prüft " +
+                            "Verfügbarkeiten direkt in Ihrem Buchungssystem oder Channel Manager (z.B. CampNerd). " +
+                            "Es erstellt bis zu 10 personalisierte Antworten pro Minute, wodurch die Antwortzeiten " +
+                            "verkürzt und die Zufriedenheit Ihrer Gäste gesteigert wird."}
+                    ></Card>
+                    <Card
+                        heading={"Automatisch senden oder manuell prüfen"}
+                        body={"MailFlow kann Antworten entweder automatisch versenden oder Entwürfe zur Überprüfung " +
+                            "durch Ihre Mitarbeiter erstellen. So bleibt die Kontrolle über die Kommunikation " +
+                            "gewährleistet, während ein Großteil der Anfragen effizient automatisiert wird."}
+                    ></Card>
                 </div>
             </section>
-            <section id="why-mailflow">
-                <h3>Warum MailFlow?</h3>
+            <section id="why">
+                <h3 className="section-heading gradient-text">Stellen Sie sich vor ...</h3>
                 <h4>
-                    MailFlow bearbeitet E-Mail-Anfragen sofort und spart dadurch stundenlange manuelle Arbeit.
-                    Es ist rund um die Uhr im Einsatz, sodass Ihre Mitarbeiter sich auf wichtigere Aufgaben
-                    konzentrieren können.
-                    Besonders in der Hauptsaison reduziert MailFlow den Bedarf an temporären Arbeitskräften und
-                    entlastet Ihr Team.
+                    ... Sie hätten einen Mitarbeiter, der rund um die Uhr arbeitet, alle Gästeanfragen bearbeitet,
+                    Buchungen in Echtzeit prüft und nie einen Tag frei nimmt - wie viel wäre
+                    Ihnen das wert?
                 </h4>
                 <div className="card-container-grid Nx3">
                     <Card
@@ -105,30 +190,11 @@ export default function Home() {
                     ></Card>
                 </div>
             </section>
-            <section id="how-mailflow-works">
-                <h3>Wie funktioniert MailFlow?</h3>
-                <div className="card-container-grid Nx1">
-                    <Card
-                        body={"Test"}
-                        heading={"Test"}
-                    ></Card>
-                    <Card
-                        body={"Test"}
-                        heading={"Test"}
-                    ></Card>
-                    <Card
-                        body={"Test"}
-                        heading={"Test"}
-                    ></Card>
-                    <Card
-                        body={"Test"}
-                        heading={"Test"}
-                    ></Card>
-                </div>
-            </section>
+            {/*
             <section id="pricing">
                 <PricingCalculator></PricingCalculator>
             </section>
+            */}
             <section id="FAQ">
                 <FAQ></FAQ>
             </section>

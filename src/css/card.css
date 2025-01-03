@@ -1,0 +1,21 @@
+.card {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-img {
+    height: 15vh;
+    max-height: 150px;
+}
+
+.card-heading {
+    font-size: 1.25rem;
+}
+
+.card-body {
+    font-size: 1.1rem;
+}

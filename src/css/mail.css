@@ -1,0 +1,33 @@
+.mail-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background: var(--very-light-gradient);
+    box-shadow: var(--box-shadow);
+    height: min-content;
+}
+
+.mail-container p {
+    margin: 0;
+}
+
+.mail-container > .container {
+    align-items: center;
+}
+
+.mail-from {
+    font-size: 1.25rem;
+}
+
+.mail-user-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--border-radius);
+    background-color: var(--light-gray);
+    border: 3px solid var(--black);
+}
+
+.mail-container > hr {
+    margin: 1rem 0;
+}

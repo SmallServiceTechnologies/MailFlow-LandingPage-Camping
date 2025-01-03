@@ -26,3 +26,9 @@
     box-shadow: var(--box-shadow);
     cursor: pointer;
 }
+
+@media (max-width: 430px) {
+    #video-text-overlay {
+        padding: 20% 5%;
+    }
+}

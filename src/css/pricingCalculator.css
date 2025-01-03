@@ -1,0 +1,24 @@
+.pricing-calculator-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10%;
+    padding: 2rem;
+    background-color: var(--white);
+}
+
+.pricing-calculator-container .section-heading {
+    padding: 0;
+}
+
+.pricing-calculator-container > p {
+    font-size: 1.1rem;
+}
+
+.pricing-calculator-container > h4 {
+    font-size: 1.5rem;
+}
+
+.pricing-result {
+    display: flex;
+    gap: 2rem;
+}

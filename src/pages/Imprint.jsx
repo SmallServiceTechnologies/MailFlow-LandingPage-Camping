@@ -10,25 +10,21 @@ export default function Imprint() {
             <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
-            <section className="imprint">
-                <div className="container">
-                    <strong>Impressum</strong>
-                    <ul>
-                        <li>Small Service Technologies GbR</li>
-                        <li>Streitfeldstraße 16</li>
-                        <li>81673 München</li>
-                        <li>info@flow-suite.de</li>
-                    </ul>
-                </div>
-                <div className="container">
-                    <strong>Vertretungsberechtigte</strong>
-                    <ul>
-                        <li>Jure Kleindienst</li>
-                        <li>Kevin Fischer</li>
-                        <li>Moritz Schultz</li>
-                        <li>Flamur Maliqi</li>
-                    </ul>
-                </div>
+            <section id="imprint">
+                <h1>Impressum</h1>
+                <ul>
+                    <li>Small Service Technologies GbR</li>
+                    <li>Streitfeldstraße 16</li>
+                    <li>81673 München</li>
+                    <li>info@flow-suite.de</li>
+                </ul>
+                <h2>Vertretungsberechtigte</h2>
+                <ul>
+                    <li>Jure Kleindienst</li>
+                    <li>Kevin Fischer</li>
+                    <li>Moritz Schultz</li>
+                    <li>Flamur Maliqi</li>
+                </ul>
             </section>
             <section className="no-margin-bottom">
                 <Footer></Footer>
