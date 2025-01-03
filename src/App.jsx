@@ -5,7 +5,7 @@ import Home from "./pages/Home.jsx";
 import Imprint from "./pages/Imprint.jsx";
 import {AppContextProvider} from "./AppContext.jsx";
 
-function App() {
+export default function App() {
     return (
         <AppContextProvider>
             <Router>
@@ -18,5 +18,3 @@ function App() {
         </AppContextProvider>
     );
 }
-
-export default App;

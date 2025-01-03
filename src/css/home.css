@@ -213,6 +213,10 @@
         gap: 2rem;
     }
 
+    .mail-container-grid > .container > h4 {
+       text-align: center;
+    }
+
     #arrow-mail {
         width: auto;
         height: 10vh;
@@ -232,9 +236,19 @@
         margin: 10vh 0;
     }
 
+    #why .section-heading {
+        text-align: left;
+        margin: 5vw;
+    }
+
     #why > .card-container-grid {
         grid-template-columns: 1fr;
-        margin: 5vh 10vw;
+        margin: 5vh 5vw;
+    }
+
+    #why > h4 {
+        text-align: left;
+        margin: 0 5vw;
     }
 }
 

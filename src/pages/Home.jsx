@@ -11,7 +11,6 @@ import Footer from "../components/Footer.jsx";
 import CampNerdLogo from "../assets/CampNerd-Logo.svg";
 import BVCDLogo from "../assets/BVCD-Logo.svg";
 import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
-import PricingCalculator from "../components/PricingCalculator.jsx";
 import Mail from "../components/Mail.jsx";
 import ArrowMail from "../assets/arrow-mail.svg"
 import "../css/home.css"
