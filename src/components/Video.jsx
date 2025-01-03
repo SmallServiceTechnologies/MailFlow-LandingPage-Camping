@@ -17,7 +17,7 @@ export default function Video() {
     return (
         <div className="video-container" onClick={handleAcceptCookies}>
             <span id="video-text-overlay">
-                Mit dem Start des Videos stimmen Sie der Verwendung von (analytischen) Cookies zu. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</span>
+                Mit dem Start des Videos stimmen Sie der Verwendung von (analytischen) Cookies zu. Lehnen Sie die Cookies explizit ab, um das Video ohne diese abzuspielen.</span>
             <iframe
                 src={iframeSrc}
                 id="youtube-video"
