@@ -1,4 +1,6 @@
 #nav {
+    max-width: none;
+    padding: 0;
     position: sticky;
     top: 0;
     left: 0;
@@ -17,6 +19,7 @@
 }
 
 .nav-container {
+    max-width: 2048px;
     width: 100%;
     position: relative;
     left: 0;
@@ -24,7 +27,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 5%;
+    margin: auto;
 }
 
 .logo {
