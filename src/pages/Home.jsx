@@ -169,9 +169,9 @@ export default function Home() {
                     ></Card>
                     <Card
                         heading={"Datenänderung in Ihren Systemen"}
-                        body={"MailFlow kann nicht nur Informationen aus Ihren Systemen nutzen, um Antworten zu erstellen. " +
-                            "Durch individuelle Lösungen für Ihren Geschäftsprozess kann MailFlow Daten aus Anfragen, wie " +
-                            "beispielsweise eine Adressänderung, direkt in Ihr System übertragen."}
+                        body={"MailFlow nutzt nicht nur die Informationen aus Ihren Systemen, um passende Antworten zu " +
+                            "erstellen. Dank maßgeschneiderter Lösungen für Ihre Geschäftsprozesse kann MailFlow zudem " +
+                            "Daten aus Anfragen, wie beispielsweise Adressänderungen, direkt in Ihr System übertragen."}
                     ></Card>
                 </div>
             </section>
