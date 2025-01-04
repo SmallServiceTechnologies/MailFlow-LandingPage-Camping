@@ -6,7 +6,7 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
     const [cookieConsent, setCookieConsent] = useState(localStorage.getItem("cookieConsent") === "accepted");
 
-    const GA4_MEASUREMENT_ID="G-TRCNJNF9MT";
+    const GA4_MEASUREMENT_ID= "G-TRCNJNF9MT";
 
     function acceptCookies() {
         localStorage.setItem("cookieConsent", "accepted");
@@ -27,10 +27,10 @@ export const AppContextProvider = ({ children }) => {
     // Function to update consent settings (e.g., based on user interaction)
     function updateConsent(adUserData, adPersonalization, adStorage, analyticsConsent) {
         gtag('consent', 'update', {
-            ad_user_data: adUserData ? 'granted' : 'denied',
-            ad_personalization: adPersonalization ? 'granted' : 'denied',
-            ad_storage: adStorage ? 'granted' : 'denied',
-            analytics_storage: analyticsConsent ? 'granted' : 'denied'
+            'ad_user_data': adUserData ? 'granted' : 'denied',
+            'ad_personalization': adPersonalization ? 'granted' : 'denied',
+            'ad_storage': adStorage ? 'granted' : 'denied',
+            'analytics_storage': analyticsConsent ? 'granted' : 'denied'
         });
     }
 
@@ -44,19 +44,17 @@ export const AppContextProvider = ({ children }) => {
         if (overlay) overlay.classList.add("hidden");
     }
 
+    function gtag() {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push(arguments);
+    }
+
     (function () {
         // Dynamically load the Google Analytics script
         var script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_MEASUREMENT_ID;
         document.head.appendChild(script);
-
-        // Initialize the dataLayer
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        window.gtag = gtag;
 
         // Configure Consent Mode
         gtag('consent', 'default', {
