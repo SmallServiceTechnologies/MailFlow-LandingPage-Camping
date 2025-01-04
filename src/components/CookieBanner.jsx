@@ -5,18 +5,17 @@ import {AppContext} from "../AppContext.jsx";
 
 
 export default function CookieBanner() {
-    const { acceptCookies, declineCookies }  = useContext(AppContext)
+    const { cookieConsent, acceptCookies, declineCookies }  = useContext(AppContext)
 
     useEffect(() => {
         const banner = document.getElementById('cookie-banner');
-        const cookieConsent = localStorage.getItem('cookieConsent');
 
         if (!banner) return;
 
         if (!cookieConsent) {
             banner.classList.remove("hidden");
-        } else if (cookieConsent === 'accepted') {
-            acceptCookies()
+        } else if (cookieConsent) {
+            acceptCookies();
         }
     }, []); // Run only once
 
@@ -29,8 +28,8 @@ export default function CookieBanner() {
                 Cookie-Einstellungen jederzeit anpassen.
             </p>
             <div className="container">
-                <button className="cookie-btn" id="accept-cookies" onClick={acceptCookies}>Annehmen 🍪</button>
-                <button className="cookie-btn" id="decline-cookies" onClick={declineCookies}>Ablehnen</button>
+                <button className="cookie-btn" id="accept-cookies" onClick={acceptCookies}>🍪 Annehmen</button>
+                <button className="cookie-btn" id="decline-cookies" onClick={declineCookies}>🍪 Ablehnen</button>
             </div>
         </div>
     )
