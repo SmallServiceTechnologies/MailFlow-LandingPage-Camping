@@ -1,9 +1,9 @@
 #above-the-fold  {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.75fr 1fr;
     column-gap: 5%;
     row-gap: 1rem;
-    margin-top: -5vh;
+    margin-top: -2rem;
 }
 
 #above-the-fold > .container {
@@ -21,6 +21,7 @@
 
 #arrow-video {
     width: 10vw;
+    max-height: 3rem;
     margin: 0 auto 2rem 30%;
     transform: rotate(20deg);
 }
@@ -79,11 +80,13 @@
 
 #arrow-mail-1 {
     width: 7vw;
+    max-width: 10rem;
 }
 
 #arrow-mail-2 {
     width: 4vw;
     transform: rotate(180deg);
+    max-width: 5rem;
 }
 
 #mail-customer {
@@ -163,7 +166,7 @@
         width: 15vw;
         grid-column: 2;
         grid-row: 3;
-        margin: -5vh auto auto 10vw;
+        margin: -5vh auto 1rem 10vw;
     }
 
     #above-the-fold > .container {
@@ -198,7 +201,7 @@
 
     #arrow-video {
         grid-column: span 2;
-        margin: auto;
+        margin: 1rem auto;
     }
 
     #partners > .container {
