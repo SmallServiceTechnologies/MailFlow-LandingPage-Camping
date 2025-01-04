@@ -12,6 +12,8 @@ export const AppContextProvider = ({ children }) => {
         localStorage.setItem("cookieConsent", "accepted");
         hideBanner();
         hideVideoTextOverlay();
+        gtag('js', new Date());
+        gtag('config', GA4_MEASUREMENT_ID);
         updateConsent(false, false, false, true);
         setCookieConsent(true);
     }
@@ -67,10 +69,6 @@ export const AppContextProvider = ({ children }) => {
 
         gtag('set', 'url_passthrough', true);
         gtag('set', 'ads_data_redaction', true);
-
-        // Initialize Google Analytics
-        gtag('js', new Date());
-        gtag('config', GA4_MEASUREMENT_ID);
     })();
 
     return (
