@@ -17,6 +17,10 @@ export default function Imprint() {
                     <li>Streitfeldstraße 16</li>
                     <li>81673 München</li>
                     <li>info@flow-suite.de</li>
+                    <li>IBAN: DE97700703620074933300</li>
+                    <li>BIC: DEUTDEMMXXX</li>
+                    <li>USt-IdNr: DE450182419</li>
+                    <li>Steuernummer: 143/518/70223</li>
                 </ul>
                 <h2>Vertretungsberechtigte</h2>
                 <ul>
