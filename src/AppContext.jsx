@@ -6,7 +6,7 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
     const [cookieConsent, setCookieConsent] = useState(localStorage.getItem("cookieConsent") === "accepted");
 
-    const GA4_MEASUREMENT_ID="G-TRCNJNF9MT";
+    const GA4_MEASUREMENT_ID="G-1MFY55M7FQ";
 
     function acceptCookies() {
         localStorage.setItem("cookieConsent", "accepted");
