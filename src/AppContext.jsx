@@ -12,7 +12,7 @@ export const AppContextProvider = ({ children }) => {
         localStorage.setItem("cookieConsent", "accepted");
         hideBanner();
         hideVideoTextOverlay();
-        updateConsent(false, true);
+        updateConsent(false, false, false, true);
         setCookieConsent(true);
     }
 
@@ -20,14 +20,16 @@ export const AppContextProvider = ({ children }) => {
         localStorage.setItem("cookieConsent", "declined");
         hideBanner();
         hideVideoTextOverlay();
-        updateConsent(false, false);
+        updateConsent(false, false, false, false);
         setCookieConsent(false);
     }
 
     // Function to update consent settings (e.g., based on user interaction)
-    function updateConsent(adConsent, analyticsConsent) {
+    function updateConsent(adUserData, adPersonalization, adStorage, analyticsConsent) {
         gtag('consent', 'update', {
-            ad_storage: adConsent ? 'granted' : 'denied',
+            ad_user_data: adUserData ? 'granted' : 'denied',
+            ad_personalization: adPersonalization ? 'granted' : 'denied',
+            ad_storage: adStorage ? 'granted' : 'denied',
             analytics_storage: analyticsConsent ? 'granted' : 'denied'
         });
     }
@@ -58,9 +60,15 @@ export const AppContextProvider = ({ children }) => {
 
         // Configure Consent Mode
         gtag('consent', 'default', {
-            ad_storage: 'denied', // Deny ad storage by default
-            analytics_storage: 'denied' // Deny analytics storage by default
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'wait_for_update': 500
         });
+
+        gtag('set', 'url_passthrough', true);
+        gtag('set', 'ads_data_redaction', true);
 
         // Initialize Google Analytics
         gtag('js', new Date());
