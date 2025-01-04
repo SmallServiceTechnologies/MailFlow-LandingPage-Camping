@@ -20,6 +20,7 @@ export const AppContextProvider = ({ children }) => {
         localStorage.setItem("cookieConsent", "declined");
         hideBanner();
         hideVideoTextOverlay();
+        updateConsent(false, false);
         setCookieConsent(false);
     }
 

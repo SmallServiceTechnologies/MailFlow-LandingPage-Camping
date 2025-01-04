@@ -28,8 +28,8 @@ export default function CookieBanner() {
                 Cookie-Einstellungen jederzeit anpassen.
             </p>
             <div className="container">
-                <button className="cookie-btn" id="accept-cookies" onClick={acceptCookies}>Annehmen 🍪</button>
-                <button className="cookie-btn" id="decline-cookies" onClick={declineCookies}>Ablehnen</button>
+                <button className="cookie-btn" id="accept-cookies" onClick={acceptCookies}>🍪 Annehmen</button>
+                <button className="cookie-btn" id="decline-cookies" onClick={declineCookies}>🍪 Ablehnen</button>
             </div>
         </div>
     )

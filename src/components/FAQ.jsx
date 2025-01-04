@@ -20,7 +20,7 @@ export default function FAQ() {
                 </Accordion>
                 <Accordion
                     title="Was passiert, wenn die KI nicht die richtige Antwort findet?"
-                    content="Anfragen, die eine manuelle Bearbeitung erfordern, werden entsprechend klassifiziert und in einen passenden Ordner verschoben, um es Ihrem Personal leicher zu machen diese zu bearbeiten.">
+                    content="Anfragen, die eine manuelle Bearbeitung erfordern, werden entsprechend klassifiziert und in einen passenden Ordner verschoben, um es Ihrem Personal leichter zu machen diese zu bearbeiten.">
                 </Accordion>
                 <Accordion
                     title="Ist MailFlow sicher?"
