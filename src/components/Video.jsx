@@ -11,8 +11,8 @@ export default function Video() {
 
     // Dynamically set the iframe src based on cookie consent
     const iframeSrc = cookieConsent
-        ? "https://www.youtube.com/embed/IiB02GFi1FU?enablejsapi=1"
-        : "https://www.youtube-nocookie.com/embed/IiB02GFi1FU?enablejsapi=1";
+        ? "https://www.youtube.com/embed/TyCqL-9zf_Q?enablejsapi=1"
+        : "https://www.youtube-nocookie.com/embed/TyCqL-9zf_Q?enablejsapi=1";
 
     return (
         <div className="video-container" onClick={handleAcceptCookies}>
