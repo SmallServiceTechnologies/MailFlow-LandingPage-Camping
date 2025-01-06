@@ -130,7 +130,7 @@ export default function Home() {
                             "Hier ist die Sendungsverfolgungsnummer: DE123456789000.",
                             <br key="3"></br>,
                             <br key="4"></br>,
-                            "Mit dieser Nummer können Sie den aktuellen Status Ihrer Sendung auf unserer Webseite oder beim Versanddienstleister überprüfen.",
+                            "Mit dieser Nummer können Sie den aktuellen Status Ihrer Sendung auf unserer Website oder beim Versanddienstleister überprüfen.",
                             <br key="5"></br>,
                             <br key="6"></br>,
                             "Falls Sie weitere Fragen haben, stehen wir Ihnen gerne zur Verfügung.",
@@ -151,7 +151,7 @@ export default function Home() {
                     ></Card>
                     <Card
                         heading={"Automatische Kategorisierung von Anfragen"}
-                        body={"MailFlow sortiert E-Mails automatisch in von Ihnen definiere Kategorien wie zum Beispiel Retoure, " +
+                        body={"MailFlow sortiert E-Mails automatisch in von Ihnen definierte Kategorien wie zum Beispiel Retoure, " +
                             "Kundendaten, allgemeine Anfragen, Spam/Unwichtig oder E-Mails, die eine manuelle Bearbeitung " +
                             "erfordern. Dadurch schafft MailFlow Struktur und erleichtert die Arbeit Ihrer Mitarbeiter erheblich."}
                     ></Card>
