@@ -15,7 +15,7 @@ export default function FAQ() {
                     content="MailFlow kann in der Regel innerhalb weniger Stunden eingerichtet und getestet werden. Wir kümmern uns um alle technischen Notwendigkeiten und leiten Sie durch die notwendigen Schritte. Buchen Sie sich ein Gespräch, damit wir Ihnen genau sagen können, wie schnell die Testversion bei Ihnen eingesetzt werden kann.">
                 </Accordion>
                 <Accordion
-                    title="Lässt sich MailFlow mit jeder E-Mail bzw. jedem E-Mail-Programm integrierten?"
+                    title="Lässt sich MailFlow mit jeder E-Mail bzw. jedem E-Mail-Programm integrieren?"
                     content="MailFlow integriert sich nahtlos in gängige Provider und Programme wie Gmail, Outlook, Thunderbird und viele mehr.">
                 </Accordion>
                 <Accordion
@@ -24,7 +24,7 @@ export default function FAQ() {
                 </Accordion>
                 <Accordion
                     title="Ist MailFlow sicher?"
-                    content="Ja! Wir legen hochen Wert darauf so DSGVO-konform wie möglich zu agieren. Ihre E-Mail Daten und die Ihrer Kunden werden ausschließlich bei Ihnen im Postfach und bei keinem Dritten gespeichert.">
+                    content="Ja! Wir legen hohen Wert darauf so DSGVO-konform wie möglich zu agieren. Ihre E-Mail Daten und die Ihrer Kunden werden ausschließlich bei Ihnen im Postfach und bei keinem Dritten gespeichert.">
                 </Accordion>
                 <Accordion
                     title="Unterstützt MailFlow mehrere Sprachen?"
