@@ -13,6 +13,7 @@ export default function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/impressum" element={<Imprint />} />
                     <Route path="/datenschutzerklärung" element={<PrivacyPolicy />} />
+
                 </Routes>
             </Router>
         </AppContextProvider>
