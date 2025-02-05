@@ -1,0 +1,19 @@
+.test-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.test-btn {
+    padding: 1.5rem;
+    border-image: var(--gradient);
+    border-image-slice: 1;
+}
+.test-btn:hover {
+    background: var(--gradient);
+}
+.test-btn:hover .gradient-text {
+    background: none;
+    color: var(--white);
+    -webkit-text-fill-color: var(--white);
+    -webkit-background-clip: initial;
+}

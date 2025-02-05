@@ -1,0 +1,23 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left:0;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+.modal-content {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background-color: var(--white);
+    border-radius: 20px;
+}
+.exit-button {
+    place-self: end;
+}

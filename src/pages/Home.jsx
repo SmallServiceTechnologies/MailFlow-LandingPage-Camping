@@ -19,6 +19,7 @@ import ArrowVideo from "../assets/arrow-video.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
 import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
+import TestBtn from "../components/TestBtn.jsx";
 
 export default function Home() {
     const handleLinkClick = (event) => {
@@ -189,6 +190,9 @@ export default function Home() {
                         body={"Reduziert Personalkosten, minimiert Fluktuation und erleichtert dadurch die Personalplanung."}
                     ></Card>
                 </div>
+            </section>
+            <section id="testing">
+                <TestBtn></TestBtn>
             </section>
             {/*
             <section id="pricing">
