@@ -6,6 +6,8 @@ export default function ModalEmail({ onClose }) {
   const modalRef = useRef();
   const [selectedId, setSelectedId] = useState(null);
   const [emailData, setEmailData] = useState({ subject: "", body: "" });
+  const [agbsAccepted, setAgbsAccepted] = useState(false); 
+  const [error, setError] = useState(""); 
 
   const emailOptions = [
     {
@@ -32,12 +34,22 @@ export default function ModalEmail({ onClose }) {
   };
 
   const openEmailClient = () => {
-    if (!emailData.subject || !emailData.body) return;
+    setError(""); // Fehler zuerst zurücksetzen
+
+    if (!emailData.subject || !emailData.body) {
+        setError("Bitte wähle eine E-Mail-Option aus.");
+        return;
+    }
+    if (!agbsAccepted) {
+        setError("Bitte akzeptiere die AGBs, um fortzufahren.");
+        return; 
+    }
     const email = "demo@flow-suite.de";
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(
       emailData.subject
     )}&body=${encodeURIComponent(emailData.body)}`;
-  };
+};
+
 
   const handleSelection = (id, title, content) => {
     setSelectedId(id);
@@ -66,7 +78,19 @@ export default function ModalEmail({ onClose }) {
             </div>
           ))}
         </div>
-        <button onClick={openEmailClient} disabled={!emailData.subject}>
+        <div className="agbs-checkbox">
+          <input
+            type="checkbox"
+            id="acceptAgbs"
+            checked={agbsAccepted}
+            onChange={() => setAgbsAccepted(!agbsAccepted)}
+          />
+          <label htmlFor="acceptAgbs" c>
+            Ich akzeptiere die <a href="/agbs" className="agb-font">AGBs</a>.
+          </label>
+        </div>
+        {error && <div className="error-message">{error}</div>} 
+        <button onClick={openEmailClient}>
           Get test email (Btw Moritz is gay)
         </button>
       </div>
