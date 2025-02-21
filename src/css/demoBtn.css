@@ -1,17 +1,17 @@
-.test-container {
+.demo-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.test-btn {
+.demo-btn {
     padding: 1.5rem;
     border-image: var(--gradient);
     border-image-slice: 1;
 }
-.test-btn:hover {
+.demo-btn:hover {
     background: var(--gradient);
 }
-.test-btn:hover .gradient-text {
+.demo-btn:hover .gradient-text {
     background: none;
     color: var(--white);
     -webkit-text-fill-color: var(--white);

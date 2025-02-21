@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import "../css/testBtn.css"
+import "../css/demoBtn.css"
 import ModalEmail from './ModalEmail'  
-export default function TestBtn() {
+export default function DemoBtn() {
     const [showModal, setShowModal] = useState(false)
     return (
         <div>
-            <div className='test-container'>
-                <button className="test-btn" onClick={() => setShowModal(true)}>
+            <div className='demo-container'>
+                <button className="demo-btn" onClick={() => setShowModal(true)}>
                     <span className="gradient-text"> Probier MailFlow aus!</span>
                 </button>
                 {showModal && <ModalEmail onClose={() => setShowModal((false))}/>}
