@@ -20,6 +20,7 @@ import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
 import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
 import DemoBtn from '../components/DemoBtn.jsx';
+import DemoEmailSelector from "../components/DemoEmailSelector.jsx";
 
 export default function Home() {
     const handleLinkClick = (event) => {
@@ -192,7 +193,27 @@ export default function Home() {
                 </div>
             </section>
             <section id="demo">
-                <DemoBtn></DemoBtn>
+                <div>
+                    <h3 className="section-heading gradient-text">Testen Sie MailFlow</h3>
+                    <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und
+                        erhalten
+                        Sie innerhalb weniger Minuten eine Antwort.</h4>
+                    <p><strong>Alle Anfragen werden so beantwortet, als wären sie an den Campingplatz
+                        <a href="https://www.ostseecamp-ferienpark.de/campingplatz-an-der-ostsee.html">Ostseecamp
+                            Rostocker
+                            Heide</a> gerichtet.</strong><br/>
+                        Schreiben Sie Ihre Nachricht also so, als wären Sie ein Kunde des Campingplatzes.</p>
+                    <ol>
+                        <li>Wählen Sie eine Vorlage aus.</li>
+                        <li>Öffnen Sie die Vorlage in Ihrem E-Mail-Programm.</li>
+                        <li>Optional: Passen Sie die Anfrage nach Ihren Vorstellungen an.</li>
+                        <li>Schicken Sie die E-Mail ab und warten Sie auf die Antwort.</li>
+                    </ol>
+                    <p><strong>Alternativ können Sie auch direkt eine eigene Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> schicken.</strong></p>
+                </div>
+                <div>
+                <DemoEmailSelector></DemoEmailSelector>
+                </div>
             </section>
             {/*
             <section id="pricing">

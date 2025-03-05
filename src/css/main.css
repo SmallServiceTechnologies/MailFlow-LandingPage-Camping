@@ -106,6 +106,16 @@ button:hover, .btn:hover {
     border-color: var(--black);
 }
 
+button:disabled, .btn:disabled  {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+button:disabled:hover, .btn:disabled:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
 .cta-btn {
     border-image: var(--gradient);
     border-image-slice: 1;
