@@ -100,6 +100,10 @@ button, input, select, .btn {
     z-index: 10;
 }
 
+select {
+    text-align-last: center;
+}
+
 input:focus {
     border-image: var(--gradient);
     border-image-slice: 1;
