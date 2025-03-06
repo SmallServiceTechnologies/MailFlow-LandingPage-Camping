@@ -28,6 +28,10 @@
     font-size: 1.5rem;
 }
 
+.popup-content .cta-btn {
+    width: 50%;
+}
+
 .close-btn {
     position: absolute;
     right: 2rem;
@@ -47,6 +51,10 @@
         left: 2rem;
         width: auto;
     }
+
+    .popup-content .cta-btn {
+        width: 100%;
+    }
 }
 
 @media (max-width: 430px) {
@@ -55,5 +63,14 @@
         right: 1rem;
         bottom: 1rem;
         left: 1rem;
+    }
+
+    .close-btn {
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .popup-content > .gradient-text {
+        width: 90%;
     }
 }

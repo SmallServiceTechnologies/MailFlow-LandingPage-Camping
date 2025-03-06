@@ -13,9 +13,9 @@ import CampNerdLogo from "../assets/CampNerd-Logo.svg";
 import BVCDLogo from "../assets/BVCD-Logo.svg";
 import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
 import Mail from "../components/Mail.jsx";
-import ArrowMail1 from "../assets/arrow-mail-1.svg"
-import ArrowMail2 from "../assets/arrow-mail-2.svg"
-import ArrowVideo from "../assets/arrow-video.svg";
+import ArrowMail1 from "../assets/arrow-1.svg"
+import ArrowMail2 from "../assets/arrow-2.svg"
+import ArrowVideo from "../assets/arrow-3.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
 import CampgroundPicture from "../assets/campground-svgrepo-com.svg"

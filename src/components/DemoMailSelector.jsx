@@ -10,13 +10,13 @@ export default function DemoMailSelector({ openPopup }) {
         subject: "MailFlow live erleben",
         body: "Schritt 1: Geben Sie dem Absender einen Vor- und Nachnamen.\n\n" +
             "Schritt 2: Wählen Sie eine Vorlage aus.\n\n" +
-            "Schritt 3: Senden Sie die Anfrage ab (öffnet Ihr Standard-E-Mail-Programm).\n\n" +
+            "Schritt 3: Senden Sie die Anfrage ab (öffnet Ihr Standard-E-MaProgramm).\n\n" +
             "Schritt 4 (Optional): Passen Sie die Anfrage nach Ihrem Belieben an.\n\n" +
             "Alternativ können Sie auch eine völlig individuelle Anfrage an demo@flow-suite.de senden.",
         reference: ""
     });
     const [name, setName] = useState("Vorname Nachname");
-    let [step, setStep] = useState(1);
+    let [step, setStep] = useState(0);
     const [popupTimer, setPopupTimer] = useState(null);
     const recipient = "demo@flow-suite.de";
 
@@ -83,16 +83,35 @@ export default function DemoMailSelector({ openPopup }) {
 
     return (
         <div className="email-selector">
-            <div>
                 <h3 className="section-heading gradient-text">MailFlow live erleben – jetzt testen!</h3>
-                <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und erhalten Sie in unter einer Minute eine Antwort.</h4>
-                <p>Alle Anfragen werden so behandelt, als wären sie an den <strong>Campingplatz <a href="https://www.ostseecamp-ferienpark.de/campingplatz-an-der-ostsee.html" target="_blank" rel="noopener noreferrer">Ostseecamp Rostocker Heide</a></strong> gerichtet.<br/><br/>Formulieren Sie Ihre Nachricht bitte entsprechend, als wären Sie
-                    ein Kunde des Campingplatzes, oder verwenden Sie eine der folgenden Vorlagen und passen Sie diese
-                    nach Bedarf an.
-                </p>
+                { step === 0 &&
+                    <div>
+                        <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und
+                            erhalten Sie in unter einer Minute eine Antwort.</h4>
+                        <p>Alle Anfragen werden so behandelt, als wären sie an den <strong>Campingplatz <a
+                            href="https://www.ostseecamp-ferienpark.de/campingplatz-an-der-ostsee.html" target="_blank"
+                            rel="noopener noreferrer">Ostseecamp Rostocker Heide</a></strong> gerichtet.<br/><br/>Formulieren
+                            Sie Ihre Nachricht bitte entsprechend, als wären Sie
+                            ein Kunde des Campingplatzes, oder verwenden Sie eine der folgenden Vorlagen und passen Sie
+                            diese
+                            nach Bedarf an.
+                        </p>
+                    </div>
+                }
+
+                {selectedEmail.subject && step >= 1 && (
+                    <Mail icon={MailIcon} to={"demo@flow-suite.de"} from={name} subject={selectedEmail.subject}
+                          text={selectedEmail.body.replace(/\n/g, "<br/>")} html={true}></Mail>
+                )}
 
                 <div className="email-form">
-                    <Step title="1. Absender benennen" isActive={step === 1}>
+                    <Step isActive={step === 0} id="step-0">
+                        <button className="cta-btn" onClick={() => setStep(step + 1)} >
+                            <span className="gradient-text">MailFlow jetzt live ausprobieren</span>
+                        </button>
+                    </Step>
+
+                    <Step title="1. Absender benennen" isActive={step === 1}  showArrow={true}>
                         <input
                             type="text"
                             placeholder="Name des Absenders"
@@ -100,31 +119,28 @@ export default function DemoMailSelector({ openPopup }) {
                         />
                     </Step>
 
-                    <Step title="2. Vorlage wählen" isActive={step === 2}>
-                        <DemoEmailForm
+                    <Step title="2. Vorlage wählen" isActive={step === 2} showArrow={true}>
+                    <DemoEmailForm
                             emailOptions={emailOptions}
                             handleSelection={handleSelection}
                             selectedEmail={selectedEmail}
                         />
                     </Step>
 
-                    <Step title="3. Absenden & Antwort erhalten" isActive={step === 3}>
+                    <Step title="3. Absenden & Antwort erhalten" isActive={step === 3}  showArrow={true}>
                         <button onClick={openEmailClient} disabled={!selectedEmail.subject}>Anfrage absenden</button>
                     </Step>
 
-                    {selectedEmail.reference && <p id="hint">Die gewählte Vorlage bezieht sich auf die Inhalte von <a href={selectedEmail.reference} target="_blank" rel="noopener noreferrer">dieser Seite</a>. Vergleichen Sie die erhaltene Antwort mit den dort angegebenen Informationen.</p>}
+                    { step >= 1 &&
+                        <div className="form-controls">
+                            <button className="step-btn" onClick={() => setStep(step - 1)} disabled={step === 0 || step === 1}>← Zurück</button>
+                            <button className="step-btn" onClick={() => name && setStep(step + 1)} disabled={name === "Vorname Nachname" || !name || step === 3}><span className="gradient-text">Weiter →</span>
+                            </button>
+                        </div>
+                    }
 
-                    <div className="form-controls">
-                        <button className="step-btn" onClick={() => setStep(step - 1)} disabled={step === 1}>← Zurück</button>
-                        <button className="step-btn" onClick={() => name && setStep(step + 1)} disabled={name === "Vorname Nachname" || !name || step === 3}>Weiter →</button>
-                    </div>
+                    {selectedEmail.reference && <p id="hint">Diese Vorlage bezieht sich auf die Inhalte von <a href={selectedEmail.reference} target="_blank" rel="noopener noreferrer">dieser Seite</a>. Bitte vergleichen Sie die Antwort mit den dortigen Infos.</p>}
                 </div>
-            </div>
-
-            {selectedEmail.subject && (
-                <Mail icon={MailIcon} to={"demo@flow-suite.de"} from={name} subject={selectedEmail.subject}
-                      text={selectedEmail.body.replace(/\n/g, "<br/>")} html={true}></Mail>
-            )}
         </div>
     );
 }
