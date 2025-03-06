@@ -83,7 +83,7 @@ img {
     height: auto;
 }
 
-button, .btn {
+button, input, select, .btn {
     margin: 0;
     padding: 0.75rem 2rem;
     border: 3px solid var(--black);
@@ -99,19 +99,19 @@ button, .btn {
     z-index: 10;
 }
 
-button:hover, .btn:hover {
+button:hover, .btn:hover, select:hover {
     text-decoration: none;
     background: var(--black);
     color: var(--white);
     border-color: var(--black);
 }
 
-button:disabled, .btn:disabled  {
+button:disabled, .btn:disabled, input:disabled, select:disabled {
     opacity: 0.5;
     cursor: auto;
 }
 
-button:disabled:hover, .btn:disabled:hover {
+button:disabled:hover, .btn:disabled:hover, input:disabled:hover, select:disabled:hover {
     background-color: var(--white);
     color: var(--black);
 }
@@ -137,6 +137,11 @@ button:disabled:hover, .btn:disabled:hover {
     gap: 1rem;
 }
 
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
 .gradient-text {
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -157,17 +162,4 @@ button:disabled:hover, .btn:disabled:hover {
 
 .Nx8 {
     grid-template-columns: repeat(8, 1fr);
-}
-
-input {
-    border-radius: var(--border-radius);
-    border: 3px solid var(--black);
-    outline: none;
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: var(--white);
-    width: min-content;
-    min-width: 100px;
-    margin: 1rem 0;
 }

@@ -156,6 +156,10 @@
     margin-left: 5%;
 }
 
+#demo {
+    padding-top: 5vh;
+}
+
 @media (max-width: 1024px) {
     #above-the-fold {
         margin-top: 5vh;

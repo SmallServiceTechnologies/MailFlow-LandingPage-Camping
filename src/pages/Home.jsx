@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
@@ -19,8 +19,8 @@ import ArrowVideo from "../assets/arrow-video.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
 import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
-import DemoBtn from '../components/DemoBtn.jsx';
-import DemoEmailSelector from "../components/DemoEmailSelector.jsx";
+import DemoMailSelector from "../components/DemoMailSelector.jsx";
+import Popup from "../components/Popup.jsx";
 
 export default function Home() {
     const handleLinkClick = (event) => {
@@ -32,9 +32,25 @@ export default function Home() {
         }
     };
 
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const handleClosePopup = () => {
+        setIsPopupOpen(false);
+    };
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsPopupOpen(true);
+        }, 30000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
+
     return (
         <React.Fragment>
             <CookieBanner></CookieBanner>
+            <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
             <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
@@ -53,7 +69,7 @@ export default function Home() {
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
-                        <a href="#how" className="btn">Wie funktioniert MailFlow?</a>
+                        <a href="#demo" className="btn">MailFlow live erleben!</a>
                     </div>
                 </div>
                 <Video></Video>
@@ -89,7 +105,7 @@ export default function Home() {
                 <div className="mail-container-grid Nx8">
                     <Mail
                         id={"mail-customer"}
-                        picture={MailUserPicture}
+                        icon={MailUserPicture}
                         from={"kevin@flow-suite.de"}
                         to={"kontakt@campingplatz.de"}
                         subject={"Buchungsanfrage August 2025"}
@@ -119,7 +135,7 @@ export default function Home() {
                     </div>
                     <Mail
                         id={"mail-campground"}
-                        picture={CampgroundPicture}
+                        icon={CampgroundPicture}
                         from={"kontakt@campingplatz.de"}
                         to={"kevin@flow-suite.de"}
                         subject={"Re: Buchungsanfrage August 2025"}
@@ -193,27 +209,7 @@ export default function Home() {
                 </div>
             </section>
             <section id="demo">
-                <div>
-                    <h3 className="section-heading gradient-text">Testen Sie MailFlow</h3>
-                    <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und
-                        erhalten
-                        Sie innerhalb weniger Minuten eine Antwort.</h4>
-                    <p><strong>Alle Anfragen werden so beantwortet, als wären sie an den Campingplatz
-                        <a href="https://www.ostseecamp-ferienpark.de/campingplatz-an-der-ostsee.html">Ostseecamp
-                            Rostocker
-                            Heide</a> gerichtet.</strong><br/>
-                        Schreiben Sie Ihre Nachricht also so, als wären Sie ein Kunde des Campingplatzes.</p>
-                    <ol>
-                        <li>Wählen Sie eine Vorlage aus.</li>
-                        <li>Öffnen Sie die Vorlage in Ihrem E-Mail-Programm.</li>
-                        <li>Optional: Passen Sie die Anfrage nach Ihren Vorstellungen an.</li>
-                        <li>Schicken Sie die E-Mail ab und warten Sie auf die Antwort.</li>
-                    </ol>
-                    <p><strong>Alternativ können Sie auch direkt eine eigene Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> schicken.</strong></p>
-                </div>
-                <div>
-                <DemoEmailSelector></DemoEmailSelector>
-                </div>
+                <DemoMailSelector openPopup={() => setIsPopupOpen(true)}></DemoMailSelector>
             </section>
             {/*
             <section id="pricing">

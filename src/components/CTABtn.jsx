@@ -11,7 +11,7 @@ export default function CTABtn() {
 
     return (
         <button className="cta-btn" onClick={openCalendly}>
-            <span className="gradient-text">Kostenlos testen!</span>
+            <span className="gradient-text">Termin reservieren!</span>
         </button>
     )
 }

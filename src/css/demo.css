@@ -1,0 +1,106 @@
+.email-selector {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: 0.75fr 1fr;
+    gap: 3rem;
+}
+
+.email-selector .section-heading {
+    padding-top: 0;
+}
+
+.email-selector a {
+    text-decoration: underline;
+}
+
+.email-form {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--black);
+}
+
+.step {
+    display: none;
+}
+
+.step h5 {
+    font-size: 1.25rem;
+}
+
+.step button, .step input, .step select, .step btn {
+    width: 100%;
+}
+
+.step.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.step-btn {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+.step-btn:hover {
+    background-color: transparent;
+    color: var(--purple);
+}
+
+#hint {
+    margin: 2rem 0;
+}
+
+@media (max-width: 1024px) {
+    .email-selector {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .email-form {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        gap: 1rem;
+    }
+
+    .step {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #hint {
+        margin: 0;
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .form-controls {
+        margin: 0;
+        grid-column: 2;
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 430px) {
+    .email-selector {
+        padding: 1rem;
+    }
+
+    .email-form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
