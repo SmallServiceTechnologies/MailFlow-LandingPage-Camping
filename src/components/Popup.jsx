@@ -10,7 +10,7 @@ export default function Popup({ isOpen, onClose }) {
             <div className="popup-content">
                 <button className="close-btn" onClick={onClose}>❌</button>
 
-                <h3 className="gradient-text"><strong>Testen Sie MailFlow kostenlos!</strong></h3>
+                <h3 className="gradient-text"><strong>Kostenlos: MailFlow für Ihren Campingplatz!</strong></h3>
 
                 <p>
                     Probieren Sie MailFlow <strong>kostenlos</strong> aus und integrieren Sie es mühelos in Ihren Campingplatz-Alltag.
