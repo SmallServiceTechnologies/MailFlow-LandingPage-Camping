@@ -10,7 +10,7 @@ export default function DemoMailSelector({ openPopup }) {
         subject: "MailFlow live erleben",
         body: "Schritt 1: Geben Sie dem Absender einen Vor- und Nachnamen.\n\n" +
             "Schritt 2: Wählen Sie eine Vorlage aus.\n\n" +
-            "Schritt 3: Senden Sie die Anfrage ab (öffnet Ihr Standard-E-MaProgramm).\n\n" +
+            "Schritt 3: Senden Sie die Anfrage ab (öffnet Ihr Standard-E-Mail-Programm).\n\n" +
             "Schritt 4 (Optional): Passen Sie die Anfrage nach Ihrem Belieben an.\n\n" +
             "Alternativ können Sie auch eine völlig individuelle Anfrage an demo@flow-suite.de senden.",
         reference: ""
