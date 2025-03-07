@@ -18,6 +18,7 @@ export default function DemoMailSelector({ openPopup }) {
     const [name, setName] = useState("Vorname Nachname");
     let [step, setStep] = useState(0);
     const [popupTimer, setPopupTimer] = useState(null);
+    const [showHint, setShowHint] = useState(false);
     const recipient = "demo@flow-suite.de";
 
     const emailOptions = [
@@ -79,6 +80,8 @@ export default function DemoMailSelector({ openPopup }) {
         }, 30000);
 
         setPopupTimer(newTimer);
+
+        setShowHint(true)
     };
 
     return (
@@ -127,19 +130,34 @@ export default function DemoMailSelector({ openPopup }) {
                         />
                     </Step>
 
-                    <Step title="3. Absenden & Antwort erhalten" isActive={step === 3}  showArrow={true}>
-                        <button onClick={openEmailClient} disabled={!selectedEmail.subject}>Anfrage absenden</button>
+                    <Step title="3. Absenden & Antwort erhalten" isActive={step === 3} showArrow={true}>
+                        <button onClick={openEmailClient}>Anfrage absenden</button>
                     </Step>
 
-                    { step >= 1 &&
+                    {step >= 1 &&
                         <div className="form-controls">
-                            <button className="step-btn" onClick={() => setStep(step - 1)} disabled={step === 0 || step === 1}>← Zurück</button>
-                            <button className="step-btn" onClick={() => name && setStep(step + 1)} disabled={name === "Vorname Nachname" || !name || step === 3}><span className="gradient-text">Weiter →</span>
+                            <button className="step-btn" onClick={() => setStep(step - 1)}
+                                    disabled={step === 0 || step === 1}>← Zurück
+                            </button>
+                            <button className="step-btn" onClick={() => name && setStep(step + 1)}
+                                    disabled={(step === 1 && name === "Vorname Nachname") || !name ||
+                                        (step === 2 && selectedEmail.subject === "MailFlow live erleben") || !selectedEmail.subject ||
+                                        step === 3}>
+                                <span className="gradient-text">Weiter →</span>
                             </button>
                         </div>
                     }
 
-                    {selectedEmail.reference && <p id="hint">Diese Vorlage bezieht sich auf die Inhalte von <a href={selectedEmail.reference} target="_blank" rel="noopener noreferrer">dieser Seite</a>. Bitte vergleichen Sie die Antwort mit den dortigen Infos.</p>}
+                    { showHint && step === 3 &&
+                        <p className="hint text-align-left">Hat sich Ihr E-Mail-Programm nicht geöffnet? Versuchen Sie es direkt im Web über{" "}
+                            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(selectedEmail.subject)}&body=${encodeURIComponent(selectedEmail.body)}`}
+                               target="_blank" rel="noopener noreferrer">Gmail</a> oder{" "}
+                            <a href={`https://outlook.live.com/mail/deeplink/compose?to=${recipient}&subject=${encodeURIComponent(selectedEmail.subject)}&body=${encodeURIComponent(selectedEmail.body)}`}
+                               target="_blank" rel="noopener noreferrer">Outlook</a>.
+                        </p>
+                    }
+
+                    {selectedEmail.reference && <p className="hint text-align-right">Diese Vorlage bezieht sich auf die Inhalte von <a href={selectedEmail.reference} target="_blank" rel="noopener noreferrer">dieser Seite</a>. Bitte vergleichen Sie die Antwort mit den dortigen Infos.</p>}
                 </div>
         </div>
     );

@@ -98,10 +98,14 @@
     width: 50px;
 }
 
-#hint {
-    margin: 0;
-    align-self: center;
+.hint {
+    align-self: flex-end;
     text-align: right;
+    margin: 0;
+}
+
+.hint.text-align-left {
+    grid-column: 1;
 }
 
 @media (max-width: 1024px) {
@@ -110,12 +114,12 @@
     }
 
     .email-form {
-        grid-template-columns: 1fr 0.5fr;
+        grid-template-columns: 1fr 0.75fr;
     }
 
-    #hint {
-        grid-column: span 2;
-        text-align: left;
+    .hint {
+        grid-column: span 2 !important;
+        text-align: left !important;
     }
 
     .step .cta-btn {
