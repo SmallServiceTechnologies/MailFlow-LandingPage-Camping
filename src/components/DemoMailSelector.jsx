@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../css/demo.css";
+import "../css/step.css"
 import Mail from "./Mail.jsx";
 import Step from "./Step";
 import DemoEmailForm from "./DemoEmailForm";
 import MailIcon from "../assets/mail-pencil-svgrepo-com.svg"
+import Arrow from "../assets/arrow-1.svg";
 
 export default function DemoMailSelector({ openPopup }) {
     const [selectedEmail, setSelectedEmail] = useState({
@@ -86,79 +88,93 @@ export default function DemoMailSelector({ openPopup }) {
 
     return (
         <div className="email-selector">
-                <h3 className="section-heading gradient-text">MailFlow live erleben – jetzt testen!</h3>
-                { step === 0 &&
-                    <div>
-                        <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und
-                            erhalten Sie in unter einer Minute eine Antwort.</h4>
-                        <p>Alle Anfragen werden so behandelt, als wären sie an den <strong>Campingplatz <a
-                            href="https://www.ostseecamp-ferienpark.de/campingplatz-an-der-ostsee.html" target="_blank"
-                            rel="noopener noreferrer">Ostseecamp Rostocker Heide</a></strong> gerichtet.<br/><br/>Formulieren
-                            Sie Ihre Nachricht bitte entsprechend, als wären Sie
-                            ein Kunde des Campingplatzes, oder verwenden Sie eine der folgenden Vorlagen und passen Sie
-                            diese
-                            nach Bedarf an.
-                        </p>
+            <h3 className="section-heading gradient-text">MailFlow live erleben – jetzt testen!</h3>
+            {step === 0 &&
+                <div>
+                    <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und
+                        erhalten Sie in unter einer Minute eine Antwort.</h4>
+                    <p>Alle Anfragen werden so behandelt, als wären sie an den <strong>Campingplatz <a
+                        href="https://www.ostseecamp-ferienpark.de/campingplatz-an-der-ostsee.html" target="_blank"
+                        rel="noopener noreferrer">Ostseecamp Rostocker Heide</a></strong> gerichtet.<br/><br/>Formulieren
+                        Sie Ihre Nachricht bitte entsprechend, als wären Sie
+                        ein Kunde des Campingplatzes, oder verwenden Sie eine der folgenden Vorlagen und passen Sie
+                        diese
+                        nach Bedarf an.
+                    </p>
+                </div>
+            }
+
+            {selectedEmail.subject && step >= 1 && (
+                <Mail icon={MailIcon} to={"demo@flow-suite.de"} from={name} subject={selectedEmail.subject}
+                      text={selectedEmail.body.replace(/\n/g, "<br/>")} html={true}></Mail>
+            )}
+
+            <div className="progress-bar">
+                {[1, 2, 3].map((num) => (
+                    <div
+                        key={num}
+                        className={`progress-bar-step ${step >= num ? "active" : ""}`}
+                    ></div>
+                ))}
+            </div>
+
+            <div className="email-form">
+                <Step isActive={step === 0} id="step-0">
+                    <img className="step-arrow" src={Arrow} alt="Arrow icon"/>
+                    <button className="cta-btn" onClick={() => setStep(step + 1)}>
+                        <span className="gradient-text">MailFlow jetzt live erleben</span>
+                    </button>
+                </Step>
+
+                <Step title="1. Absender benennen" isActive={step === 1} showArrow={true}>
+                    <input
+                        type="text"
+                        placeholder="Name des Absenders"
+                        onChange={e => setName(e.target.value)}
+                    />
+                </Step>
+
+                <Step title="2. Vorlage wählen" isActive={step === 2} showArrow={true}>
+                    <DemoEmailForm
+                        emailOptions={emailOptions}
+                        handleSelection={handleSelection}
+                        selectedEmail={selectedEmail}
+                    />
+                </Step>
+
+                <Step title="3. Absenden & Antwort erhalten" isActive={step === 3} showArrow={true}>
+                    <button onClick={openEmailClient}>Anfrage absenden</button>
+                </Step>
+
+                {step >= 1 &&
+                    <div className="form-controls">
+                        <button className="step-btn" onClick={() => setStep(step - 1)}
+                                disabled={step === 0 || step === 1}>← Zurück
+                        </button>
+                        <button className="step-btn" onClick={() => name && setStep(step + 1)}
+                                disabled={(step === 1 && name === "Vorname Nachname") || !name ||
+                                    (step === 2 && selectedEmail.subject === "MailFlow live erleben") || !selectedEmail.subject ||
+                                    step === 3}>
+                            <span className="gradient-text">Weiter →</span>
+                        </button>
                     </div>
                 }
 
-                {selectedEmail.subject && step >= 1 && (
-                    <Mail icon={MailIcon} to={"demo@flow-suite.de"} from={name} subject={selectedEmail.subject}
-                          text={selectedEmail.body.replace(/\n/g, "<br/>")} html={true}></Mail>
-                )}
+                {showHint && step === 3 &&
+                    <p className="hint text-align-left">Hat sich Ihr E-Mail-Programm nicht geöffnet? Versuchen Sie es
+                        direkt im Web über{" "}
+                        <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(selectedEmail.subject)}&body=${encodeURIComponent(selectedEmail.body)}`}
+                           target="_blank" rel="noopener noreferrer">Gmail</a> oder{" "}
+                        <a href={`https://outlook.live.com/mail/deeplink/compose?to=${recipient}&subject=${encodeURIComponent(selectedEmail.subject)}&body=${encodeURIComponent(selectedEmail.body)}`}
+                           target="_blank" rel="noopener noreferrer">Outlook</a>.
+                    </p>
+                }
 
-                <div className="email-form">
-                    <Step isActive={step === 0} id="step-0">
-                        <button className="cta-btn" onClick={() => setStep(step + 1)} >
-                            <span className="gradient-text">MailFlow jetzt live ausprobieren</span>
-                        </button>
-                    </Step>
-
-                    <Step title="1. Absender benennen" isActive={step === 1}  showArrow={true}>
-                        <input
-                            type="text"
-                            placeholder="Name des Absenders"
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </Step>
-
-                    <Step title="2. Vorlage wählen" isActive={step === 2} showArrow={true}>
-                    <DemoEmailForm
-                            emailOptions={emailOptions}
-                            handleSelection={handleSelection}
-                            selectedEmail={selectedEmail}
-                        />
-                    </Step>
-
-                    <Step title="3. Absenden & Antwort erhalten" isActive={step === 3} showArrow={true}>
-                        <button onClick={openEmailClient}>Anfrage absenden</button>
-                    </Step>
-
-                    {step >= 1 &&
-                        <div className="form-controls">
-                            <button className="step-btn" onClick={() => setStep(step - 1)}
-                                    disabled={step === 0 || step === 1}>← Zurück
-                            </button>
-                            <button className="step-btn" onClick={() => name && setStep(step + 1)}
-                                    disabled={(step === 1 && name === "Vorname Nachname") || !name ||
-                                        (step === 2 && selectedEmail.subject === "MailFlow live erleben") || !selectedEmail.subject ||
-                                        step === 3}>
-                                <span className="gradient-text">Weiter →</span>
-                            </button>
-                        </div>
-                    }
-
-                    { showHint && step === 3 &&
-                        <p className="hint text-align-left">Hat sich Ihr E-Mail-Programm nicht geöffnet? Versuchen Sie es direkt im Web über{" "}
-                            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${encodeURIComponent(selectedEmail.subject)}&body=${encodeURIComponent(selectedEmail.body)}`}
-                               target="_blank" rel="noopener noreferrer">Gmail</a> oder{" "}
-                            <a href={`https://outlook.live.com/mail/deeplink/compose?to=${recipient}&subject=${encodeURIComponent(selectedEmail.subject)}&body=${encodeURIComponent(selectedEmail.body)}`}
-                               target="_blank" rel="noopener noreferrer">Outlook</a>.
-                        </p>
-                    }
-
-                    {selectedEmail.reference && <p className="hint text-align-right">Diese Vorlage bezieht sich auf die Inhalte von <a href={selectedEmail.reference} target="_blank" rel="noopener noreferrer">dieser Seite</a>. Bitte vergleichen Sie die Antwort mit den dortigen Infos.</p>}
-                </div>
+                {selectedEmail.reference &&
+                    <p className="hint text-align-right">Diese Vorlage bezieht sich auf die Inhalte von <a
+                        href={selectedEmail.reference} target="_blank" rel="noopener noreferrer">dieser Seite</a>. Bitte
+                        vergleichen Sie die Antwort mit den dortigen Infos.</p>}
+            </div>
         </div>
     );
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import '../css/popup.css';
+import React from "react";
+import "../css/popup.css";
 import CTABtn from "./CTABtn.jsx";
 
 export default function Popup({ isOpen, onClose }) {
     if (!isOpen) return null;
 
     return (
-        <div className={`popup-overlay ${isOpen ? "active" : ""}`}>
+        <div className={`overlay ${isOpen ? "active" : ""}`}>
             <div className="popup-content">
                 <button className="close-btn" onClick={onClose}>❌</button>
 
@@ -25,7 +25,7 @@ export default function Popup({ isOpen, onClose }) {
                     Vorteile von MailFlow!
                 </p>
 
-                <CTABtn/>
+                <CTABtn closePopup={onClose}/>
             </div>
         </div>
     );

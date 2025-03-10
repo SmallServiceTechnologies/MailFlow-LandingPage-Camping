@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
@@ -21,8 +21,13 @@ import MailUserPicture from "../assets/user-svgrepo-com.svg"
 import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
 import DemoMailSelector from "../components/DemoMailSelector.jsx";
 import Popup from "../components/Popup.jsx";
+import ContactForm from "../components/ContactForm.jsx";
+import {AppContext} from "../AppContext.jsx";
 
 export default function Home() {
+    const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
+
+
     const handleLinkClick = (event) => {
         event.preventDefault();
 
@@ -32,24 +37,10 @@ export default function Home() {
         }
     };
 
-    const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-    const handleClosePopup = () => {
-        setIsPopupOpen(false);
-    };
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsPopupOpen(true);
-        }, 30000);
-
-        return () => clearTimeout(timer);
-    }, []);
-
-
     return (
         <React.Fragment>
             <CookieBanner></CookieBanner>
+            <ContactForm isOpen={isContactFormOpen} onClose={handleCloseContactForm}></ContactForm>
             <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
             <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
@@ -209,7 +200,7 @@ export default function Home() {
                 </div>
             </section>
             <section id="demo">
-                <DemoMailSelector openPopup={() => setIsPopupOpen(true)}></DemoMailSelector>
+                <DemoMailSelector openPopup={handleOpenPopup}></DemoMailSelector>
             </section>
             {/*
             <section id="pricing">

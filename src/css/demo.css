@@ -14,88 +14,12 @@
 }
 
 .email-form {
-    margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--black);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     justify-content: center;
     align-items: flex-start;
-}
-
-.step {
-    display: none;
-    grid-row: span 2;
-    gap: 1rem;
-}
-
-.step .container {
-    align-items: center;
-}
-
-.step h5 {
-    font-size: 1.25rem;
-    margin: 0;
-}
-
-.step button,
-.step input,
-.step select,
-.step .btn,
-.step {
-    width: 100%;
-}
-
-.step .cta-btn {
-    width: 50%;
-    margin: auto;
-}
-
-#step-0 {
-    grid-row: span 2;
-    grid-column: span 2;
-}
-
-.step.active {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-controls {
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-start;
-    gap: 1rem;
-    grid-row: 1;
-    grid-column: 2;
-}
-
-.step-btn {
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    font-size: 1.25rem;
-}
-
-.step-btn:hover {
-    background-color: transparent;
-    color: var(--purple);
-}
-
-.step-btn:disabled {
-    color: var(--black);
-}
-
-.step-btn:disabled .gradient-text {
-    background: none;
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: var(--black);
-    color: var(--black);
-}
-
-.step-arrow {
-    width: 50px;
 }
 
 .hint {
@@ -106,6 +30,23 @@
 
 .hint.text-align-left {
     grid-column: 1;
+}
+
+#step-0 {
+    justify-content: center;
+    align-items: center;
+}
+
+#step-0 .step-arrow {
+    margin: 0;
+}
+
+#step-0 .cta-btn {
+    width: 50%;
+}
+
+.email-selector .progress-bar-step {
+    background-color: var(--light-gray);
 }
 
 @media (max-width: 1024px) {
@@ -121,10 +62,6 @@
         grid-column: span 2 !important;
         text-align: left !important;
     }
-
-    .step .cta-btn {
-        width: 100%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -139,28 +76,17 @@
         background-color: transparent;
     }
 
+    .email-selector .progress-bar-step {
+        background-color: var(--white);
+    }
+
     .email-form {
         display: flex;
         flex-direction: column;
     }
 
-    .step button,
-    .step input,
-    .step select,
-    .step .btn,
-    .step {
+    #step-0 .cta-btn {
         width: 100%;
-    }
-
-    .form-controls {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .step-arrow {
-        width: auto;
-        height: 50px;
-        margin-right: 10%;
     }
 }
 

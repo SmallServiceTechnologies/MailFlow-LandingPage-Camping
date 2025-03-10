@@ -12,7 +12,7 @@ export default function FAQ() {
                 </Accordion>
                 <Accordion
                     title="Wie lange dauert die Einrichtung von MailFlow?"
-                    content="MailFlow kann in der Regel innerhalb weniger Stunden eingerichtet und getestet werden. Wir kümmern uns um alle technischen Notwendigkeiten und leiten Sie durch die notwendigen Schritte. Buchen Sie sich ein Gespräch, damit wir Ihnen genau sagen können, wie schnell die Testversion bei Ihnen eingesetzt werden kann.">
+                    content="MailFlow kann in der Regel innerhalb einer Stunde eingerichtet und getestet werden. Wir kümmern uns um alle technischen Notwendigkeiten und leiten Sie durch die notwendigen Schritte. Buchen Sie sich ein Gespräch, damit wir Ihnen genau sagen können, wie schnell die Testversion bei Ihnen eingesetzt werden kann.">
                 </Accordion>
                 <Accordion
                     title="Lässt sich MailFlow mit jeder E-Mail bzw. jedem E-Mail-Programm integrieren?"
