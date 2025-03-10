@@ -94,11 +94,13 @@ export const AppContextProvider = ({ children }) => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-           handleOpenPopup()
+            if (!isContactFormOpen) {
+                setIsPopupOpen(true);
+            }
         }, 30000);
 
         return () => clearTimeout(timer);
-    }, []);
+    }, [isContactFormOpen]);
 
     return (
         <AppContext.Provider value={{
