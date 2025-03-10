@@ -56,8 +56,12 @@ export default function ContactForm({ isOpen, onClose }) {
         return false;
     };
 
+    const [message, setMessage] = useState("");
+
     const sendEmail = (e) => {
         e.preventDefault();
+
+        setMessage("⏳ Senden...");
 
         emailjs.send(
             "service_2a3hg8q",
@@ -77,11 +81,14 @@ export default function ContactForm({ isOpen, onClose }) {
         )
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
-                alert("Message sent successfully!");
+                setMessage("✅ Vielen Dank. Wir werden uns bald bei Ihnen melden.");
+                setTimeout(() => {
+                    onClose();
+                }, 5000);
             })
             .catch((err) => {
                 console.error("FAILED...", err);
-                alert("Failed to send message. Please try again.");
+                setMessage("❌ Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.");
             });
 
     }
@@ -226,6 +233,10 @@ export default function ContactForm({ isOpen, onClose }) {
                         </button>
                     }
                 </div>
+
+                {
+                    step === 4 && message && <strong className="message">{message}</strong>
+                }
             </form>
         </div>
     );
