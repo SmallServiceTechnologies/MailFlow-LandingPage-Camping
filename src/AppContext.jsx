@@ -92,15 +92,18 @@ export const AppContextProvider = ({ children }) => {
         setIsPopupOpen(false);
     };
 
+    const [popupOpenedOnce, setPopupOpenedOnce] = useState(false);
+
     useEffect(() => {
         const timer = setTimeout(() => {
-            if (!isContactFormOpen) {
+            if (!isContactFormOpen && !popupOpenedOnce) {
                 setIsPopupOpen(true);
+                setPopupOpenedOnce(true);
             }
         }, 30000);
 
         return () => clearTimeout(timer);
-    }, [isContactFormOpen]);
+    }, [isContactFormOpen, popupOpenedOnce]);
 
     return (
         <AppContext.Provider value={{
