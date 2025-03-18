@@ -22,6 +22,7 @@ export default function ContactForm({ isOpen, onClose }) {
         email: "",
         company: "",
         campNerd: false,
+        campingCare: false,
         phone: "",
         date: "",
         timeOfDay: "",
@@ -72,6 +73,7 @@ export default function ContactForm({ isOpen, onClose }) {
                 email: contact.email,
                 company: contact.company,
                 campNerd: contact.campNerd ? "Ja" : "Nein",
+                campingCare: contact.campingCare ? "Ja" : "Nein",
                 phone: contact.phone || "Nicht angegeben",
                 date: contact.date || "Nicht angegeben",
                 timeOfDay: contact.timeOfDay || "Nicht angegeben",
@@ -156,6 +158,11 @@ export default function ContactForm({ isOpen, onClose }) {
                     <select name="campNerd" value={contact.campNerd} onChange={handleInputChange}>
                         <option value="true">Ja, wir nutzen CampNerd</option>
                         <option value="false">Nein, wir nutzen CampNerd nicht</option>
+                    </select>
+
+                    <select name="campingCare" value={contact.campingCare} onChange={handleInputChange}>
+                        <option value="true">Ja, wir nutzen Camping.care</option>
+                        <option value="false">Nein, wir nutzen Camping.care nicht</option>
                     </select>
                 </Step>
 
