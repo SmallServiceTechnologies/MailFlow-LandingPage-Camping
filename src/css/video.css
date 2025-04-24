@@ -4,6 +4,7 @@
     height: min-content;
     position: relative;
     cursor: pointer;
+    margin: auto 0;
 }
 
 #video-text-overlay {

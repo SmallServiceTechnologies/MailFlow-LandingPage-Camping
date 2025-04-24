@@ -5,7 +5,7 @@ import "../css/faq.css"
 export default function FAQ() {
     return (
         <div className="FAQ-container">
-                <h3 className="section-heading gradient-text">Frequently asked questions</h3>
+                <h3 className="section-heading">Frequently Asked Questions</h3>
                 <Accordion
                     title="Wie viel kostet MailFlow?"
                     content="Wir möchten kleine und mittelgroße Unternehmen nicht benachteiligen. Daher richten sich die Kosten für MailFlow vor allem nach der Größe Ihres Unternehmens und Ihren individuellen Anforderungen. Buchen Sie ein kostenloses Beratungsgespräch, um mehr über eine Lösung zu erfahren, die optimal zu Ihrem Unternehmen passt.">

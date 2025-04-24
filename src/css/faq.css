@@ -6,11 +6,6 @@
     border-radius: var(--border-radius);
 }
 
-.FAQ-container .section-heading {
-    padding: 0;
-    text-align: center;
-}
-
 @media (max-width: 768px) {
     .FAQ-container {
         margin: 0;

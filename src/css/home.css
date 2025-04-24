@@ -1,9 +1,14 @@
+#nav {
+    background-color: var(--baige);
+}
+
 #above-the-fold  {
+    background-color: var(--baige);
     display: grid;
     grid-template-columns: 0.75fr 1fr;
     column-gap: 5%;
     row-gap: 1rem;
-    margin-top: -2rem;
+    min-height: 70vh;
 }
 
 #above-the-fold > .container {
@@ -27,6 +32,7 @@
 }
 
 #partners {
+    display: none;
     margin-top: 5vh;
 }
 
@@ -104,6 +110,10 @@
     gap: 3rem;
 }
 
+#how {
+    display: none;
+}
+
 #how > .card-container-grid {
     margin: 10%;
     padding: 2rem;
@@ -118,12 +128,12 @@
 }
 
 #why {
+    background-color: var(--baige);
     text-align: center;
 }
 
 #why > h4 {
-    font-size: 1.5rem;
-    margin: 0 15vw;
+    font-size: 1rem;
 }
 
 #why > .card-container-grid {

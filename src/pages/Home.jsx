@@ -36,21 +36,18 @@ export default function Home() {
                 <Nav></Nav>
             </section>
             <section id="above-the-fold">
-                <div></div>
-                <img id="arrow-video" src={ArrowVideo} alt="Gerader Pfeil der auf das Video zeigt"/>
                 <div className="container">
                     <h1>
-                        <span className="gradient-text">Automatisieren Sie das Postfach Ihres Unternehmens mit MailFlow</span> –
-                        Schnelle Antworten, minimaler manueller Aufwand!
+                        <span className="gradient-text">Automate repetitive emails with AI.</span>
                     </h1>
                     <h2>
-                        Sparen Sie Zeit, indem Sie wiederkehrende E-Mail-Anfragen automatisieren. MailFlow integriert
-                        sich nahtlos in Ihr E-Mail Postfach und verwaltet die Kundenkommunikation schnell, höflich und
-                        effizient.
+                        Save time and improve the performance of your customer service and sales teams.
+                        mailflow connects to your inbox and automatically generates ready-to-send drafts before your first sip of morning coffee.
+                        <br/><br/>Dealing with emails has never been easier!
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
-                        <a href="#how" className="btn">Wie funktioniert MailFlow?</a>
+                        <a href="#how" className="btn">Learn More</a>
                     </div>
                 </div>
                 <Video></Video>
@@ -176,11 +173,9 @@ export default function Home() {
                 </div>
             </section>
             <section id="why">
-                <h3 className="section-heading gradient-text">Stellen Sie sich vor ...</h3>
+                <h3 className="section-heading">How It Works</h3>
                 <h4>
-                    ... Sie hätten einen Mitarbeiter, der rund um die Uhr arbeitet, alle Kundenanfragen bearbeitet,
-                    Ihre Systeme in Echtzeit prüft und nie einen Tag frei nimmt - wie viel wäre
-                    Ihnen das wert?
+                    mailflow is an AI email assistant that automates repetitive emails, helping customer service and sales teams save time and improve performance.
                 </h4>
                 <div className="card-container-grid Nx3">
                     <Card

@@ -10,8 +10,6 @@ export default function CTABtn() {
     };
 
     return (
-        <button className="cta-btn" onClick={openCalendly}>
-            <span className="gradient-text">Kostenlos testen!</span>
-        </button>
+        <button className="cta-btn" onClick={openCalendly}>Apply Now</button>
     )
 }
