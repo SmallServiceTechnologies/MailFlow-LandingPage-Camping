@@ -1,11 +1,9 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
 import Video from "../components/Video.jsx";
-import ClockIcon from "../assets/clock-check-svgrepo-com.svg"
 import HeartIcon from "../assets/circle-heart-svgrepo-com.svg"
-import DollarIcon from "../assets/dollar-circle-list-svgrepo-com.svg"
 import Nav from "../components/Nav.jsx";
 import FAQ from "../components/FAQ.jsx";
 import Footer from "../components/Footer.jsx";
@@ -15,18 +13,13 @@ import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
 import Mail from "../components/Mail.jsx";
 import ArrowMail1 from "../assets/arrow-1.svg"
 import ArrowMail2 from "../assets/arrow-2.svg"
-import ArrowVideo from "../assets/arrow-3.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
-<<<<<<< Updated upstream
-import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
 import DemoMailSelector from "../components/DemoMailSelector.jsx";
 import Popup from "../components/Popup.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 import {AppContext} from "../AppContext.jsx";
-=======
 import EmailGIF from "../assets/email-gif-animation.gif"
->>>>>>> Stashed changes
 
 export default function Home() {
     const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
@@ -61,7 +54,7 @@ export default function Home() {
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
-                        <a href="#how" className="btn">Learn More</a>
+                        <a href="#how-it-works" className="btn">Learn More</a>
                     </div>
                 </div>
                 <Video></Video>
@@ -186,7 +179,7 @@ export default function Home() {
                     ></Card>
                 </div>
             </section>
-            <section id="why">
+            <section id="how-it-works">
                 <h3 className="section-heading">How It Works</h3>
                 <h4>
                     mailflow is an AI email assistant that automates repetitive emails, helping customer service and sales teams save time and improve performance.
@@ -209,9 +202,10 @@ export default function Home() {
                     ></Card>
                 </div>
             </section>
-            <section id="demo">
+            {/*<section id="demo">
+                <h3 className="section-heading">Try It Yourself</h3>
                 <DemoMailSelector openPopup={handleOpenPopup}></DemoMailSelector>
-            </section>
+            </section>*/}
             {/*
             <section id="pricing">
                 <PricingCalculator></PricingCalculator>

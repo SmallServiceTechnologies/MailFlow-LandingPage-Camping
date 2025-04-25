@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "../css/footer.css"
 import CTABtn from "./CTABtn.jsx";
+import gdpr from "../assets/gdpr-compliant.svg"
 
 export default function Footer() {
 
@@ -11,12 +12,12 @@ export default function Footer() {
     }
 
     return (
-
         <div className="footer-container">
-            <CTABtn></CTABtn>
-            <Link className="footer-btn" to="/impressum">Impressum</Link>
-            <Link className="footer-btn" to="/datenschutzerklärung">Datenschutzerklärung</Link>
-            <button className="footer-btn" onClick={toggleCookieBanner}>Cookie Einstellungen</button>
+            <img src={gdpr} alt="Gdpr Compliant"/>
+            {/*<CTABtn></CTABtn>*/}
+            <Link className="footer-btn" to="/impressum">Imprint</Link>
+            <Link className="footer-btn" to="/datenschutzerklärung">Privacy Policy</Link>
+            <button className="footer-btn" onClick={toggleCookieBanner}>Cookies</button>
         </div>
     )
 }

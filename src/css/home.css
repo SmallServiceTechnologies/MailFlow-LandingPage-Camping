@@ -9,6 +9,7 @@
     column-gap: 5%;
     row-gap: 1rem;
     min-height: 70vh;
+    margin-bottom: 0;
 }
 
 #above-the-fold > .container {
@@ -127,20 +128,20 @@
     gap: 0;
 }
 
-#why {
-    background-color: var(--baige);
+#how-it-works {
     text-align: center;
+    padding-top: 10vh;
 }
 
-#why > h4 {
+#how-it-works > h4 {
     font-size: 1rem;
 }
 
-#why > .card-container-grid {
+#how-it-works > .card-container-grid {
     margin: 0 0;
 }
 
-#why > .card-container-grid > .card {
+#how-it-works > .card-container-grid > .card {
     background: var(--gradient);
 }
 
@@ -198,11 +199,11 @@
         width: 5vw;
     }
 
-    #why > h4 {
+    #how-it-works > h4 {
         margin: 0 10vw;
     }
 
-    #why > .card-container-grid {
+    #how-it-works > .card-container-grid {
         margin: 5vh 0;
     }
 }
@@ -269,17 +270,17 @@
         margin: 10vh 0;
     }
 
-    #why .section-heading {
+    #how-it-works .section-heading {
         text-align: left;
         margin-left: 10vw;
     }
 
-    #why > .card-container-grid {
+    #how-it-works > .card-container-grid {
         grid-template-columns: 1fr;
         margin: 5vh 0;
     }
 
-    #why > h4 {
+    #how-it-works > h4 {
         text-align: left;
     }
 }
@@ -334,15 +335,15 @@
         padding: 1rem;
     }
 
-    #why .section-heading {
+    #how-it-works .section-heading {
         margin: 5vw;
     }
 
-    #why > .card-container-grid {
+    #how-it-works > .card-container-grid {
         margin: 5vh 5vw;
     }
 
-    #why > h4 {
+    #how-it-works > h4 {
         margin: 0 5vw;
     }
 

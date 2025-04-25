@@ -24,7 +24,6 @@
 }
 
 .accordion-header:hover {
-    border-radius: 0.5rem;
     text-decoration: underline var(--dark-gray);
 }
 

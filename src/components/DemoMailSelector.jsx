@@ -81,14 +81,15 @@ export default function DemoMailSelector({ openPopup }) {
             openPopup();
         }, 30000);
 
-        setPopupTimer(newTimer);
+        // setPopupTimer(newTimer);
 
         setShowHint(true)
     };
 
     return (
+
+
         <div className="email-selector">
-            <h3 className="section-heading gradient-text">MailFlow live erleben – jetzt testen!</h3>
             {step === 0 &&
                 <div>
                     <h4>Senden Sie eine Anfrage an <a href="mailto:demo@flow-suite.de">demo@flow-suite.de</a> und

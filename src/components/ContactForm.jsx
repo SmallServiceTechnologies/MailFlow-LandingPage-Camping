@@ -98,50 +98,66 @@ export default function ContactForm({ isOpen, onClose }) {
     return (
         <div className={`overlay ${isOpen ? "active" : ""}`}>
             <form className="contact-form" onSubmit={sendEmail}>
-                <button className="close-btn" onClick={onClose}>❌</button>
-                <div className="progress-bar">
+                <button className="close-btn" onClick={onClose}>✖</button>
+                {/*<div className="progress-bar">
                     {[1, 2, 3, 4].map((num) => (
                         <div
                             key={num}
                             className={`progress-bar-step ${step >= num ? "active" : ""}`}
                         ></div>
                     ))}
-                </div>
+                </div>*/}
 
-                <p className="form-heading gradient-text"><strong>Wir melden uns bei Ihnen!</strong></p>
+                <h2 className="form-heading"><strong>Schedule a demo</strong></h2>
+                <p>Enter your details below and we'll get in touch with you as soon as possible.</p>
 
                 <Step isActive={step === 1} id="step-1">
                     <div className="container">
                         <FormInput
-                            label="Vorname*"
                             type="text"
                             name="firstName"
                             value={contact.firstName}
                             onChange={handleInputChange}
-                            placeholder="Vorname"
+                            placeholder="First Name*" s
                             required={true}
                         />
 
                         <FormInput
-                            label="Nachname*"
                             type="text"
                             name="lastName"
                             value={contact.lastName}
                             onChange={handleInputChange}
-                            placeholder="Nachname"
+                            placeholder="Last Name*"
                             required={true}
                         />
                     </div>
 
                     <FormInput
-                        label="E-Mail*"
                         type="email"
                         name="email"
                         value={contact.email}
                         onChange={handleInputChange}
-                        placeholder="E-Mail"
+                        placeholder="Email*"
                         required={true}
                     />
+
+                    <FormInput
+                        type="tel"
+                        name="phone"
+                        value={contact.phone}
+                        onChange={handleInputChange}
+                        placeholder="Phone Number (Optional)"
+                        required={false}
+                    />
+
+                    <label id="privacy-checkbox" className="form-input-wrapper">
+                        <input
+                            type="checkbox"
+                            name="privacy"
+                            required
+                        />
+                        <span>I have read the <a href="/datenschutzerklärung">privacy policy</a> and agree to it.</span>
+                    </label>
                 </Step>
 
                 <Step isActive={step === 2} id="step-2">
@@ -225,20 +241,18 @@ export default function ContactForm({ isOpen, onClose }) {
                 </Step>
 
                 <div className="form-controls">
-                    <button className="step-btn" onClick={() => setStep(step - 1)}
+                 {/*   <button className="step-btn" onClick={() => setStep(step - 1)}
                             disabled={step === 1}>← Zurück
-                    </button>
+                    </button>*/}
                     {
-                        step === 4 && <button type="submit" className="cta-btn">
-                            <span className="gradient-text">Senden</span>
-                        </button>
+                        step === 1 && <button type="submit" className="cta-btn">Schedule a call</button>
                     }
-                    {step !== 4 &&
+                   {/* {step !== 4 &&
                         <button className="step-btn" onClick={() => setStep(step + 1)}
                                 disabled={step === 4 || !isStepValid()}>
                             <span className="gradient-text">Weiter →</span>
                         </button>
-                    }
+                    }*/}
                 </div>
 
                 {
