@@ -156,6 +156,10 @@
     margin-left: 5%;
 }
 
+#demo {
+    padding-top: 15vh;
+}
+
 @media (max-width: 1024px) {
     #above-the-fold {
         margin-top: 5vh;
@@ -342,5 +346,9 @@
     .imprint h2 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
+    }
+
+    #FAQ {
+        margin-top: 15vh;
     }
 }

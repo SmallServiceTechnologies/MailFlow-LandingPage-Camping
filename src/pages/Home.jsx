@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
@@ -13,13 +13,21 @@ import CampNerdLogo from "../assets/CampNerd-Logo.svg";
 import BVCDLogo from "../assets/BVCD-Logo.svg";
 import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
 import Mail from "../components/Mail.jsx";
-import ArrowMail1 from "../assets/arrow-mail-1.svg"
-import ArrowMail2 from "../assets/arrow-mail-2.svg"
-import ArrowVideo from "../assets/arrow-video.svg";
+import ArrowMail1 from "../assets/arrow-1.svg"
+import ArrowMail2 from "../assets/arrow-2.svg"
+import ArrowVideo from "../assets/arrow-3.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
+import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
+import DemoMailSelector from "../components/DemoMailSelector.jsx";
+import Popup from "../components/Popup.jsx";
+import ContactForm from "../components/ContactForm.jsx";
+import {AppContext} from "../AppContext.jsx";
 
 export default function Home() {
+    const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
+
+
     const handleLinkClick = (event) => {
         event.preventDefault();
 
@@ -32,6 +40,8 @@ export default function Home() {
     return (
         <React.Fragment>
             <CookieBanner></CookieBanner>
+            <ContactForm isOpen={isContactFormOpen} onClose={handleCloseContactForm}></ContactForm>
+            <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
             <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
@@ -50,7 +60,7 @@ export default function Home() {
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
-                        <a href="#how" className="btn">Wie funktioniert MailFlow?</a>
+                        <a href="#demo" className="btn">MailFlow live erleben!</a>
                     </div>
                 </div>
                 <Video></Video>
@@ -86,7 +96,7 @@ export default function Home() {
                 <div className="mail-container-grid Nx8">
                     <Mail
                         id={"mail-customer"}
-                        picture={MailUserPicture}
+                        icon={MailUserPicture}
                         from={"kevin@flow-suite.de"}
                         to={"support@example.de"}
                         subject={"Sendungsverfolgung meiner Bestellung"}
@@ -196,6 +206,9 @@ export default function Home() {
                         body={"Reduziert Personalkosten, minimiert Fluktuation und erleichtert dadurch die Personalplanung."}
                     ></Card>
                 </div>
+            </section>
+            <section id="demo">
+                <DemoMailSelector openPopup={handleOpenPopup}></DemoMailSelector>
             </section>
             {/*
             <section id="pricing">

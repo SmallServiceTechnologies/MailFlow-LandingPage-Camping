@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useState} from 'react';
 
 export const AppContext = createContext();
 
@@ -71,8 +71,52 @@ export const AppContextProvider = ({ children }) => {
         gtag('set', 'ads_data_redaction', true);
     })();
 
+    const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+    const handleOpenContactForm = () => {
+        setIsContactFormOpen(true);
+        setIsPopupOpen(false)
+    };
+
+    const handleCloseContactForm = () => {
+        setIsContactFormOpen(false);
+    };
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const handleOpenPopup = () => {
+        if (!isContactFormOpen) setIsPopupOpen(true);
+    };
+
+    const handleClosePopup = () => {
+        setIsPopupOpen(false);
+    };
+
+    const [popupOpenedOnce, setPopupOpenedOnce] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (!isContactFormOpen && !popupOpenedOnce) {
+                setIsPopupOpen(true);
+                setPopupOpenedOnce(true);
+            }
+        }, 30000);
+
+        return () => clearTimeout(timer);
+    }, [isContactFormOpen, popupOpenedOnce]);
+
     return (
-        <AppContext.Provider value={{ cookieConsent, acceptCookies, declineCookies }}>
+        <AppContext.Provider value={{
+            cookieConsent,
+            acceptCookies,
+            declineCookies,
+            isContactFormOpen,
+            handleOpenContactForm,
+            handleCloseContactForm,
+            isPopupOpen,
+            handleOpenPopup,
+            handleClosePopup
+        }}>
             {children}
         </AppContext.Provider>
     );
