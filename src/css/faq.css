@@ -1,8 +1,7 @@
 .FAQ-container {
-    margin: 10%;
-    margin-top: calc(10% + 10vh);
     padding: 2rem;
     background-color: var(--white);
+    border: 1.5px solid var(--light-gray);
     border-radius: var(--border-radius);
 }
 

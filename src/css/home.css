@@ -137,12 +137,11 @@
 }
 
 #why > .card-container-grid {
-    margin: 5vh 10vw;
+    margin: 0 0;
 }
 
 #why > .card-container-grid > .card {
-    box-shadow: var(--box-shadow);
-    background: var(--light-gradient);
+    background: var(--gradient);
 }
 
 #imprint, #privacy-policy {
@@ -164,6 +163,10 @@
 
 #imprint ul {
     margin-left: 5%;
+}
+
+#demo {
+    padding-top: 15vh;
 }
 
 @media (max-width: 1024px) {
@@ -273,12 +276,11 @@
 
     #why > .card-container-grid {
         grid-template-columns: 1fr;
-        margin: 5vh 10vw;
+        margin: 5vh 0;
     }
 
     #why > h4 {
         text-align: left;
-        margin: 0 10vw;
     }
 }
 
@@ -352,5 +354,9 @@
     .imprint h2 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
+    }
+
+    #FAQ {
+        margin-top: 15vh;
     }
 }

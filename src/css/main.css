@@ -4,13 +4,13 @@
     --purple: #C057BB;
     --red: #C24454;
     --light-blue: #4B7FFF;
+    --light-blue-low-opacity: rgba(75, 127, 255, 0.08);
     --dark-blue: #3D6BDA;
     --dark-gray: #454655;
     --light-gray: #EAEAEA;
     --baige: #F6F6F6;
     --gradient: linear-gradient(to right, var(--light-blue), var(--dark-blue));
     --light-gradient: linear-gradient(to top right,  rgba(192, 87, 187, 0.3),rgba(194, 68, 84, 0.1));
-    --very-light-gradient: linear-gradient(to top right,  rgba(192, 87, 187, 0.1), var(--white));
     --border-radius: 0.5rem;
     --box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 48px 0px;
 }
@@ -116,6 +116,7 @@ img {
 }
 
 .section-heading {
+    pointer-events: none;
     width: fit-content;
     justify-self: center;
     padding: 0.75rem 2rem;
@@ -152,9 +153,9 @@ button, .btn {
 
 button:hover, .btn:hover {
     text-decoration: none;
-    background: var(--dark-gray);
-    color: var(--white);
-    border-color: var(--dark-gray);
+    background: var(--white);
+    color: var(--light-blue);
+    border-color: var(--gradient);
 }
 
 .cta-btn {
@@ -165,6 +166,7 @@ button:hover, .btn:hover {
 }
 
 .cta-btn:hover {
+    color: var(--white);
     background: var(--gradient);
 }
 

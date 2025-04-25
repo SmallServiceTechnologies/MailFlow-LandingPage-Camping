@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../css/accordion.css"
-import LeftArrow from "../assets/arrow-circle-left-svgrepo-com.svg";
-import DownArrow from "../assets/arrow-circle-down-svgrepo-com.svg";
+import LeftArrow from "../assets/dropdown-closed.svg";
+import DownArrow from "../assets/dropdown-open.svg";
 
 export default function Accordion({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +20,6 @@ export default function Accordion({ title, content }) {
                     className="accordion-arrow"
                 />
             </div>
-            <hr></hr>
             {isOpen && <div className="accordion-content">{content}</div>}
         </div>
     )

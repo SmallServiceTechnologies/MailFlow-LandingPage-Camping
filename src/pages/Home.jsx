@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
@@ -13,13 +13,25 @@ import CampNerdLogo from "../assets/CampNerd-Logo.svg";
 import BVCDLogo from "../assets/BVCD-Logo.svg";
 import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
 import Mail from "../components/Mail.jsx";
-import ArrowMail1 from "../assets/arrow-mail-1.svg"
-import ArrowMail2 from "../assets/arrow-mail-2.svg"
-import ArrowVideo from "../assets/arrow-video.svg";
+import ArrowMail1 from "../assets/arrow-1.svg"
+import ArrowMail2 from "../assets/arrow-2.svg"
+import ArrowVideo from "../assets/arrow-3.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
 import MailUserPicture from "../assets/user-svgrepo-com.svg"
+<<<<<<< Updated upstream
+import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
+import DemoMailSelector from "../components/DemoMailSelector.jsx";
+import Popup from "../components/Popup.jsx";
+import ContactForm from "../components/ContactForm.jsx";
+import {AppContext} from "../AppContext.jsx";
+=======
+import EmailGIF from "../assets/email-gif-animation.gif"
+>>>>>>> Stashed changes
 
 export default function Home() {
+    const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
+
+
     const handleLinkClick = (event) => {
         event.preventDefault();
 
@@ -32,6 +44,8 @@ export default function Home() {
     return (
         <React.Fragment>
             <CookieBanner></CookieBanner>
+            <ContactForm isOpen={isContactFormOpen} onClose={handleCloseContactForm}></ContactForm>
+            <Popup isOpen={isPopupOpen} onClose={handleClosePopup} />
             <section id="nav" className="no-margin-bottom">
                 <Nav></Nav>
             </section>
@@ -83,7 +97,7 @@ export default function Home() {
                 <div className="mail-container-grid Nx8">
                     <Mail
                         id={"mail-customer"}
-                        picture={MailUserPicture}
+                        icon={MailUserPicture}
                         from={"kevin@flow-suite.de"}
                         to={"support@example.de"}
                         subject={"Sendungsverfolgung meiner Bestellung"}
@@ -179,18 +193,24 @@ export default function Home() {
                 </h4>
                 <div className="card-container-grid Nx3">
                     <Card
-                        image={ClockIcon}
-                        body={"Bearbeitet bis zu 10 E-Mails pro Minute – 24 Stunden am Tag, 365 Tage im Jahr."}
+                        heading={"1. Connect Your Inbox"}
+                        image={EmailGIF}
+                        body={"Get started by creating an account and connecting your email inbox."}
                     ></Card>
                     <Card
-                        image={HeartIcon}
-                        body={"Schafft Zeit und Fokus für wichtige Aufgaben und sorgt für ein besseres Kundenerlebnis."}
+                        heading={"2. Email Generation"}
+                        image={EmailGIF}
+                        body={"Using context from your website, CRM, and other systems, mailflow automatically generates reply drafts to incoming emails."}
                     ></Card>
                     <Card
-                        image={DollarIcon}
-                        body={"Reduziert Personalkosten, minimiert Fluktuation und erleichtert dadurch die Personalplanung."}
+                        heading={"3. Review and Send"}
+                        image={EmailGIF}
+                        body={"You stay in control by reviewing every draft before it’s sent."}
                     ></Card>
                 </div>
+            </section>
+            <section id="demo">
+                <DemoMailSelector openPopup={handleOpenPopup}></DemoMailSelector>
             </section>
             {/*
             <section id="pricing">
@@ -198,6 +218,7 @@ export default function Home() {
             </section>
             */}
             <section id="FAQ">
+                <h3 className="section-heading">Frequently Asked Questions</h3>
                 <FAQ></FAQ>
             </section>
             <section className="no-margin-bottom">
