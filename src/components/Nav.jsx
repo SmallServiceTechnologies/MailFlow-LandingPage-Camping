@@ -19,10 +19,12 @@ export default function Nav() {
     return (
         <div className="nav-container">
             <a href="/" className="logo">
-                <img src={mailflowlogo}
-                     alt="FlowSutie Logo, ein in einem Strich gezogenes kleines f mit buntem Farbverlauf."/>
+                <img src={mailflowlogo}/>
             </a>
-            <CTABtn></CTABtn>
+            <div className="container">
+                <a href="https://dashboard.mail-flow.com" className="btn">Sign In</a>
+                <CTABtn></CTABtn>
+            </div>
         </div>
     )
 }

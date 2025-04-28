@@ -17,6 +17,14 @@ export default function FAQ() {
                     title="Will I still have control over the emails?"
                     content="Absolutely. mailflow drafts replies, but you review and send every email.">
                 </Accordion>
+                <Accordion
+                    title="Does mailflow support multiple languages?"
+                    content="Yes, mailflow can generate responses in many different languages and is ideal for international customers.">
+                </Accordion>
+                <Accordion
+                    title="Can mailflow be integrated with any email or email program?"
+                    content="mailflow integrates seamlessly with popular providers and programs like Outlook, Gmail, Thunderbird, and many more.">
+                </Accordion>
         </div>
 
     )

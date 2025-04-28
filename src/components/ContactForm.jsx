@@ -20,13 +20,7 @@ export default function ContactForm({ isOpen, onClose }) {
         firstName: "",
         lastName: "",
         email: "",
-        company: "",
-        campNerd: false,
-        campingCare: false,
-        phone: "",
-        date: "",
-        timeOfDay: "",
-        note: ""
+        phone: ""
     });
 
     const [step, setStep] = useState(1);
@@ -62,7 +56,7 @@ export default function ContactForm({ isOpen, onClose }) {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        setMessage("⏳ Senden...");
+        setMessage("⏳ Your message is being sent.");
 
         emailjs.send(
             "service_2a3hg8q",
@@ -71,26 +65,17 @@ export default function ContactForm({ isOpen, onClose }) {
                 firstName: contact.firstName,
                 lastName: contact.lastName,
                 email: contact.email,
-                company: contact.company,
-                campNerd: contact.campNerd ? "Ja" : "Nein",
-                campingCare: contact.campingCare ? "Ja" : "Nein",
-                phone: contact.phone || "Nicht angegeben",
-                date: contact.date || "Nicht angegeben",
-                timeOfDay: contact.timeOfDay || "Nicht angegeben",
-                note: contact.note || "Keine Nachricht angegeben",
+                phone: contact.phone || "Not specified"
             },
             "Y_yNqlwUVsl7t7L0f"
         )
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
-                setMessage("✅ Vielen Dank. Wir werden uns bald bei Ihnen melden.");
-                setTimeout(() => {
-                    onClose();
-                }, 5000);
+                setMessage("✅  Thank you for contacting us! We’ve received your message and will respond shortly.");
             })
             .catch((err) => {
                 console.error("FAILED...", err);
-                setMessage("❌ Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.");
+                setMessage("❌  An error has occurred, please try again or write us an email.");
             });
 
     }
@@ -118,7 +103,7 @@ export default function ContactForm({ isOpen, onClose }) {
                             name="firstName"
                             value={contact.firstName}
                             onChange={handleInputChange}
-                            placeholder="First Name*" s
+                            placeholder="First Name*"
                             required={true}
                         />
 
@@ -160,7 +145,7 @@ export default function ContactForm({ isOpen, onClose }) {
                     </label>
                 </Step>
 
-                <Step isActive={step === 2} id="step-2">
+                {/*<Step isActive={step === 2} id="step-2">
                     <FormInput
                         label="Firma (Name oder Website)*"
                         type="text"
@@ -239,7 +224,7 @@ export default function ContactForm({ isOpen, onClose }) {
                             mich damit einverstanden.</span>
                     </label>
                 </Step>
-
+                */}
                 <div className="form-controls">
                  {/*   <button className="step-btn" onClick={() => setStep(step - 1)}
                             disabled={step === 1}>← Zurück
@@ -247,7 +232,7 @@ export default function ContactForm({ isOpen, onClose }) {
                     {
                         step === 1 && <button type="submit" className="cta-btn">Schedule a call</button>
                     }
-                   {/* {step !== 4 &&
+                 {/*   {step !== 4 &&
                         <button className="step-btn" onClick={() => setStep(step + 1)}
                                 disabled={step === 4 || !isStepValid()}>
                             <span className="gradient-text">Weiter →</span>
@@ -256,8 +241,9 @@ export default function ContactForm({ isOpen, onClose }) {
                 </div>
 
                 {
-                    step === 4 && message && <strong className="message">{message}</strong>
+                    message && <strong className="message">{message}</strong>
                 }
+
             </form>
         </div>
     );

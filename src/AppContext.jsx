@@ -1,4 +1,5 @@
 import React, {createContext, useEffect, useState} from 'react';
+import {useLocation, useNavigate, useSearchParams} from "react-router-dom";
 
 export const AppContext = createContext();
 
@@ -73,13 +74,28 @@ export const AppContextProvider = ({ children }) => {
 
     const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
+    useEffect(() => {
+        const quaryParams = new URLSearchParams(window.location.search);
+        if (quaryParams.get('contact-form') === 'open') setIsContactFormOpen(true);
+    }, [])
+
     const handleOpenContactForm = () => {
         setIsContactFormOpen(true);
-        setIsPopupOpen(false)
+        setIsPopupOpen(false);
+        window.history.pushState(
+            null,
+            '',
+            `${window.location.pathname}?contact-form=open`
+        );
     };
 
     const handleCloseContactForm = () => {
         setIsContactFormOpen(false);
+        window.history.pushState(
+            null,
+            '',
+            window.location.pathname
+        );
     };
 
     const [isPopupOpen, setIsPopupOpen] = useState(false);

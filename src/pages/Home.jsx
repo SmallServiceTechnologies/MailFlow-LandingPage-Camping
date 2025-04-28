@@ -24,7 +24,6 @@ import EmailGIF from "../assets/email-gif-animation.gif"
 export default function Home() {
     const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
 
-
     const handleLinkClick = (event) => {
         event.preventDefault();
 

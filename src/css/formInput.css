@@ -18,8 +18,14 @@
     margin: 0;
 }
 
-.form-input-wrapper:has(.form-input:focus) {
+/*.form-input-wrapper:has(.form-input:focus) {
     border-image: var(--gradient);
+}*/
+
+.form-input-wrapper .form-input:focus {
+    text-decoration: none;
+    background: var(--white);
+    border-color: var(--gradient);
 }
 
 .form-input-wrapper:hover {

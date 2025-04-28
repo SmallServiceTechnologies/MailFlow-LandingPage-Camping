@@ -10,6 +10,7 @@
     backdrop-filter: none;
     box-shadow: none;
     transition: background-color 1s ease, backdrop-filter 1s ease, box-shadow 1s ease;
+    border-bottom: var(--light-gray) 1.5px solid;
 }
 
 #nav.scrolled {
@@ -30,6 +31,7 @@
     padding: 1rem 5%;
     margin: auto;
 }
+
 .logo {
     justify-content: center;
     display: flex;
@@ -39,4 +41,14 @@
 .logo > img {
     width: auto;
     height: 2.5rem;
+}
+
+.nav-container > .container {
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        display: none;
+    }
 }
