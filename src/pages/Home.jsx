@@ -19,7 +19,9 @@ import DemoMailSelector from "../components/DemoMailSelector.jsx";
 import Popup from "../components/Popup.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 import {AppContext} from "../AppContext.jsx";
-import EmailGIF from "../assets/email-gif-animation.gif"
+import RegistrationGIF from "../assets/Register.gif"
+import EmailGenerationGIF from "../assets/email-generation-GIF.gif"
+import ReviewSendGIF from "../assets/review-and-send-GIF.gif";
 
 export default function Home() {
     const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
@@ -49,7 +51,7 @@ export default function Home() {
                     <h2>
                         Save time and improve the performance of your customer service and sales teams.
                         mailflow connects to your inbox and automatically generates ready-to-send drafts before your first sip of morning coffee.
-                        <br/><br/>Dealing with emails has never been easier!
+                        <br/><br/>Empty your inbox faster!
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
@@ -186,17 +188,17 @@ export default function Home() {
                 <div className="card-container-grid Nx3">
                     <Card
                         heading={"1. Connect Your Inbox"}
-                        image={EmailGIF}
+                        image={RegistrationGIF}
                         body={"Get started by creating an account and connecting your email inbox."}
                     ></Card>
                     <Card
                         heading={"2. Email Generation"}
-                        image={EmailGIF}
+                        image={EmailGenerationGIF}
                         body={"Using context from your website, CRM, and other systems, mailflow automatically generates reply drafts to incoming emails."}
                     ></Card>
                     <Card
                         heading={"3. Review and Send"}
-                        image={EmailGIF}
+                        image={ReviewSendGIF}
                         body={"You stay in control by reviewing every draft before it’s sent."}
                     ></Card>
                 </div>

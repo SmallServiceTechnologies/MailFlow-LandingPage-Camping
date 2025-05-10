@@ -11,18 +11,18 @@ export default function Video() {
 
     // Dynamically set the iframe src based on cookie consent
     const iframeSrc = cookieConsent
-        ? "https://www.youtube.com/embed/8Bbbohhxn7I?si=punAMd3RIjMxG--Q?enablejsapi=1&vq=hd1080&rel=0"
-        : "https://www.youtube-nocookie.com/embed8Bbbohhxn7I?si=punAMd3RIjMxG--Q?enablejsapi=1&vq=hd1080&rel=0";
+        ? "https://www.youtube.com/embed/ZONUPHhtbsY?si=1XdJpAjt7igbavcn&enablejsapi=1&vq=hd1080&rel=0"
+        : "https://www.youtube-nocookie.com/embed/ZONUPHhtbsY?si=1XdJpAjt7igbavcn&enablejsapi=1&vq=hd1080&rel=0";
 
     return (
         <div className="video-container" onClick={handleAcceptCookies}>
             <span id="video-text-overlay">
-               Mit Start des Videos stimmen Sie der Nutzung von Cookies zu. Lehnen Sie Cookies explizit ab, um das Video ohne sie abzuspielen.</span>
+               By starting the video, you agree to the use of cookies. Explicitly reject cookies to play the video without them.</span>
             <iframe
                 src={iframeSrc}
                 id="youtube-video"
                 allowFullScreen
-                title="MailFlow: KI E-Mail Automatiserung"
+                title="AI Email Automation | mailflow"
             ></iframe>
         </div>
     )
