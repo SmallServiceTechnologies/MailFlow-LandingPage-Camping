@@ -15,7 +15,7 @@ export default function FAQ() {
                 </Accordion>
                 <Accordion
                     title="Will I still have control over the emails?"
-                    content="Absolutely. mailflow drafts replies, but you review and send every email.">
+                    content="Absolutely. mailflow either sends auto-replies or saves drafts for your review, ensuring you stay in control before sending them.">
                 </Accordion>
                 <Accordion
                     title="Does mailflow support multiple languages?"

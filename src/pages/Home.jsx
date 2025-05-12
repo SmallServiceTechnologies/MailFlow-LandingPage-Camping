@@ -51,7 +51,7 @@ export default function Home() {
                     <h2>
                         Save time and improve the performance of your customer service and sales teams.
                         mailflow connects to your inbox and automatically generates ready-to-send drafts before your first sip of morning coffee.
-                        <br/><br/>Empty your inbox faster!
+                        <br/><br/>Dealing with emails has never been easier!
                     </h2>
                     <div className="btn-container">
                         <CTABtn></CTABtn>
@@ -194,12 +194,12 @@ export default function Home() {
                     <Card
                         heading={"2. Email Generation"}
                         image={EmailGenerationGIF}
-                        body={"Using context from your website, CRM, and other systems, mailflow automatically generates reply drafts to incoming emails."}
+                        body={"Automatically drafts replies using both public data (e.g., FAQ, website) and internal company resources (e.g., SAP, CRM)."}
                     ></Card>
                     <Card
                         heading={"3. Review and Send"}
                         image={ReviewSendGIF}
-                        body={"You stay in control by reviewing every draft before it’s sent."}
+                        body={"Replies are either sent as auto-responses or saved as drafts for your review, giving you full control before sending."}
                     ></Card>
                 </div>
             </section>
