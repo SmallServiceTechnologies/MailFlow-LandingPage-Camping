@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
             <div className="row">
                 <img className="gdpr-badge" src={gdpr} alt="Gdpr Compliant"/>
-                <Link className="footer-btn" to="/https://circular-hovercraft-852.notion.site/Case-Study-PULS-Power-GmbH-218182eb20d880c48e12f9ab646ed4b5">Case study (German)</Link>
+                <Link className="footer-btn" to="https://circular-hovercraft-852.notion.site/Case-Study-PULS-Power-GmbH-218182eb20d880c48e12f9ab646ed4b5">Case study (German)</Link>
                 <Link className="footer-btn" to="/impressum">Imprint</Link>
                 <Link className="footer-btn" to="/datenschutzerklärung">Privacy policy</Link>
                 <button className="footer-btn" onClick={toggleCookieBanner}>Cookies</button>

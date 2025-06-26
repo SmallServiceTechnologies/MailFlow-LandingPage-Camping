@@ -9,7 +9,7 @@ export default function FAQ() {
 
             <Accordion
                 title="What kind of emails can mailflow handle?"
-                content="Mailflow is ideal for handling any kind customer service or sales related emails like order confirmations, shipping inquiries, FAQs, cancellations, and appointment scheduling. It can also assist with more complex cases by using integrations into your systems."
+                content="Mailflow is ideal for handling any kind of customer service or sales related emails like order confirmations, shipping inquiries, FAQs, cancellations, and appointment scheduling. It can also assist with more complex cases by using integrations into your systems."
             />
 
             <Accordion
@@ -19,7 +19,7 @@ export default function FAQ() {
 
             <Accordion
                 title="Is any training or setup required?"
-                content="No technical skills are needed. Our team guides you through a simple onboarding process. Mailflow works out of the box using your publicly available data from your wesbite. Using data sources like a CRM or other third party systems requires a custom integraion. Book a call to talk about your specific requirements."
+                content="No technical skills are needed. Our team guides you through a simple onboarding process. Mailflow works out of the box using your publicly available data from your website. Using data sources like a CRM or other third party systems requires a custom integraion. Book a call to talk about your specific requirements."
             />
 
             <Accordion

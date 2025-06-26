@@ -66,7 +66,7 @@ export default function SavingsEstimator() {
                         <div className="container">
                             <Accordion
                                 title="Number of potential users"
-                                content="Enter the approximate number of employees in your organisation who are activly working on answering customer emails"
+                                content="Enter the approximate number of employees in your organisation who are actively working on answering customer emails"
                             />
                             <FormInput
                                 type="number"
@@ -92,7 +92,7 @@ export default function SavingsEstimator() {
                         <div className="container">
                             <Accordion
                                 title="Manual processing time per email (minutes)"
-                                content="Enter the approximate average processing time in minutes a employee needs to resolve a customers email inquery."
+                                content="Enter the approximate average processing time in minutes a employee needs to resolve a customers email inquiry."
                             />
                             <FormInput
                                 type="number"
@@ -118,7 +118,7 @@ export default function SavingsEstimator() {
                         <br></br>
                         <Accordion
                             title="Monthly gross salary per user"
-                            content="Choose the gross salary a normal customer service or sales employee receives per month. The approximated costs per minute inlcue non-wage labor costs."
+                            content="Choose the gross salary a normal customer service or sales employee receives per month. The approximated costs per minute include non-wage labor costs."
                         />
                         <div className="salary Nx2">
                             {salaryOptions.map((option) => (
