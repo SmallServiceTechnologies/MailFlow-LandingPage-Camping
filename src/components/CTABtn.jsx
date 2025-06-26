@@ -14,8 +14,6 @@ export default function CTABtn({closePopup}) {
     };
 
     return (
-        <button className="cta-btn" onClick={handleOpenContactForm}>
-            <span className="gradient-text">Termin reservieren!</span>
-        </button>
+        <button className="cta-btn" onClick={handleOpenContactForm}>Let's talk!</button>
     )
 }

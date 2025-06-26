@@ -1,32 +1,26 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import "../css/home.css"
 import Card from "../components/Card.jsx";
 import CTABtn from "../components/CTABtn.jsx";
 import Video from "../components/Video.jsx";
-import ClockIcon from "../assets/clock-check-svgrepo-com.svg"
-import HeartIcon from "../assets/circle-heart-svgrepo-com.svg"
-import DollarIcon from "../assets/dollar-circle-list-svgrepo-com.svg"
 import Nav from "../components/Nav.jsx";
 import FAQ from "../components/FAQ.jsx";
 import Footer from "../components/Footer.jsx";
 import CampNerdLogo from "../assets/CampNerd-Logo.svg";
 import BVCDLogo from "../assets/BVCD-Logo.svg";
 import UnternehmerTUMLogo from "../assets/UnternehmerTUM-Logo.svg";
-import Mail from "../components/Mail.jsx";
-import ArrowMail1 from "../assets/arrow-1.svg"
-import ArrowMail2 from "../assets/arrow-2.svg"
-import ArrowVideo from "../assets/arrow-3.svg";
 import CookieBanner from "../components/CookieBanner.jsx";
-import MailUserPicture from "../assets/user-svgrepo-com.svg"
-import CampgroundPicture from "../assets/campground-svgrepo-com.svg"
-import DemoMailSelector from "../components/DemoMailSelector.jsx";
 import Popup from "../components/Popup.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 import {AppContext} from "../AppContext.jsx";
+import RegistrationGIF from "../assets/Register.gif"
+import EmailGenerationGIF from "../assets/email-generation-GIF.gif"
+import ReviewSendGIF from "../assets/review-and-send-GIF.gif";
+import SavingsEstimator from "../components/SavingsEstimator.jsx";
+import gdpr from "../assets/gdpr-compliant.svg";
 
 export default function Home() {
     const { isContactFormOpen, handleCloseContactForm, isPopupOpen, handleOpenPopup, handleClosePopup }  = useContext(AppContext)
-
 
     const handleLinkClick = (event) => {
         event.preventDefault();
@@ -46,21 +40,20 @@ export default function Home() {
                 <Nav></Nav>
             </section>
             <section id="above-the-fold">
-                <div></div>
-                <img id="arrow-video" src={ArrowVideo} alt="Gerader Pfeil der auf das Video zeigt"/>
                 <div className="container">
                     <h1>
-                        <span className="gradient-text">Automatisieren Sie das Postfach Ihres Unternehmens mit MailFlow</span> –
-                        Schnelle Antworten, minimaler manueller Aufwand!
+                        <span className="gradient-text">Automate customer service and sales emails with AI.</span>
                     </h1>
                     <h2>
-                        Sparen Sie Zeit, indem Sie wiederkehrende E-Mail-Anfragen automatisieren. MailFlow integriert
-                        sich nahtlos in Ihr E-Mail Postfach und verwaltet die Kundenkommunikation schnell, höflich und
-                        effizient.
+                        Save time and improve the performance of your customer service and sales teams.
+                        Mailflow connects to your inbox and automatically generates ready-to-send drafts before your first sip of morning coffee.
+                        <br/><br/><strong>Dealing with emails has never been easier!</strong>
                     </h2>
                     <div className="btn-container">
+                        <img className="gdpr-badge" src={gdpr} alt="Gdpr Compliant"/>
+                        <a href="#savings-estimator" className="btn">Estimate your savings now!</a>
+                        <a href="mailto:info@mail-flow.com?subject=Question%20about%20mailflow&body=Ask%20something%20about%20mailflow" className="btn" id="demo-btn">Demo</a>
                         <CTABtn></CTABtn>
-                        <a href="#demo" className="btn">MailFlow live erleben!</a>
                     </div>
                 </div>
                 <Video></Video>
@@ -91,9 +84,44 @@ export default function Home() {
                     </a>
                 </div>
             </section>
+            <section id="how-it-works">
+                <h3 className="section-heading gradient-text">Mailflow replies faster than you - here is how</h3>
+                <h4>
+                    Mailflow is an AI email assistant that automates repetitive emails, helping customer service and sales teams save time and improve performance.
+                </h4>
+                <div className="container">
+                    <div className="row">
+                        <Card image={RegistrationGIF}></Card>
+                        <div className="container">
+                            <h3 className="gradient-text">1. Creating an account</h3>
+                            <p>Get started by having a coffee chat with us and creating an account.</p>
+                        </div>
+                    </div>
+                    <div className="row reversed">
+                        <Card
+                            image={EmailGenerationGIF}
+                        ></Card>
+                        <div className="container">
+                            <h3 className="gradient-text">2. Email generation</h3>
+                            <p>Mailflow automatically begins to drafts replies using both public data (e.g., FAQ, website) and internal company resources (e.g., SAP, CRM).</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <Card
+                            image={ReviewSendGIF}
+                        ></Card>
+                        <div className="container">
+                            <h3 className="gradient-text">3. Review and send</h3>
+                            <p>Replies are either sent as auto-responses or saved as drafts for your review, giving you full control before sending.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="savings-estimator">
+                <SavingsEstimator></SavingsEstimator>
+            </section>
             <section id="how">
-                <h3 className="section-heading gradient-text">Wie funktioniert MailFlow?</h3>
-                <div className="mail-container-grid Nx8">
+                { /* <div className="mail-container-grid Nx8">
                     <Mail
                         id={"mail-customer"}
                         icon={MailUserPicture}
@@ -152,64 +180,35 @@ export default function Home() {
                         ]}
                     ></Mail>
                 </div>
+                */ }
                 <div className="card-container-grid Nx1">
+                    <h3 className="section-heading gradient-text">Smart email automation in action</h3>
                     <Card
-                        heading={"Integration mit Ihrem Posteingang"}
-                        body={"MailFlow integriert sich nahtlos und in wenigen Minuten in nahezu jedes E-Mail-Postfach – " +
-                            "ganz ohne Lernkurve oder technische Vorkenntnisse. Wir führen Sie durch die wenigen, " +
-                            "einfachen Schritte, die erforderlich sind."}
-                    ></Card>
+                        heading={"Integration with your Inbox in a few clicks!"}
+                        body={"Mailflow integrates seamlessly with almost any email inbox in just a few clicks - no learning curve or technical knowledge required. We guide you through the few simple steps needed."}
+                    />
                     <Card
-                        heading={"Automatische Kategorisierung von Anfragen"}
-                        body={"MailFlow sortiert E-Mails automatisch in von Ihnen definierte Kategorien wie zum Beispiel Retoure, " +
-                            "Kundendaten, allgemeine Anfragen, Spam/Unwichtig oder E-Mails, die eine manuelle Bearbeitung " +
-                            "erfordern. Dadurch schafft MailFlow Struktur und erleichtert die Arbeit Ihrer Mitarbeiter erheblich."}
-                    ></Card>
+                        heading={"Automatic request categorization"}
+                        body={"Mailflow automatically sorts emails into categories you define, such as returns, customer data, general inquiries, spam/unimportant, or emails requiring manual handling. This creates structure and significantly eases the workload of your team."}
+                    />
                     <Card
-                        heading={"Intelligente Antwortgenerierung durch KI"}
-                        body={"MailFlow nutzt Informationen von Ihrer Website, Ihren Systemen und zusätzlichen Quellen " +
-                            "und erstellt bis zu 10 personalisierte Antworten pro Minute, wodurch die Antwortzeiten " +
-                            "verkürzt und die Zufriedenheit Ihrer Kunden gesteigert wird."}
-                    ></Card>
+                        heading={"Intelligent AI-powered response generation"}
+                        body={"Mailflow uses information from your website, internal systems, and additional sources to generate a single reply in about 15 seconds - reducing response times and increasing customer satisfaction."}
+                    />
                     <Card
-                        heading={"Automatisch senden oder manuell prüfen"}
-                        body={"MailFlow kann Antworten entweder automatisch versenden oder Entwürfe zur Überprüfung " +
-                            "durch Ihre Mitarbeiter erstellen. So bleibt die Kontrolle über die Kommunikation " +
-                            "gewährleistet, während ein Großteil der Anfragen effizient automatisiert wird."}
-                    ></Card>
+                        heading={"Send automatically or review manually"}
+                        body={"Mailflow can either send responses automatically or prepare drafts for your team to review. This ensures communication stays under your control while efficiently automating the bulk of routine inquiries."}
+                    />
                     <Card
-                        heading={"Datenänderung in Ihren Systemen"}
-                        body={"MailFlow nutzt nicht nur die Informationen aus Ihren Systemen, um passende Antworten zu " +
-                            "erstellen. Dank maßgeschneiderter Lösungen für Ihre Geschäftsprozesse kann MailFlow zudem " +
-                            "Daten aus Anfragen, wie beispielsweise Adressänderungen, direkt in Ihr System übertragen."}
-                    ></Card>
+                        heading={"Data changes in your systems"}
+                        body={"Mailflow not only uses your system data to craft accurate responses - it can also write back to your systems. For example, customer-provided updates like address changes can be applied automatically through custom workflows."}
+                    />
                 </div>
             </section>
-            <section id="why">
-                <h3 className="section-heading gradient-text">Stellen Sie sich vor ...</h3>
-                <h4>
-                    ... Sie hätten einen Mitarbeiter, der rund um die Uhr arbeitet, alle Kundenanfragen bearbeitet,
-                    Ihre Systeme in Echtzeit prüft und nie einen Tag frei nimmt - wie viel wäre
-                    Ihnen das wert?
-                </h4>
-                <div className="card-container-grid Nx3">
-                    <Card
-                        image={ClockIcon}
-                        body={"Bearbeitet bis zu 10 E-Mails pro Minute – 24 Stunden am Tag, 365 Tage im Jahr."}
-                    ></Card>
-                    <Card
-                        image={HeartIcon}
-                        body={"Schafft Zeit und Fokus für wichtige Aufgaben und sorgt für ein besseres Kundenerlebnis."}
-                    ></Card>
-                    <Card
-                        image={DollarIcon}
-                        body={"Reduziert Personalkosten, minimiert Fluktuation und erleichtert dadurch die Personalplanung."}
-                    ></Card>
-                </div>
-            </section>
-            <section id="demo">
+            {/*<section id="demo">
+                <h3 className="section-heading">Try It Yourself</h3>
                 <DemoMailSelector openPopup={handleOpenPopup}></DemoMailSelector>
-            </section>
+            </section>*/}
             {/*
             <section id="pricing">
                 <PricingCalculator></PricingCalculator>

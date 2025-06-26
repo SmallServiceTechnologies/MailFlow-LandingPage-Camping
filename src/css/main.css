@@ -1,14 +1,39 @@
 :root {
     --white: #FFFFFF;
-    --light-gray: #f4f4f4;
     --black: #000000;
-    --purple: #C057BB;
-    --red: #C24454;
-    --gradient: linear-gradient(to right, var(--purple), var(--red));
-    --light-gradient: linear-gradient(to top right,  rgba(192, 87, 187, 0.3),rgba(194, 68, 84, 0.1));
-    --very-light-gradient: linear-gradient(to top right,  rgba(192, 87, 187, 0.1), var(--white));
+    --light-blue: #4B7FFF;
+    --dark-blue: #3D6BDA;
+    --light-blue-rgb: 75, 127, 255;
+    --dark-blue-rgb: 61, 107, 218;
+    --dark-gray: #454655;
+    --light-gray: #EAEAEA;
+    --baige: #F6F6F6;
+    --gradient: linear-gradient(to bottom right, var(--light-blue), var(--dark-blue));
+    --gradient-hover: linear-gradient(to bottom right, rgba(var(--light-blue-rgb), 0.9), rgba(var(--dark-blue-rgb), 0.9));
+    --gradient-bg: linear-gradient(to bottom right, rgba(var(--light-blue-rgb), 0.9), rgba(var(--dark-blue-rgb), 0.6));
     --border-radius: 0.5rem;
     --box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 48px 0px;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('src/assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('src/assets/fonts/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('src/assets/fonts/Inter_18pt-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* SemiBold */
+    font-style: normal;
 }
 
 * {
@@ -23,26 +48,32 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
     line-height: 150%;
-    color: var(--black);
-    font-family: Helvetica, sans-serif;
+    color: var(--dark-gray);
+    font-family: Inter, sans-serif;
     font-size: 1rem;
-    background-color: var(--light-gray);
+    background-color: var(--baige);
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
-    margin-top: 0;
-    margin-bottom: 1em;
+    margin: 0 auto 1rem auto;
     line-height: 125%;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
 }
 
 .section-heading {
@@ -57,7 +88,7 @@ a {
 }
 
 a:hover {
-    color: var(--purple);
+    color: var(--light-blue);
     text-decoration: underline;
 }
 
@@ -68,6 +99,7 @@ a:hover {
 }
 
 section {
+    background: var(--baige);
     width: 100%;
     max-width: 2048px;
     padding: 0 5%;
@@ -83,15 +115,19 @@ img {
     height: auto;
 }
 
-button, input, select, .btn {
+.section-heading {
+  text-align: center;
+}
+
+button, .btn {
     margin: 0;
     padding: 0.75rem 2rem;
-    border: 3px solid var(--black);
-    border-radius: 0;
+    border: 1.5px solid var(--light-gray);
+    border-radius: 0.5rem;
     background-color: var(--white);
-    color: var(--black);
+    color: var(--dark-gray);
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: none;
     text-align: center;
     outline: none;
@@ -100,46 +136,23 @@ button, input, select, .btn {
     z-index: 10;
 }
 
-select {
-    text-align-last: center;
-}
-
-input:focus {
-    border-image: var(--gradient);
-    border-image-slice: 1;
-}
-
-button:hover, .btn:hover, select:hover {
+button:hover, .btn:hover {
     text-decoration: none;
-    background: var(--black);
-    color: var(--white);
-    border-color: var(--black);
-}
-
-button:disabled, .btn:disabled, input:disabled, select:disabled {
-    opacity: 0.5;
-    cursor: auto;
-}
-
-button:disabled:hover, .btn:disabled:hover, input:disabled:hover, select:disabled:hover {
-    background-color: var(--white);
-    color: var(--black);
+    background: var(--white);
+    color: var(--light-blue);
+    border-color: var(--gradient);
 }
 
 .cta-btn {
-    border-image: var(--gradient);
-    border-image-slice: 1;
+    color: var(--white);
+    background: var(--gradient);
+    border: none;
+    border-radius: 0.5rem;
 }
 
 .cta-btn:hover {
-    background: var(--gradient);
-}
-
-.cta-btn:hover .gradient-text {
-    background: none;
     color: var(--white);
-    -webkit-text-fill-color: var(--white);
-    -webkit-background-clip: initial;
+    background: var(--gradient-hover);
 }
 
 .btn-container {
@@ -147,9 +160,9 @@ button:disabled:hover, .btn:disabled:hover, input:disabled:hover, select:disable
     gap: 1rem;
 }
 
-select {
-    appearance: none;
-    cursor: pointer;
+.button-blue {
+    color: var(--white);
+    color: var(--white);
 }
 
 .gradient-text {
@@ -163,31 +176,91 @@ select {
 }
 
 .Nx1 {
+    display: grid;
     grid-template-columns: 1fr;
 }
 
+.Nx2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .Nx3 {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .Nx8 {
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
 
-.text-align-left {
-    text-align: left;
+input {
+    border-radius: var(--border-radius);
+    border: 3px solid var(--black);
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--white);
+    width: min-content;
+    margin: 1rem 0;
 }
 
-.text-align-right {
-    text-align: right;
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.reversed {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .overlay {
     z-index: 2000;
-    background: rgba(0, 0, 0, 0.25);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
     left: 0;
+    right: 0;
+}
+
+.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .Nx1 {
+        grid-template-columns: 1fr;
+    }
+
+    .Nx2 {
+        grid-template-columns: 1fr;
+    }
+
+    .Nx3 {
+        grid-template-columns: 1fr;
+    }
+
+    .Nx8 {
+        grid-template-columns: 1fr;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reversed {
+        display: flex;
+        flex-direction: column;
+    }
 }

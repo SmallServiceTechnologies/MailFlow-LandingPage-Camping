@@ -22,14 +22,13 @@ export default function CookieBanner() {
     return (
         <div id="cookie-banner">
             <p>
-                Wir verwenden YouTube, Google Tag Manager und Google Analytics, um unser Angebot zu verbessern und das
-                Nutzungsverhalten auf unserer Website zu analysieren. Die Verarbeitung Ihrer Daten erfolgt gemäß
-                unserer <Link to="/datenschutzerklärung">Datenschutzerklärung</Link>. Sie können Ihre
-                Cookie-Einstellungen jederzeit anpassen.
+                We use YouTube, Google Tag Manager and Google Analytics to improve our offer and analyze user behavior on our website.
+                Your data is processed in accordance with our <Link to="/datenschutzerklärung">privacy policy</Link>.
+                You can adjust your cookie settings at any time.
             </p>
             <div className="container">
-                <button className="cookie-btn" id="accept-cookies" onClick={acceptCookies}>🍪 Annehmen</button>
-                <button className="cookie-btn" id="decline-cookies" onClick={declineCookies}>🍪 Ablehnen</button>
+                <button className="cookie-btn" id="accept-cookies" onClick={acceptCookies}>🍪 Accept</button>
+                <button className="cookie-btn" id="decline-cookies" onClick={declineCookies}>🍪 Reject</button>
             </div>
         </div>
     )

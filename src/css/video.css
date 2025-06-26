@@ -4,6 +4,7 @@
     height: min-content;
     position: relative;
     cursor: pointer;
+    margin: auto 0;
 }
 
 #video-text-overlay {
@@ -19,6 +20,7 @@
 }
 
 #youtube-video {
+    border-radius: 1rem;
     border: none;
     outline: none;
     aspect-ratio: 16 / 9;

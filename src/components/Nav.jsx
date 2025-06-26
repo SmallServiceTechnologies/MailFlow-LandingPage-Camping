@@ -1,7 +1,7 @@
 import React from "react";
-import flowSuiteLogo from "../assets/FlowSuite-Logo.svg";
 import CTABtn from "./CTABtn.jsx";
 import "../css/nav.css"
+import mailflowlogo from "../assets/mailflow-logo-color.svg";
 
 export default function Nav() {
 
@@ -19,10 +19,13 @@ export default function Nav() {
     return (
         <div className="nav-container">
             <a href="/" className="logo">
-                <img src={flowSuiteLogo}
-                     alt="FlowSutie Logo, ein in einem Strich gezogenes kleines f mit buntem Farbverlauf."/>
+                <img src={mailflowlogo}/>
             </a>
-            <CTABtn></CTABtn>
+            <div className="container">
+                <a href="mailto:info@mail-flow.com?subject=Question%20about%20mailflow&body=Ask%20something%20about%20mailflow" className="btn secondary-btn">Demo</a>
+                <a href="https://dashboard.mail-flow.com" className="btn secondary-btn">Log In</a>
+                <CTABtn></CTABtn>
+            </div>
         </div>
     )
 }

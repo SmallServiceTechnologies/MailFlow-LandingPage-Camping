@@ -11,23 +11,18 @@ export default function Imprint() {
                 <Nav></Nav>
             </section>
             <section id="imprint">
-                <h1>Impressum</h1>
+                <h1>Imprint</h1>
                 <ul>
-                    <li>Small Service Technologies GbR</li>
+                    <li>FlowSuite UG (haftungsbeschränkt) i. G.</li>
                     <li>Streitfeldstraße 16</li>
                     <li>81673 München</li>
-                    <li>info@flow-suite.de</li>
-                    <li>IBAN: DE97700703620074933300</li>
-                    <li>BIC: DEUTDEMMXXX</li>
-                    <li>USt-IdNr: DE450182419</li>
-                    <li>Steuernummer: 143/518/70223</li>
+                    <li>info@mail-flow.com</li>
                 </ul>
-                <h2>Vertretungsberechtigte</h2>
+                <h2>Authorized representatives</h2>
                 <ul>
                     <li>Jure Kleindienst</li>
                     <li>Kevin Fischer</li>
                     <li>Moritz Schultz</li>
-                    <li>Flamur Maliqi</li>
                 </ul>
             </section>
             <section className="no-margin-bottom">

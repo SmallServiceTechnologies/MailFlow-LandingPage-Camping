@@ -5,47 +5,59 @@ import "../css/faq.css"
 export default function FAQ() {
     return (
         <div className="FAQ-container">
-                <h3 className="section-heading gradient-text">Frequently asked questions</h3>
-                <Accordion
-                    title="Wie viel kostet MailFlow?"
-                    content="Wir möchten kleine und mittelgroße Unternehmen nicht benachteiligen. Daher richten sich die Kosten für MailFlow vor allem nach der Größe Ihres Unternehmens und Ihren individuellen Anforderungen. Buchen Sie ein kostenloses Beratungsgespräch, um mehr über eine Lösung zu erfahren, die optimal zu Ihrem Unternehmen passt.">
-                </Accordion>
-                <Accordion
-                    title="Wie lange dauert die Einrichtung von MailFlow?"
-                    content="MailFlow kann in der Regel innerhalb einer Stunde eingerichtet und getestet werden. Wir kümmern uns um alle technischen Notwendigkeiten und leiten Sie durch die notwendigen Schritte. Buchen Sie sich ein Gespräch, damit wir Ihnen genau sagen können, wie schnell die Testversion bei Ihnen eingesetzt werden kann.">
-                </Accordion>
-                <Accordion
-                    title="Lässt sich MailFlow mit jeder E-Mail bzw. jedem E-Mail-Programm integrieren?"
-                    content="MailFlow integriert sich nahtlos in gängige Provider und Programme wie Gmail, Outlook, Thunderbird und viele mehr.">
-                </Accordion>
-                <Accordion
-                    title="Was passiert, wenn die KI nicht die richtige Antwort findet?"
-                    content="Anfragen, die eine manuelle Bearbeitung erfordern, werden entsprechend klassifiziert und in einen passenden Ordner verschoben, um es Ihrem Personal leichter zu machen diese zu bearbeiten.">
-                </Accordion>
-                <Accordion
-                    title="Ist MailFlow sicher?"
-                    content="Ja! Wir legen hohen Wert darauf so DSGVO-konform wie möglich zu agieren. Ihre E-Mail Daten und die Ihrer Kunden werden ausschließlich bei Ihnen im Postfach und bei keinem Dritten gespeichert.">
-                </Accordion>
-                <Accordion
-                    title="Unterstützt MailFlow mehrere Sprachen?"
-                    content="Ja, MailFlow kann Antworten in vielen verschiedenen Sprachen generieren und ist ideal für internationale Kunden.">
-                </Accordion>
-                <Accordion
-                    title="Wie bewältigt MailFlow große Anfragenmengen?"
-                    content="MailFlow bearbeitet bis zu 10 E-Mails pro Minute.">
-                </Accordion>
-                <Accordion
-                    title="Kann die Software auf mein Unternehmen und Prozess angepasst werden?"
-                    content="Ja, MailFlow kann individuell an Ihre Geschäftsprozesse angepasst werden. Vereinbaren Sie gerne einen Termin, damit wir gemeinsam eine Lösung für Ihren Prozess entwickeln.">
-                </Accordion>
-                <Accordion
-                    title="Welche Arten von E-Mails kann MailFlow bearbeiten, und wie geht es mit komplexen Anfragen um?"
-                    content="MailFlow kann E-Mails nahezu so gut wie ein Mensch beantworten, vorausgesetzt, es wird mit den richtigen Werkzeugen ausgestattet. Es bearbeitet FAQs sowie Anfragen zu Buchungen, Reservierungen, Bestellungen, Stornierungen und allgemeinen Themen. Dabei nutzt MailFlow Informationen von Ihrer Website oder aus bereitgestellten Dokumenten. Komplexe Anfragen werden automatisch klassifiziert und an Ihr Personal weitergeleitet, damit diese individuell bearbeitet werden können.">
-                </Accordion>
-                <Accordion
-                    title="Wer ist das Team hinter MailFlow?"
-                    content="Wir sind vier (Wirtschafts-)Informatik-Studenten der Technischen Universität München und der Technischen Hochschule Ingolstadt. Mit MailFlow möchten wir Unternehmen dabei helfen, ihre Kommunikation effizienter zu gestalten, Zeit und Kosten zu sparen und den Kundenservice zu entlasten.">
-                </Accordion>
+            <h3 className="section-heading gradient-text">Frequently asked questions</h3>
+
+            <Accordion
+                title="What kind of emails can mailflow handle?"
+                content="Mailflow is ideal for handling any kind customer service or sales related emails like order confirmations, shipping inquiries, FAQs, cancellations, and appointment scheduling. It can also assist with more complex cases by using integrations into your systems."
+            />
+
+            <Accordion
+                title="How fast does mailflow respond to emails?"
+                content="Mailflow generates responses in seconds significantly reducing customer wait times and increasing team efficiency."
+            />
+
+            <Accordion
+                title="Is any training or setup required?"
+                content="No technical skills are needed. Our team guides you through a simple onboarding process. Mailflow works out of the box using your publicly available data from your wesbite. Using data sources like a CRM or other third party systems requires a custom integraion. Book a call to talk about your specific requirements."
+            />
+
+            <Accordion
+                title="Is there a free trial available?"
+                content="Yes, we offer a risk-free trial so you can test mailflow in your real-world workflow and evaluate its impact before committing."
+            />
+
+            <Accordion
+                title="Can mailflow work with custom internal systems?"
+                content="Yes. We support integrations with CRMs, ERPs, and proprietary systems through APIs or custom connectors tailored to your setup."
+            />
+
+            <Accordion
+                title="How secure is mailflow?"
+                content="Security is our top priority. All data is encrypted in transit and at rest. We comply with GDPR standards."
+            />
+
+            <Accordion
+                title="Who is mailflow designed for?"
+                content="Mailflow is designed for customer support and sales teams across industries who handle high volumes of inbound emails."
+            />
+
+            <Accordion
+                title="Can mailflow improve response time SLAs?"
+                content="Yes. By automating repetitive tasks and suggesting accurate replies instantly, mailflow helps your team meet and exceed email response SLAs consistently."
+            />
+
+            <Accordion
+                title="How does mailflow handle multiple languages?"
+                content="Mailflow supports English and German communication at the moment. If you require other languages we are happy to extend the support."
+            />
+
+            <Accordion
+                title="Does mailflow offer a dashboard with analytics, configuration and knowledge base management?"
+                content="Yes, mailflow includes a powerful dashboard where you can track key performance metrics like processing time, response rates, categories and customer satisfaction. You can also manage your knowledge base and settings directly from the dashboard."
+            />
+
+
         </div>
 
     )

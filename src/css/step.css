@@ -95,6 +95,7 @@
 
 .message {
     text-align: center;
+    padding-top: 1rem;
 }
 
 @media (max-width: 430px) {
