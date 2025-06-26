@@ -83,7 +83,7 @@ export default function ContactForm({ isOpen, onClose }) {
     return (
         <div className={`overlay ${isOpen ? "active" : ""}`}>
             <form className="contact-form" onSubmit={sendEmail}>
-                <button className="close-btn" onClick={onClose}>✖</button>
+                <button className="close-btn" onClick={onClose}>Close</button>
                 {/*<div className="progress-bar">
                     {[1, 2, 3, 4].map((num) => (
                         <div
@@ -93,8 +93,8 @@ export default function ContactForm({ isOpen, onClose }) {
                     ))}
                 </div>*/}
 
-                <h2 className="form-heading"><strong>Schedule a demo</strong></h2>
-                <p>Enter your details below and we'll get in touch with you as soon as possible.</p>
+                <h2 className="form-heading gradient-text"><strong>Schedule a call</strong></h2>
+                <p>Enter your details below and we will get in touch with you as soon as possible.</p>
 
                 <Step isActive={step === 1} id="step-1">
                     <div className="container">
@@ -122,7 +122,7 @@ export default function ContactForm({ isOpen, onClose }) {
                         name="email"
                         value={contact.email}
                         onChange={handleInputChange}
-                        placeholder="Email*"
+                        placeholder="E-Mail*"
                         required={true}
                     />
 
@@ -131,7 +131,7 @@ export default function ContactForm({ isOpen, onClose }) {
                         name="phone"
                         value={contact.phone}
                         onChange={handleInputChange}
-                        placeholder="Phone Number (Optional)"
+                        placeholder="Phone Number"
                         required={false}
                     />
 

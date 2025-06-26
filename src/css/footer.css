@@ -1,10 +1,19 @@
 .footer-container {
     padding-bottom: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
     text-align: center;
+}
+
+.footer-container .container {
+    flex-direction: column;
+}
+
+.footer-container .container p {
+    margin: 0;
 }
 
 .footer-btn {
@@ -38,10 +47,16 @@
 @media (max-width: 786px) {
     .footer-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .footer-container > .cta-btn {
         grid-column: span 2;
+    }
+
+    .footer-container .row {
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 }

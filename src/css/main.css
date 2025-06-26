@@ -3,10 +3,14 @@
     --black: #000000;
     --light-blue: #4B7FFF;
     --dark-blue: #3D6BDA;
+    --light-blue-rgb: 75, 127, 255;
+    --dark-blue-rgb: 61, 107, 218;
     --dark-gray: #454655;
     --light-gray: #EAEAEA;
     --baige: #F6F6F6;
-    --gradient: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+    --gradient: linear-gradient(to bottom right, var(--light-blue), var(--dark-blue));
+    --gradient-hover: linear-gradient(to bottom right, rgba(var(--light-blue-rgb), 0.9), rgba(var(--dark-blue-rgb), 0.9));
+    --gradient-bg: linear-gradient(to bottom right, rgba(var(--light-blue-rgb), 0.9), rgba(var(--dark-blue-rgb), 0.6));
     --border-radius: 0.5rem;
     --box-shadow: rgba(17, 12, 46, 0.15) 0px 12px 48px 0px;
 }
@@ -112,22 +116,7 @@ img {
 }
 
 .section-heading {
-    pointer-events: none;
-    width: fit-content;
-    justify-self: center;
-    padding: 0.75rem 2rem;
-    border: 1.5px solid var(--light-gray);
-    border-radius: 0.5rem;
-    background-color: var(--white);
-    color: var(--light-blue);
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-    z-index: 10;
+  text-align: center;
 }
 
 button, .btn {
@@ -163,7 +152,7 @@ button:hover, .btn:hover {
 
 .cta-btn:hover {
     color: var(--white);
-    background: var(--gradient);
+    background: var(--gradient-hover);
 }
 
 .btn-container {
@@ -187,14 +176,22 @@ button:hover, .btn:hover {
 }
 
 .Nx1 {
+    display: grid;
     grid-template-columns: 1fr;
 }
 
+.Nx2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .Nx3 {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .Nx8 {
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
 
@@ -208,4 +205,62 @@ input {
     background-color: var(--white);
     width: min-content;
     margin: 1rem 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.reversed {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.overlay {
+    z-index: 2000;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.active {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .Nx1 {
+        grid-template-columns: 1fr;
+    }
+
+    .Nx2 {
+        grid-template-columns: 1fr;
+    }
+
+    .Nx3 {
+        grid-template-columns: 1fr;
+    }
+
+    .Nx8 {
+        grid-template-columns: 1fr;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reversed {
+        display: flex;
+        flex-direction: column;
+    }
 }

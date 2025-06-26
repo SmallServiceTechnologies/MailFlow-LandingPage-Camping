@@ -15,12 +15,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    text-align: center;
 }
 
-.form-heading h2 {
-    text-align: left;
+.form-heading {
     font-size: 1.5rem;
-    margin: 0;
+    margin-top: 1.5rem;
 }
 
 .contact-form .container .form-input-wrapper {
@@ -35,6 +35,10 @@
 .form-controls {
     margin-top: 1rem;
     width: 100%;
+}
+
+.form-controls .cta-btn {
+    flex-grow: 1;
 }
 
 .contact-form select {

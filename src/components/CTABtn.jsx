@@ -14,6 +14,6 @@ export default function CTABtn({closePopup}) {
     };
 
     return (
-        <button className="cta-btn" onClick={handleOpenContactForm}>Apply Now</button>
+        <button className="cta-btn" onClick={handleOpenContactForm}>Let's talk!</button>
     )
 }
