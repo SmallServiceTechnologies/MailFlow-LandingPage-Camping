@@ -22,7 +22,7 @@ export default function Nav() {
                 <img src={mailflowlogo}/>
             </a>
             <div className="container">
-                <a href="mailto:info@mail-flow.com?subject=Question%20about%20mailflow&body=Ask%20something%20about%20mailflow" className="btn secondary-btn">Demo</a>
+                <a href="mailto:demo@mail-flow.com?subject=Question%20about%20mailflow&body=Ask%20something%20about%20mailflow" className="btn secondary-btn">Demo</a>
                 <a href="https://dashboard.mail-flow.com" className="btn secondary-btn">Log In</a>
                 <CTABtn></CTABtn>
             </div>

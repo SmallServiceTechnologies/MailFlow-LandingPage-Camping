@@ -52,7 +52,7 @@ export default function Home() {
                     <div className="btn-container">
                         <img className="gdpr-badge" src={gdpr} alt="Gdpr Compliant"/>
                         <a href="#savings-estimator" className="btn">Estimate your savings now!</a>
-                        <a href="mailto:info@mail-flow.com?subject=Question%20about%20mailflow&body=Ask%20something%20about%20mailflow" className="btn" id="demo-btn">Demo</a>
+                        <a href="mailto:demo@mail-flow.com?subject=Question%20about%20mailflow&body=Ask%20something%20about%20mailflow" className="btn" id="demo-btn">Demo</a>
                         <CTABtn></CTABtn>
                     </div>
                 </div>
